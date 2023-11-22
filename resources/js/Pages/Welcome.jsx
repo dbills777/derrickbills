@@ -71,13 +71,11 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                     </div>
 
                                     <h2 className="mt-6 text-xl font-semibold text-gray-900 dark:text-white">
-                                        Documentation
+                                        Dashboard
                                     </h2>
 
                                     <p className="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                        Laravel has wonderful documentation covering every aspect of the framework.
-                                        Whether you are a newcomer or have prior experience with Laravel, we recommend
-                                        reading our documentation from beginning to end.
+                                       Register and login to access the dashboard. The dashboard is a SPA built with ReactJs and Tailwind CSS. It is a stateful application that leverages inertiajs to communicate with the backend.
                                     </p>
                                 </div>
 
@@ -117,13 +115,11 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                     </div>
 
                                     <h2 className="mt-6 text-xl font-semibold text-gray-900 dark:text-white">
-                                        Laracasts
+                                        Laravel & ReactJs
                                     </h2>
 
                                     <p className="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                        Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript
-                                        development. Check them out, see for yourself, and massively level up your
-                                        development skills in the process.
+                                        This portfolio was built with Laravel, inertiajs, ReactJs and Tailwind CSS. It utilizes Laravel's built-in authentication and authorization features, and leverages the power of ReactJs and Tailwind CSS to create a stateful SPA's
                                     </p>
                                 </div>
 
