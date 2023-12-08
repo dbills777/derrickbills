@@ -1,6 +1,5 @@
 import { Link, Head } from "@inertiajs/react";
-import { Button, Tabs, Tab, Chip } from "@nextui-org/react";
-import { GalleryIcon } from "@/Icons/GalleryIcon";
+import { Tabs, Tab } from "@nextui-org/react";
 import { useState } from "react";
 
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
