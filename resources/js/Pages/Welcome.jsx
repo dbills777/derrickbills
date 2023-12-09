@@ -1,6 +1,5 @@
 import { Link, Head, usePage } from "@inertiajs/react";
-import ModeToggle from "@/components/ui/mode-toggle";
-
+import { ModeToggle } from "@/Components/ModeToggle";
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
     const { url, component } = usePage();
     let isLoggedIn = { auth }.auth.user ? true : false;
@@ -35,7 +34,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                             </Link>
                         </>
                     )}
-                    <ModeToggle className="mx-4" />
+                    <ModeToggle />
                 </div>
 
                 <div className="max-w-7xl mx-auto p-6 lg:p-8">
@@ -343,8 +342,6 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                     </div>
                 </div>
             </div>
-
-
         </>
     );
 }
