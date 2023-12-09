@@ -9,6 +9,12 @@ import {
     CardHeader,
     CardTitle,
 } from "@/Components/ui/card";
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/Components/ui/accordion";
 import { Input } from "@/Components/ui/input";
 import InputError from "@/Components/InputError";
 import { Transition } from "@headlessui/react";
@@ -33,11 +39,25 @@ export default function UpdateProfileInformation({
         patch(route("profile.update"));
     };
     return (
-        <Card>
+        <Card className="space-y-6">
             <CardHeader>
                 <CardTitle>Update Profile</CardTitle>
-                <CardDescription>
-                    Update your name and email address Here
+                <CardDescription className="sm:w-1/2 lg:w-1/3">
+                    <Accordion type="single" collapsible>
+                        <AccordionItem value="item-1">
+                            <AccordionTrigger>
+                                Updates to the profile edit section
+                            </AccordionTrigger>
+                            <AccordionContent>
+                                This is a refresh of the profile form. The
+                                original is not styled as a card and does not
+                                get the universal card styling. Styling
+                                additions include dark mode, rounded corners,
+                                coloring, coloring for backgrounds, input, text,
+                                btns, etc and more.
+                            </AccordionContent>
+                        </AccordionItem>
+                    </Accordion>
                 </CardDescription>
             </CardHeader>
             <CardContent>
@@ -112,7 +132,7 @@ export default function UpdateProfileInformation({
             >
                 <p className="ps-8 Justify-start text-red-500">Saved.</p>
             </Transition>
-            <CardFooter className="flex justify-start">
+            <CardFooter className="ps-6 flex justify-start">
                 <Button onClick={submit} clolor="primary">
                     Save
                 </Button>
