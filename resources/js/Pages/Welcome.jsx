@@ -1,5 +1,12 @@
 import { Link, Head, usePage } from "@inertiajs/react";
 import { ModeToggle } from "@/Components/ModeToggle";
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "../Components/ui/accordion";
+
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
     const { url, component } = usePage();
     let isLoggedIn = { auth }.auth.user ? true : false;
@@ -58,7 +65,40 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                             </h1>
                         </div>
                     )}
-
+                    <section className="w-full sm:w-1/2 center m-auto">
+                        <Accordion type="single" collapsible>
+                            <AccordionItem value="item-1">
+                                <AccordionTrigger>
+                                    What did I build this with?
+                                </AccordionTrigger>
+                                <AccordionContent>
+                                    how do i change Themes?
+                                </AccordionContent>
+                            </AccordionItem>
+                        </Accordion>
+                        <Accordion type="single" collapsible>
+                            <AccordionItem value="item-1">
+                                <AccordionTrigger>
+                                    Is it accessible?
+                                </AccordionTrigger>
+                                <AccordionContent>
+                                    Yes. It adheres to the WAI-ARIA design
+                                    pattern.
+                                </AccordionContent>
+                            </AccordionItem>
+                        </Accordion>
+                        <Accordion type="single" collapsible>
+                            <AccordionItem value="item-1">
+                                <AccordionTrigger>
+                                    Is it accessible?
+                                </AccordionTrigger>
+                                <AccordionContent>
+                                    Yes. It adheres to the WAI-ARIA design
+                                    pattern.
+                                </AccordionContent>
+                            </AccordionItem>
+                        </Accordion>
+                    </section>
                     <div className="mt-16">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                             <a
