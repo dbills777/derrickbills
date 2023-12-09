@@ -8,7 +8,7 @@ import {
     CardFooter,
     CardHeader,
     CardTitle,
-} from "@/components/ui/card";
+} from "@/Components/ui/card";
 import { Input } from "@/Components/ui/input";
 import InputError from "@/Components/InputError";
 import { Transition } from "@headlessui/react";
