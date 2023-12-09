@@ -1,4 +1,5 @@
 import { Link, Head, usePage } from "@inertiajs/react";
+import ModeToggle from "@/components/ui/mode-toggle";
 
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
     const { url, component } = usePage();
@@ -8,7 +9,6 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
         <>
             <Head title="Welcome" />
             <div className="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
-
                 <div className="sm:fixed sm:top-0 sm:right-0 p-6 text-end">
                     {isLoggedIn && (
                         <Link
@@ -29,16 +29,16 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
 
                             <Link
                                 href={route("register")}
-                                className="ms-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
+                                className="m-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
                             >
                                 Register
                             </Link>
                         </>
                     )}
+                    <ModeToggle className="mx-4" />
                 </div>
 
                 <div className="max-w-7xl mx-auto p-6 lg:p-8">
-                    
                     <div className="flex justify-center">
                         <svg
                             viewBox="0 0 62 65"
@@ -52,13 +52,12 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                             />
                         </svg>
                     </div>
-                    
                     {isLoggedIn && (
-                    <div className="flex justify-center">
-                        <h1 className="mt-6 text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
-                            Welcome {auth.user.name}
-                        </h1>
-                    </div>
+                        <div className="flex justify-center">
+                            <h1 className="mt-6 text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
+                                Welcome {auth.user.name}
+                            </h1>
+                        </div>
                     )}
 
                     <div className="mt-16">
