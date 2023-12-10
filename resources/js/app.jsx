@@ -6,6 +6,7 @@ import { createInertiaApp } from "@inertiajs/react";
 import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 import { ThemeProvider } from "./Components/theme-provider";
 import { StrictMode } from "react";
+import { NextUIProvider } from "@nextui-org/react";
 
 const appName = import.meta.env.VITE_APP_NAME || "Laravel";
 
@@ -22,7 +23,9 @@ createInertiaApp({
         root.render(
             <StrictMode>
                 <ThemeProvider>
-                    <App {...props} />
+                    <NextUIProvider>
+                        <App {...props} />
+                    </NextUIProvider>
                 </ThemeProvider>
             </StrictMode>
         );
