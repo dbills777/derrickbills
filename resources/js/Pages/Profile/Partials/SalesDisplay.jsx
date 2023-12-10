@@ -1,15 +1,16 @@
 import { Card } from "@/Components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/Components/ui/avatar";
+import { Avatar } from "@nextui-org/react";
 
 export default function SalesDisplay() {
     return (
         <Card className="p-4 md:m-8">
             <h1 className="text-2xl font my-4 ">Monthy Sales</h1>
             <div className="flex items-center motion-safe:hover:scale-[1.01] transition-all duration-250 motion-safe:hover:text-primary ">
-                <Avatar className="flex h-9 w-9 items-center justify-center space-y-0 border">
-                    <AvatarImage src="#" alt="Avatar" />
-                    <AvatarFallback>OM</AvatarFallback>
-                </Avatar>
+                <Avatar
+                    isBordered
+                    color="default"
+                    src="https://robohash.org/456450644.png"
+                />
                 <div className="ml-4 ">
                     <p className="text-sm font-medium leading-none mt-4">
                         Olivia Martin
@@ -21,10 +22,11 @@ export default function SalesDisplay() {
                 <div className="ml-auto font-medium">+$1,999.00</div>
             </div>
             <div className="flex items-center motion-safe:hover:scale-[1.01] transition-all duration-250 motion-safe:hover:text-primary ">
-                <Avatar className="flex h-9 w-9 items-center justify-center space-y-0 border">
-                    <AvatarImage src="#" alt="Avatar" />
-                    <AvatarFallback>JL</AvatarFallback>
-                </Avatar>
+                <Avatar
+                    isBordered
+                    color="primary"
+                    src="https://robohash.org/sdfaesra.png"
+                />
                 <div className="ml-4 space-y-1">
                     <p className="text-sm font-medium leading-none mt-4">
                         Jackson Lee
@@ -34,10 +36,11 @@ export default function SalesDisplay() {
                 <div className="ml-auto font-medium">+$39.00</div>
             </div>
             <div className="flex items-center motion-safe:hover:scale-[1.01] transition-all duration-250 motion-safe:hover:text-primary ">
-                <Avatar className="h-9 w-9">
-                    <AvatarImage src="#" alt="Avatar" />
-                    <AvatarFallback>IN</AvatarFallback>
-                </Avatar>
+                <Avatar
+                    isBordered
+                    color="secondary"
+                    src="https://robohash.org/456484.png"
+                />
                 <div className="ml-4 space-y-1">
                     <p className="text-sm font-medium leading-none mt-4">
                         Isabella Nguyen
@@ -47,10 +50,11 @@ export default function SalesDisplay() {
                 <div className="ml-auto font-medium">+$299.00</div>
             </div>
             <div className="flex items-center motion-safe:hover:scale-[1.01] transition-all duration-250 motion-safe:hover:text-primary ">
-                <Avatar className="h-9 w-9">
-                    <AvatarImage src="#" alt="Avatar" />
-                    <AvatarFallback>WK</AvatarFallback>
-                </Avatar>
+                <Avatar
+                    isBordered
+                    color="success"
+                    src="https://robohash.org/dsfaesdfrs.png"
+                />
                 <div className="ml-4 space-y-1">
                     <p className="text-sm font-medium leading-none mt-4">
                         William Kim
@@ -60,10 +64,11 @@ export default function SalesDisplay() {
                 <div className="ml-auto font-medium">+$99.00</div>
             </div>
             <div className="flex items-center motion-safe:hover:scale-[1.01] transition-all duration-250 motion-safe:hover:text-primary ">
-                <Avatar className="h-9 w-9">
-                    <AvatarImage src="#" alt="Avatar" />
-                    <AvatarFallback>SD</AvatarFallback>
-                </Avatar>
+                <Avatar
+                    isBordered
+                    color="warning"
+                    src="https://robohash.org/5456456468.png"
+                />
                 <div className="ml-4 space-y-1">
                     <p className="text-sm font-medium leading-none mt-4">
                         Sofia Davis
