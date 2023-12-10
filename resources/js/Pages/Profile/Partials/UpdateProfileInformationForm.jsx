@@ -9,12 +9,7 @@ import {
     CardHeader,
     CardTitle,
 } from "@/Components/ui/card";
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-} from "@/Components/ui/accordion";
+import { Link } from "@inertiajs/react";
 import { Input } from "@/Components/ui/input";
 import InputError from "@/Components/InputError";
 import { Transition } from "@headlessui/react";
@@ -42,23 +37,7 @@ export default function UpdateProfileInformation({
         <Card className="space-y-6">
             <CardHeader>
                 <CardTitle>Update Profile</CardTitle>
-                <CardDescription className="sm:w-1/2 lg:w-1/3">
-                    <Accordion type="single" collapsible>
-                        <AccordionItem value="item-1">
-                            <AccordionTrigger>
-                                Updates to the profile edit section
-                            </AccordionTrigger>
-                            <AccordionContent>
-                                This is a refresh of the profile form. The
-                                original is not styled as a card and does not
-                                get the universal card styling. Styling
-                                additions include dark mode, rounded corners,
-                                coloring, coloring for backgrounds, input, text,
-                                btns, etc and more.
-                            </AccordionContent>
-                        </AccordionItem>
-                    </Accordion>
-                </CardDescription>
+                <CardDescription className="sm:w-1/2 lg:w-1/3"></CardDescription>
             </CardHeader>
             <CardContent>
                 <form onSubmit={submit}>
