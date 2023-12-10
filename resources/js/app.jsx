@@ -21,11 +21,13 @@ createInertiaApp({
         const root = createRoot(el);
 
         root.render(
-                // <NextUIProvider>
+            <StrictMode>
+                <NextUIProvider>
                     <ThemeProvider>
                         <App {...props} />
                     </ThemeProvider>
-                // </NextUIProvider>
+                </NextUIProvider>
+                </StrictMode >
         );
     },
     progress: {
