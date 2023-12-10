@@ -3,7 +3,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "--max_old_space_size=4096 vite build && --max_old_space_size=4096 vite build --ssr"
+        "build": "vite build && vite build --ssr"
     },
     "devDependencies": {
         "@headlessui/react": "^1.4.2",
