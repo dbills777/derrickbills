@@ -22,11 +22,11 @@ createInertiaApp({
 
         root.render(
             <StrictMode>
-                <ThemeProvider>
-                    <NextUIProvider>
+                <NextUIProvider>
+                    <ThemeProvider>
                         <App {...props} />
-                    </NextUIProvider>
-                </ThemeProvider>
+                    </ThemeProvider>
+                </NextUIProvider>
             </StrictMode>
         );
     },
