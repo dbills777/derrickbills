@@ -1,8 +1,5 @@
 import { Link, Head, usePage } from "@inertiajs/react";
-// import { ModeToggle } from "@/Components/ModeToggle";
 import ThemeSwitch from "@/Components/ThemeSwitch";
-import { Spacer } from "@nextui-org/react";
-import { Card } from "@nextui-org/react";
 export default function Welcome({ auth, laravelVersion, phpVersion }) {
     const { url, component } = usePage();
     let isLoggedIn = { auth }.auth.user ? true : false;
@@ -40,34 +37,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                 )}
                 <ThemeSwitch />
             </div>
-            <div className="flex justify-center">
-                <Card className="w-[200px] space-y-5 p-4" radius="2xl">
-                    <div className="h-24 rounded-lg bg-default-300"></div>
-                    <div className="space-y-3">
-                        <div className="h-5 w-3/5 rounded-lg bg-default-200"></div>
-                        <div className="h-3 w-4/5 rounded-lg bg-default-200"></div>
-                        <div className="h-3 w-2/5 rounded-lg bg-default-300"></div>
-                    </div>
-                </Card>
-                <Spacer x={10} />
-                <Card className="w-[200px] space-y-5 p-4" radius="2xl">
-                    <div className="h-24 rounded-lg bg-default-300"></div>
-                    <div className="space-y-3">
-                        <div className="h-3 w-3/5 rounded-lg bg-default-200"></div>
-                        <div className="h-3 w-4/5 rounded-lg bg-default-200"></div>
-                        <div className="h-3 w-2/5 rounded-lg bg-default-300"></div>
-                    </div>
-                </Card>
-                <Spacer x={100} />
-                <Card className="w-[200px] space-y-5 p-4" radius="2xl">
-                    <div className="h-24 rounded-lg bg-default-300"></div>
-                    <div className="space-y-3">
-                        <div className="h-3 w-3/5 rounded-lg bg-default-200"></div>
-                        <div className="h-3 w-4/5 rounded-lg bg-default-200"></div>
-                        <div className="h-3 w-2/5 rounded-lg bg-default-300"></div>
-                    </div>
-                </Card>
-            </div>
+            
             <div className="max-w-7xl mx-auto p-6 lg:p-8">
                 <div className="flex justify-center">
                     <svg

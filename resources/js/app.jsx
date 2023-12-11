@@ -4,7 +4,6 @@ import "../css/app.css";
 import { createRoot } from "react-dom/client";
 import { createInertiaApp } from "@inertiajs/react";
 import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
-import { ThemeProvider } from "./Components/theme-provider";
 import { StrictMode } from "react";
 import { NextUIProvider } from "@nextui-org/react";
 
@@ -23,9 +22,7 @@ createInertiaApp({
         root.render(
             <StrictMode>
                 <NextUIProvider>
-                    <ThemeProvider>
-                        <App {...props} />
-                    </ThemeProvider>
+                    <App {...props} />
                 </NextUIProvider>
             </StrictMode>
         );
