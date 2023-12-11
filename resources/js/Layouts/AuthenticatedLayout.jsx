@@ -5,7 +5,6 @@ import NavLink from '@/Components/NavLink';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
 import ThemeSwitch from "@/Components/ThemeSwitch";
 import { Link } from "@inertiajs/react";
-import { Button } from "@nextui-org/react";
 
 export default function Authenticated({ user, header, children }) {
     const [showingNavigationDropdown, setShowingNavigationDropdown] =
