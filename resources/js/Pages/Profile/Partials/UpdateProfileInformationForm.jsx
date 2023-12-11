@@ -1,19 +1,18 @@
 import * as React from "react";
 
-import { Button } from "@/Components/ui/button";
 import {
     Card,
-    CardContent,
-    CardDescription,
+    CardBody,
     CardFooter,
     CardHeader,
-    CardTitle,
-} from "@/Components/ui/card";
+    Button,
+} from "@nextui-org/react";
+import TextInput from "@/Components/TextInput";
 import { Link } from "@inertiajs/react";
-import { Input } from "@/Components/ui/input";
 import InputError from "@/Components/InputError";
+import InputLabel from "@/Components/InputLabel";
+
 import { Transition } from "@headlessui/react";
-import { Label } from "@/Components/ui/label";
 import { useForm, usePage } from "@inertiajs/react";
 
 export default function UpdateProfileInformation({
@@ -36,15 +35,14 @@ export default function UpdateProfileInformation({
     return (
         <Card className="space-y-6">
             <CardHeader>
-                <CardTitle>Update Profile</CardTitle>
-                <CardDescription className="sm:w-1/2 lg:w-1/3"></CardDescription>
+                <h3>Update Profile</h3>
             </CardHeader>
-            <CardContent>
+            <CardBody>
                 <form onSubmit={submit}>
                     <div className="grid md:w-3/4 lg:w-1/2 items-center gap-4">
                         <div className="flex flex-col space-y-1.5">
-                            <Label htmlFor="name">Name</Label>
-                            <Input
+                            <InputLabel htmlFor="name">Name</InputLabel>
+                            <TextInput
                                 id="name"
                                 value={data.name}
                                 onChange={(e) =>
@@ -60,8 +58,8 @@ export default function UpdateProfileInformation({
                             />
                         </div>
                         <div className="flex flex-col space-y-1.5">
-                            <Label htmlFor="email">Email</Label>
-                            <Input
+                            <InputLabel htmlFor="email">Email</InputLabel>
+                            <TextInput
                                 id="email"
                                 value={data.email}
                                 onChange={(e) =>
@@ -78,13 +76,13 @@ export default function UpdateProfileInformation({
                         </div>
                         {mustVerifyEmail && user.email_verified_at === null && (
                             <div>
-                                <p className="text-sm mt-2 text-gray-800">
+                                <p className="text-sm mt-2 -800">
                                     Your email address is unverified.
                                     <Link
                                         href={route("verification.send")}
                                         method="post"
                                         as="button"
-                                        className="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                        className="underline text-sm -600 hover:-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                                     >
                                         Click here to re-send the verification
                                         email.
@@ -101,7 +99,7 @@ export default function UpdateProfileInformation({
                         )}
                     </div>
                 </form>
-            </CardContent>
+            </CardBody>
             <Transition
                 show={recentlySuccessful}
                 enter="transition ease-in-out"

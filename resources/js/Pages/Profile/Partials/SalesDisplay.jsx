@@ -1,5 +1,4 @@
-import { Card } from "@/Components/ui/card";
-import { Avatar } from "@nextui-org/react";
+import { Avatar, Card } from "@nextui-org/react";
 
 export default function SalesDisplay() {
     return (
