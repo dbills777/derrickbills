@@ -37,6 +37,17 @@ export default function UpdateProfileInformation({
             <CardHeader>
                 <h3>Update Profile</h3>
             </CardHeader>
+            <Transition
+                show={recentlySuccessful}
+                enter="transition ease-in-out"
+                enterFrom="opacity-0"
+                leave="transition ease-in-out"
+                leaveTo="opacity-0"
+            >
+                <div className="alert bg-backbround ">
+                    <span>Saved!</span>
+                </div>
+            </Transition>
             <CardBody>
                 <form onSubmit={submit}>
                     <div className="grid md:w-3/4 lg:w-1/2 items-center gap-4">
@@ -100,15 +111,7 @@ export default function UpdateProfileInformation({
                     </div>
                 </form>
             </CardBody>
-            <Transition
-                show={recentlySuccessful}
-                enter="transition ease-in-out"
-                enterFrom="opacity-0"
-                leave="transition ease-in-out"
-                leaveTo="opacity-0"
-            >
-                <p className="ps-8 Justify-start text-red-500">Saved.</p>
-            </Transition>
+
             <CardFooter className="ps-6 flex justify-start">
                 <Button onClick={submit} clolor="primary">
                     Save

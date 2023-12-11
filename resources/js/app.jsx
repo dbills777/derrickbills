@@ -27,7 +27,7 @@ createInertiaApp({
                         <App {...props} />
                     </ThemeProvider>
                 </NextUIProvider>
-                </StrictMode >
+            </StrictMode>
         );
     },
     progress: {

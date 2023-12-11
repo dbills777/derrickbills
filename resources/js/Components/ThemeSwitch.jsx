@@ -9,11 +9,19 @@ const ThemeSwitch = (props) => {
 
     return (
         <>
-            <Button variant="outline" onClick={() => setTheme("light")}>
-                Light
+            <Button
+                isIconOnly
+                variant="outline"
+                onClick={() => setTheme("light")}
+            >
+                <SunIcon />
             </Button>
-            <Button variant="outline" onClick={() => setTheme("dark")}>
-                Dark
+            <Button
+                isIconOnly
+                variant="outline"
+                onClick={() => setTheme("dark")}
+            >
+                <MoonIcon />
             </Button>
         </>
     );
