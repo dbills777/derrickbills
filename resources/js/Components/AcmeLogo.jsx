@@ -1,5 +1,8 @@
 export const AcmeLogo = (props) => (
     <svg
+        {...props}
+        className="w-20 h-20  "
+        fill="curentColor"
         aria-hidden="true"
         focusable="false"
         height="4em"
@@ -26,7 +29,7 @@ export const AcmeLogo = (props) => (
             />
             <path opacity=".35" d="M47 70h25v12H47Z" />
         </g>
-        <g fill="text-primary">
+        <g fill="success">
             <path d="M69 36l0 17.515 14 14L83 8 70 8 18 112l16 0Z" />
             <path d="M70 92l13 0 0-12Z" />
         </g>
