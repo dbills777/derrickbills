@@ -38,7 +38,7 @@ export default function ThemeToggle() {
         // "cupcake",
         // "bumblebee",
         // "emerald",
-        "corporate",
+        // "corporate",
         // "synthwave",
         // "retro",
         // "cyberpunk",
@@ -62,7 +62,7 @@ export default function ThemeToggle() {
         // "night",
         // "coffee",
         // "winter",
-        "dim",
+        // "dim",
         // "nord",
         // "sunset",
     ];
