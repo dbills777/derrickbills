@@ -1,13 +1,8 @@
 import { useRef, useState } from 'react';
-import DangerButton from '@/Components/DangerButton';
-import InputError from '@/Components/InputError';
-import InputLabel from '@/Components/InputLabel';
-import Modal from '@/Components/Modal';
-import SecondaryButton from '@/Components/SecondaryButton';
-import TextInput from '@/Components/TextInput';
-import { useForm } from '@inertiajs/react';
+import {Button} from "@nextui-org/react";
+import { useForm } from "@inertiajs/react";
 
-export default function DeleteUserForm({ className = '' }) {
+export default function DeleteUserForm({ className = "" }) {
     const [confirmingUserDeletion, setConfirmingUserDeletion] = useState(false);
     const passwordInput = useRef();
 
@@ -19,7 +14,7 @@ export default function DeleteUserForm({ className = '' }) {
         reset,
         errors,
     } = useForm({
-        password: '',
+        password: "",
     });
 
     const confirmUserDeletion = () => {
@@ -29,7 +24,7 @@ export default function DeleteUserForm({ className = '' }) {
     const deleteUser = (e) => {
         e.preventDefault();
 
-        destroy(route('profile.destroy'), {
+        destroy(route("profile.destroy"), {
             preserveScroll: true,
             onSuccess: () => closeModal(),
             onError: () => passwordInput.current.focus(),
@@ -56,13 +51,11 @@ export default function DeleteUserForm({ className = '' }) {
                 </p>
             </header>
 
-            <DangerButton onClick={confirmUserDeletion}>
-                Delete Account
-            </DangerButton>
+            <Button onClick={confirmUserDeletion}>Delete Account</Button>
 
             <Modal show={confirmingUserDeletion} onClose={closeModal}>
                 <form onSubmit={deleteUser} className="p-6">
-                    <h2 className="text-lg font-medium -900">
+                    {/* <h2 className="text-lg font-medium -900">
                         Are you sure you want to delete your account?
                     </h2>
 
@@ -108,7 +101,7 @@ export default function DeleteUserForm({ className = '' }) {
                         <DangerButton className="ms-3" disabled={processing}>
                             Delete Account
                         </DangerButton>
-                    </div>
+                    </div> */}
                 </form>
             </Modal>
         </section>

@@ -7,10 +7,7 @@ import {
     CardHeader,
     Button,
 } from "@nextui-org/react";
-import TextInput from "@/Components/TextInput";
 import { Link } from "@inertiajs/react";
-import InputError from "@/Components/InputError";
-import InputLabel from "@/Components/InputLabel";
 
 import { Transition } from "@headlessui/react";
 import { useForm, usePage } from "@inertiajs/react";
