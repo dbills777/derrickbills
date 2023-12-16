@@ -20,9 +20,14 @@ Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
+        
         'laravelVersion' => Application::VERSION,
         
     ]);
+});
+
+Route::get('/about', function () {
+    return Inertia::render('About');
 });
 
 Route::get('/dashboard', function () {
