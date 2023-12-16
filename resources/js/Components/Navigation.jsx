@@ -1,51 +1,65 @@
 import React from "react";
+import { Link } from "@inertiajs/react";
 import {
     Navbar,
     NavbarBrand,
     NavbarContent,
     NavbarItem,
-    Link,
-    Button,
+    NavbarMenu,
+    NavbarMenuItem,
+    NavbarMenuToggle,
+    DropdownMenu,
     DropdownItem,
     DropdownTrigger,
     Dropdown,
-    DropdownMenu,
+    Link as NextLink,
+    Button,
 } from "@nextui-org/react";
 import {
     ChevronDown,
-    Lock,
     Activity,
     Flash,
     Server,
     TagUser,
     Scale,
 } from "./Icons.jsx";
+import { AcmeLogo } from "./AcmeLogo.jsx";
 import ThemeToggle from "./ThemeToggle.jsx";
 
 export default function App() {
-    const icons = {
-        chevron: <ChevronDown fill="currentColor" size={16} />,
-        scale: <Scale className="text-warning" fill="currentColor" size={30} />,
-        lock: <Lock className="text-success" fill="currentColor" size={30} />,
-        activity: (
-            <Activity
-                className="text-secondary"
-                fill="currentColor"
-                size={30}
-            />
-        ),
-        flash: <Flash className="text-primary" fill="currentColor" size={30} />,
-        server: (
-            <Server className="text-success" fill="currentColor" size={30} />
-        ),
-        user: <TagUser className="text-danger" fill="currentColor" size={30} />,
-    };
+    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+    const menuItems = [
+        "Profile",
+        "Dashboard",
+        "Activity",
+        "Analytics",
+        "System",
+        "Deployments",
+        "My Settings",
+        "Team Settings",
+        "Help & Feedback",
+        "Log Out",
+    ];
 
     return (
-        <Navbar>
-            <NavbarBrand>
-                <p className="font-bold text-inherit">ACME</p>
-            </NavbarBrand>
+        <Navbar
+            isBlurred
+            motionProps
+            shouldHideOnScroll={false}
+            onMenuOpenChange={setIsMenuOpen}
+            className="bg-base-200/75 shadow-lg"
+        >
+            <NavbarContent>
+                <NavbarMenuToggle
+                    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                    className="sm:hidden"
+                />
+                <NavbarBrand>
+                    <AcmeLogo />
+                </NavbarBrand>
+            </NavbarContent>
+
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
                 <Dropdown>
                     <NavbarItem>
@@ -53,7 +67,9 @@ export default function App() {
                             <Button
                                 disableRipple
                                 className="p-0 bg-transparent data-[hover=true]:bg-transparent"
-                                endContent={icons.chevron}
+                                endContent={ChevronDown({
+                                    fill: "{(isMenuOpen ? 'primary' : 'foreground')}",
+                                })}
                                 radius="sm"
                                 variant="light"
                             >
@@ -71,62 +87,92 @@ export default function App() {
                         <DropdownItem
                             key="autoscaling"
                             description="ACME scales apps to meet user demand, automagically, based on load."
-                            startContent={icons.scale}
+                            startContent={Scale}
                         >
                             Autoscaling
                         </DropdownItem>
                         <DropdownItem
                             key="usage_metrics"
                             description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
-                            startContent={icons.activity}
+                            startContent={Activity}
                         >
                             Usage Metrics
                         </DropdownItem>
                         <DropdownItem
                             key="production_ready"
                             description="ACME runs on ACME, join us and others serving requests at web scale."
-                            startContent={icons.flash}
+                            startContent={Flash}
                         >
                             Production Ready
                         </DropdownItem>
                         <DropdownItem
                             key="99_uptime"
                             description="Applications stay on the grid with high availability and high uptime guarantees."
-                            startContent={icons.server}
+                            startContent={Server}
                         >
                             +99% Uptime
                         </DropdownItem>
                         <DropdownItem
                             key="supreme_support"
                             description="Overcome any challenge with a supporting team ready to respond."
-                            startContent={icons.user}
+                            startContent={TagUser}
                         >
                             +Supreme Support
                         </DropdownItem>
                     </DropdownMenu>
                 </Dropdown>
                 <NavbarItem isActive>
-                    <Link href="#" aria-current="page">
-                        Customers
+                    <Link href="/" aria-current="page">
+                        Welcome
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link color="foreground" href="#">
-                        Integrations
+                    <Link color="foreground" href="/about">
+                        About
                     </Link>
                 </NavbarItem>
             </NavbarContent>
+
+            <NavbarContent
+                className="hidden sm:flex gap-4"
+                justify="center"
+            ></NavbarContent>
             <NavbarContent justify="end">
                 <NavbarItem className="hidden lg:flex">
-                    <Link href="#">Login</Link>
+                    <Link href="/login">Login</Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Button as={Link} color="primary" href="#" variant="flat">
+                    <Button
+                        as={Link}
+                        color="primary"
+                        href="/register"
+                        variant="flat"
+                    >
                         Sign Up
                     </Button>
                 </NavbarItem>
             </NavbarContent>
             <ThemeToggle />
+            <NavbarMenu>
+                {menuItems.map((item, index) => (
+                    <NavbarMenuItem key={`${item}-${index}`}>
+                        <Link
+                            color={
+                                index === 2
+                                    ? "primary"
+                                    : index === menuItems.length - 1
+                                    ? "danger"
+                                    : "foreground"
+                            }
+                            className="w-full"
+                            href="#"
+                            size="lg"
+                        >
+                            {item}
+                        </Link>
+                    </NavbarMenuItem>
+                ))}
+            </NavbarMenu>
         </Navbar>
     );
 }

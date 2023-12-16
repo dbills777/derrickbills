@@ -1,9 +1,9 @@
 import forms from "@tailwindcss/forms";
+import daisyui from "daisyui";
 const { nextui } = require("@nextui-org/react");
 /** @type {import('tailwindcss').Config} */
 export default {
     darkMode: "class",
-
     content: [
         "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
         "./storage/framework/views/*.php",
@@ -15,28 +15,72 @@ export default {
     plugins: [
         forms,
         require("tailwindcss-animate"),
-        nextui({
-            addCommonColors: true, // override common colors (e.g. "blue", "green", "pink").
-            defaultExtendTheme: "dark", // default theme to extend on custom themes
-            layout: {},
-            colors: {
-                background: "hsl(var(--background))",
-            },
-            themes: {
-                light: {
-                    layout: {},
+        require("daisyui"),
+        // add daisyUI plugin
 
-                    colors: {},
-                },
-                dark: {
-                    layout: {},
-                },
-            },
-        }),
-        require("daisyui", {
-            themes: true,
-            styled: true,
-            themes: ["dark", "light", "nord", "dim"],
+        nextui({
+            addCommonColors: false, // override common colors (e.g. "blue", "green", "pink").
+            // commonCol
         }),
     ],
+    daisyui: {
+        themes: [
+            "dark",
+            "light",
+            "cupcake",
+            "bumblebee",
+            "emerald",
+            "corporate",
+            "synthwave",
+            "retro",
+            "cyberpunk",
+            "valentine",
+            "halloween",
+            "garden",
+            "forest",
+            "aqua",
+            "lofi",
+            "pastel",
+            "fantasy",
+            "wireframe",
+            "black",
+            "luxury",
+            "dracula",
+            "cmyk",
+            "autumn",
+            "business",
+            "acid",
+            "lemonade",
+            "night",
+            "coffee",
+            "winter",
+            "dim",
+            "nord",
+            "sunset",
+        ],
+    },
+
+    styled: true,
+    themes: true, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
+    darkTheme: "dark", // name of one of the included themes for dark mode
+
+    base: true, // applies background color and foreground color for root element by default
+    styled: true, // include daisyUI colors and design decisions for all components
+    utils: true, // adds responsive and modifier utility classes
+    prefix: "", // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
+    logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
+    themeRoot: ":root", // The element that receives theme color CSS variables
+
+    // daisyUI config (optional - here are the default values)
+    // daisyui: {
+    //     styled: true,
+    //     themes: true, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
+    //     darkTheme: "dark", // name of one of the included themes for dark mode
+    //     base: true, // applies background color and foreground color for root element by default
+    //     styled: true, // include daisyUI colors and design decisions for all components
+    //     utils: true, // adds responsive and modifier utility classes
+    //     prefix: "", // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
+    //     logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
+    //     themeRoot: ":root", // The element that receives theme color CSS variables
+    // },
 };
