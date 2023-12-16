@@ -1,9 +1,5 @@
 import { useState } from 'react';
-import ApplicationLogo from '@/Components/ApplicationLogo';
-import Dropdown from '@/Components/Dropdown';
-import NavLink from '@/Components/NavLink';
-import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
-import ThemeSwitch from "@/Components/ThemeSwitch";
+import ApplicationLogo from "@/Components/ApplicationLogo";
 import { Link } from "@inertiajs/react";
 
 export default function Authenticated({ user, header, children }) {
@@ -11,8 +7,9 @@ export default function Authenticated({ user, header, children }) {
         useState(false);
 
     return (
+        
         <div className="min-h-screen bg-background text-foreground">
-            <nav className="bg-background border-b border-gray-100">
+            {/* <nav className="bg-background border-b border-gray-100">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between h-16">
                         <div className="flex">
@@ -75,7 +72,6 @@ export default function Authenticated({ user, header, children }) {
                                     </Dropdown.Content>
                                 </Dropdown>
                             </div>
-                            <ThemeSwitch />
                         </div>
 
                         <div className="-me-2 flex items-center sm:hidden">
@@ -160,7 +156,7 @@ export default function Authenticated({ user, header, children }) {
                         </div>
                     </div>
                 </div>
-            </nav>
+            </nav> */}
 
             {header && (
                 <header className="bg-background shadow">
