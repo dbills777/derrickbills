@@ -40,7 +40,14 @@ export default {
     daisyui: {
         theme: {
             extend: {
-                themes: ["light", "dark", "corporate", "dim"],
+                themes: [
+                    "light",
+                    "dark",
+                    "corporate",
+                    "dim",
+                    "aqua",
+                    "dracula",
+                ],
             }, // ...
         },
         styled: true,
