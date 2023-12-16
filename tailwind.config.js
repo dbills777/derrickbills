@@ -40,47 +40,14 @@ export default {
     daisyui: {
         theme: {
             extend: {
-                themes: [
-                    "dark",
-                    "corporate",
-                    "light",
-                    "cupcake",
-                    "bumblebee",
-                    "emerald",
-                    "synthwave",
-                    "retro",
-                    "cyberpunk",
-                    "valentine",
-                    "halloween",
-                    "garden",
-                    "forest",
-                    "aqua",
-                    "lofi",
-                    "pastel",
-                    "fantasy",
-                    "wireframe",
-                    "black",
-                    "luxury",
-                    "dracula",
-                    "cmyk",
-                    "autumn",
-                    "business",
-                    "acid",
-                    "lemonade",
-                    "night",
-                    "coffee",
-                    "winter",
-                    "dim",
-                    "nord",
-                    "sunset",
-                ],
+                themes: ["light", "dark", "corporate", "dim"],
             }, // ...
         },
         styled: true,
         themes: true, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
-        darkTheme: "synthwave", // name of one of the included themes for dark mode
-
-        base: false, // applies background color and foreground color for root element by default
+        darkTheme: "dim", // name of one of the included themes for dark mode
+        defaultTheme: "dark", // options: 'dark' | 'light' | 'cupcake'
+        base: true, // applies background color and foreground color for root element by default
         styled: true, // include daisyUI colors and design decisions for all components
         utils: true, // adds responsive and modifier utility classes
         prefix: "", // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
