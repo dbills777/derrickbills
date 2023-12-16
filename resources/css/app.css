@@ -2,39 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/* get the div with this class staggered-dropdown*/
-@layer base {
+/* @layer base {
     :root {
-       
-         /* @apply bg-background text-foreground; */
+        --background: 0 0% 100%;
+        --foreground: 202 24% 9%;
+         @apply bg-background text-foreground;
     }
 
     .dark {
-      
-        /* --foreground: 210 4% 18%; */
-         /* @apply bg-background text-foreground; */
+        --background: 0 0% 0%;;
+        --foreground: 210 6% 93%;
+        
+        --foreground: 210 4% 18%;
+         @apply bg-background text-foreground;
         
     }
 }
 
+@layer base {
+    
+    body {
+        @apply bg-background text-foreground;
+    }
+} */
 
-.motion-btn {
-  -webkit-appearance: button;
-  
-  border: none;
-  border-radius: 10px;
-  padding: 10px 20px;
-  font-size: 18px;
-  font-weight: 700;
-  cursor: pointer;
-  width: 100%;
-  text-align: left;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 .menu-list {
   height: 0;
   overflow: hidden;
