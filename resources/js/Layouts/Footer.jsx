@@ -96,7 +96,7 @@ export default function Footer() {
                         href="/react"
                     >
                         <div className="group relative">
-                            <div className="group flex  space-x-1 items-center justify-center gap-1 transition  ease-in-out pr-4  l:pr-3 l:pb-3 duration-300 l:hover:scale-105">
+                            {/* <div className="group flex  space-x-1 items-center justify-center gap-1 transition  ease-in-out pr-4  l:pr-3 l:pb-3 duration-300 l:hover:scale-105">
                                
                                 <LaravelLogo
                                     size={35}
@@ -119,7 +119,7 @@ export default function Footer() {
                                     width={35}
                                     fill="currentColor"
                                 />
-                            </div>
+                            </div> */}
                         </div>
                     </a>
                 </div>

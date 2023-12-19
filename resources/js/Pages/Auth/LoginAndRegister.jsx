@@ -15,9 +15,17 @@ import { usePage, Link, useForm } from "@inertiajs/react";
 
 export default function LoginAndRegister(status, canResetPassword) {
     const [selected, setSelected] = useState("login");
+    
     const pathName = usePage();
 
     const { data, setData, post, processing, errors, reset } = useForm({
+        name: "",
+        email: "",
+        password: "",
+        password_confirmation: "",
+    });
+
+    const { data: registrationData, setData: setRegistrationData } = useForm({
         name: "",
         email: "",
         password: "",
@@ -31,6 +39,7 @@ export default function LoginAndRegister(status, canResetPassword) {
     }, []);
 
     const handleRegistrationClick = (e) => {
+        // console.log(data);
         e.preventDefault();
         post(route("register"));
     };
@@ -75,7 +84,10 @@ export default function LoginAndRegister(status, canResetPassword) {
                                     placeholder="Enter your email"
                                     type="email"
                                     onChange={(e) =>
-                                        setData("email", e.target.value)
+                                        setRegistrationData(
+                                            "email",
+                                            e.target.value
+                                        )
                                     }
                                 />
                                 <Input
@@ -86,7 +98,10 @@ export default function LoginAndRegister(status, canResetPassword) {
                                     placeholder="Enter your password"
                                     type="password"
                                     onChange={(e) =>
-                                        setData("password", e.target.value)
+                                        setRegistrationData(
+                                            "password",
+                                            e.target.value
+                                        )
                                     }
                                 />
                                 <div className="flex  justify-between">
@@ -98,7 +113,7 @@ export default function LoginAndRegister(status, canResetPassword) {
                                                 name="remember"
                                                 checked={data.remember}
                                                 onChange={(e) =>
-                                                    setData(
+                                                    setRegistrationData(
                                                         "remember",
                                                         e.target.checked
                                                     )
@@ -173,7 +188,10 @@ export default function LoginAndRegister(status, canResetPassword) {
                                     isRequired
                                     label="Name"
                                     placeholder="Enter your name"
-                                    type="password"
+                                    type="name"
+                                    onChange={(e) =>
+                                        setData("name", e.target.value)
+                                    }
                                 />
                                 <Input
                                     errorMessage={errors.email}
@@ -181,6 +199,9 @@ export default function LoginAndRegister(status, canResetPassword) {
                                     label="Email"
                                     placeholder="Enter your email"
                                     type="email"
+                                    onChange={(e) =>
+                                        setData("email", e.target.value)
+                                    }
                                 />
                                 <Input
                                     errorMessage={errors.password}
@@ -188,6 +209,9 @@ export default function LoginAndRegister(status, canResetPassword) {
                                     label="Password"
                                     placeholder="Enter your password"
                                     type="password"
+                                    onChange={(e) =>
+                                        setData("password", e.target.value)
+                                    }
                                 />
                                 <div className="flex gap-2 justify-end">
                                     <Button
