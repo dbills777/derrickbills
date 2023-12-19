@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import {
+    Checkbox,
     Tabs,
     Tab,
     Input,
@@ -8,7 +9,6 @@ import {
     Card,
     CardBody,
     Image,
-    Divider,
 } from "@nextui-org/react";
 
 import { usePage, Link, useForm } from "@inertiajs/react";
@@ -16,12 +16,14 @@ import { usePage, Link, useForm } from "@inertiajs/react";
 export default function LoginAndRegister(status, canResetPassword) {
     const [selected, setSelected] = useState("login");
     const pathName = usePage();
+
     const { data, setData, post, processing, errors, reset } = useForm({
         name: "",
         email: "",
         password: "",
         password_confirmation: "",
     });
+
     useEffect(() => {
         return () => {
             reset("password", "password_confirmation");
@@ -32,38 +34,27 @@ export default function LoginAndRegister(status, canResetPassword) {
         e.preventDefault();
         post(route("register"));
     };
+
     const handleLoginClick = (e) => {
         e.preventDefault();
-        console.log("login", data);
         post(route("login"));
     };
 
     return (
-        <div className="flex flex-col items-center">
-            <Card className="max-w-full w-[440px] h-[600px]">
-                <CardHeader className="flex gap-3">
+        <div className=" h-full grid gap-2 grid-cols-1 grid-rows-1 place-content-center place-items-center ">
+            <Card>
+                <CardHeader>
                     <Image
-                        alt="nextui logo"
-                        height={100}
-                        width={100}
-                        radius="sm"
-                        src={
-                            "https://robohash.org/4894891891843551e5.png?size100x100&set=set1"
-                        }
+                        alt="animated login lock and key gif"
+                        type="image/x-icon"
+                        src="http://localhost:8000/images/login.gif"
+                        width={390}
                     />
-                    <div className="flex flex-col">
-                        <p className="text-md">Sign In</p>
-                        <p className="text-small text-default-500">
-                            Or Register
-                        </p>
-                    </div>
                 </CardHeader>
-                <Divider />
-                <CardBody className="overflow-hidden space-y-10">
+                <CardBody>
                     <Tabs
-                        className="mt-8"
                         fullWidth
-                        size="md"
+                        size="lg"
                         aria-label="Tabs form"
                         selectedKey={pathName.url}
                         onSelectionChange={setSelected}
@@ -75,7 +66,7 @@ export default function LoginAndRegister(status, canResetPassword) {
                             href={route("login")}
                             title="Login"
                         >
-                            <form className="flex flex-col space-y-8">
+                            <form className="flex flex-col space-y-5 h-[300px]">
                                 <Input
                                     errorMessage={errors.email}
                                     value={data.email}
@@ -98,14 +89,74 @@ export default function LoginAndRegister(status, canResetPassword) {
                                         setData("password", e.target.value)
                                     }
                                 />
-                                <div className="flex  justify-end">
-                                    <Button
-                                        onClick={handleLoginClick}
-                                        fullWidth
-                                        color="primary"
-                                    >
-                                        Login
-                                    </Button>
+                                <div className="flex  justify-between">
+                                    <div className="block mt-4">
+                                        <label className="flex items-center">
+                                            <Checkbox
+                                                color="primary"
+                                                radius="md"
+                                                name="remember"
+                                                checked={data.remember}
+                                                onChange={(e) =>
+                                                    setData(
+                                                        "remember",
+                                                        e.target.checked
+                                                    )
+                                                }
+                                            />
+                                            <span className="ms-2 text-sm -600">
+                                                Remember me
+                                            </span>
+                                        </label>
+                                    </div>
+                                    {/* <div className="block mt-4">
+                                        <label className="flex items-center">
+                                            <Checkbox
+                                                name="remember"
+                                                checked={data.remember}
+                                                onChange={(e) =>
+                                                    setData(
+                                                        "remember",
+                                                        e.target.checked
+                                                    )
+                                                }
+                                            />
+                                            <span className="ms-2 text-sm -600">
+                                                Remember me
+                                            </span>
+                                        </label>
+                                    </div>
+
+                                    <div className="flex items-center justify-end mt-4">
+                                        {canResetPassword && (
+                                            <Link
+                                                href={route("password.request")}
+                                                className="underline text-sm -600 hover:-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                            >
+                                                Forgot your password?
+                                            </Link>
+                                        )}
+
+                                        <PrimaryButton
+                                            className="ms-4"
+                                            disabled={processing}
+                                        >
+                                            Log in
+                                        </PrimaryButton>
+                                    </div> */}
+                                    <div className="flex items-center justify-end mt-4">
+                                        <Button
+                                            type="submit"
+                                            color="primary"
+                                            variant="bordered"
+                                            disabled={processing}
+                                            // onKeyDown={handleLoginClick}
+                                            onClick={handleLoginClick}
+                                            fullWidth
+                                        >
+                                            Login
+                                        </Button>
+                                    </div>
                                 </div>
                             </form>
                         </Tab>
@@ -116,7 +167,7 @@ export default function LoginAndRegister(status, canResetPassword) {
                             href={route("register")}
                             title="Sign up"
                         >
-                            <form className="flex flex-col gap-4 h-[300px]">
+                            <form className="flex flex-col space-y-5 [300px]">
                                 <Input
                                     errorMessage={errors.name}
                                     isRequired
@@ -140,9 +191,13 @@ export default function LoginAndRegister(status, canResetPassword) {
                                 />
                                 <div className="flex gap-2 justify-end">
                                     <Button
+                                        type="submit"
+                                        color="nui-primary"
+                                        variant="bordered"
+                                        disabled={processing}
                                         onClick={handleRegistrationClick}
+                                        // onKeyDown={handleRegistrationClick}
                                         fullWidth
-                                        color="primary"
                                     >
                                         Registration
                                     </Button>

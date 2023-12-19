@@ -1,10 +1,10 @@
 const Intro = () => {
     // const imgURL = "https://source.unsplash.com/collection/495468/1600x900";
-    const imgURL = "https://source.unsplash.com/1600x900";
+    // const imgURL = "http://localhost:5173/images/AnimatedLockAndKey.gif";
     return (
         <>
             <div
-                className="w-full hero min-h-screen top-[-65px]"
+                className="w-full hero min-h-screen "
                 style={{
                     backgroundImage: `url(${imgURL})`,
                     // position: "relative",
