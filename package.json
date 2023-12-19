@@ -3,7 +3,8 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build && vite build --ssr"
+        "build": "vite build && vite build --ssr",
+        "start": "vite && vite build && vite build --ssr"
     },
     "devDependencies": {
         "@erbelion/vite-plugin-laravel-purgecss": "^0.2.3",
