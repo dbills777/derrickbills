@@ -1,14 +1,13 @@
-import Navigation from "../Components/Navigation";
-import ThemeToggle from "@/Components/ThemeToggle";
-import SideMenu from "@/Components/SideMenu copy";
+import NavBar from "@/Components/NavBar";
+import Footer from "@/Layouts/Footer";
+import WelcomeHero from "@/Components/WelcomeHero";
 
 export default function Layout({ auth, children, header, footer, user }) {
     return (
         <>
-            <Navigation auth={auth} user={user} />
-           
-
-            <main className="max-w-full  mx-auto center ">{children}</main>
+            <NavBar auth={auth} user={user} />
+            <main>{children}</main>
+            <Footer />
         </>
     );
 }
