@@ -1,14 +1,11 @@
-import { useState, useEffect } from "react";
-import StaggeredMenu from "./StaggeredMenu";
-
+import { useState } from "react";
 export default function SideMenu() {
     const [isOpen, setIsOpen] = useState(false);
     // const scope1 = useMenuAnimation(isOpen);
     return (
         <ul className="menu bg-secondary-200 w-56 rounded-box">
-            
             <li>
-                <details >
+                <details>
                     <summary>Parent</summary>
                     <ul>
                         <li>
@@ -18,7 +15,7 @@ export default function SideMenu() {
                             <a>Submenu 2</a>
                         </li>
                         <li>
-                            <details >
+                            <details>
                                 <summary>Parent</summary>
                                 <ul>
                                     <li>
@@ -33,7 +30,6 @@ export default function SideMenu() {
                     </ul>
                 </details>
             </li>
-
         </ul>
     );
 }

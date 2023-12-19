@@ -1,14 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Chip } from "@nextui-org/react";
 import ThemeToggle from "@/Components/ThemeToggle";
 import { LaravelLogo, ReactLogo, TailWind } from "@/Components/Icons";
-import { Chip } from "@nextui-org/react";
+import ThemeSwitch from "@/Components/ThemeSwitch";
 
 export default function Footer() {
     return (
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
             <footer className="footer p-10 bg-background text-foreground ">
                 <ThemeToggle />
+                <ThemeSwitch />
                 <nav>
                     <header className="footer-title">Services</header>
                     <a className="link link-hover">Branding</a>

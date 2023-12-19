@@ -1,14 +1,5 @@
 import React from "react";
-import {
-    Table,
-    TableHeader,
-    TableColumn,
-    TableBody,
-    TableRow,
-    TableCell,
-    getKeyValue,
-} from "@nextui-org/react";
-
+import { getKeyValue, Table, TableBody, TableCell, TableColumn, TableHeader, TableRow } from "@nextui-org/react";
 const rows = [
     {
         key: "1",

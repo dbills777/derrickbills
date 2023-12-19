@@ -1,15 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { Select, SelectItem, Button } from "@nextui-org/react";
+import React, { useEffect, useState } from "react";
+import { Select, SelectItem } from "@nextui-org/react";
 
 export default function ThemeToggle() {
     const targetElement = document.documentElement;
-    const { dataset, classList, className } = document.documentElement;
 
     const [theme, setTheme] = useState(localStorage.getItem("theme"));
 
-    const defaultTheme = localStorage.getItem("theme");
-
-    const [isOpen, setIsOpen] = useState(false); 
+    const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
         if (theme) {
@@ -36,18 +33,13 @@ export default function ThemeToggle() {
         setTheme(theme);
     };
 
-    const themes = [
-        "light",
-        "dark",
-        "zerodark",
-    ];
+    const themes = ["light", "dark", "zerodark"];
 
     return (
         <div className="w-32">
             <Select
                 classNames={{
                     label: ["text-foreground", "font-bold", "text-sm"],
-                   
                 }}
                 variant="underlined"
                 key={theme}
@@ -58,7 +50,7 @@ export default function ThemeToggle() {
                 className="w-full"
                 onChange={(e) => {
                     handleClick(e.target.value);
-                    setIsOpen(false); 
+                    setIsOpen(false);
                 }}
             >
                 {themes.map((theme) => (

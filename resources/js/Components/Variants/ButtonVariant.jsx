@@ -1,5 +1,4 @@
-// MyButton.tsx
-import { extendVariants, Button } from "@nextui-org/react";
+import { Button, extendVariants } from "@nextui-org/react";
 
 export const ButtonVariant = extendVariants(Button, {
     variants: {

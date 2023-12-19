@@ -1,36 +1,8 @@
 import { useState } from "react";
 import { Link, usePage } from "@inertiajs/react";
-
-import {
-    Navbar,
-    NavbarBrand,
-    NavbarContent,
-    NavbarItem,
-    NavbarMenu,
-    NavbarMenuItem,
-    DropdownItem,
-    DropdownTrigger,
-    NavbarMenuToggle,
-    Dropdown,
-    DropdownMenu,
-    Button,
-    Avatar,
-} from "@nextui-org/react";
-
-import {
-    ChevronDown,
-    Lock,
-    Activity,
-    Flash,
-    Server,
-    TagUser,
-    AvengersLogo,
-    Pirates,
-    Scale,
-    LogIn,
-    LogOut,
-} from "./Icons.jsx";
-
+import { Avatar, Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
+import { Activity, AvengersLogo, ChevronDown, Flash, Lock, LogIn, LogOut, Pirates, Scale, Server, TagUser } from "./Icons.jsx";
+import ThemeSwitch from "./ThemeSwitch.jsx";
 export default function App() {
     const currentPage = usePage();
 
@@ -86,13 +58,14 @@ export default function App() {
                 />
             </NavbarContent>
             <NavbarBrand className="max-w-['30px']">
-                <Link href="/">
+                {/* <Link href="/">
                     <AvengersLogo
                         className="text-primary"
                         fill="currentColor"
                         size={64}
                     />
-                </Link>
+                </Link> */}
+                <ThemeSwitch />
             </NavbarBrand>
             <NavbarContent className="hidden sm:flex gap-16" justify="center">
                 <Dropdown>

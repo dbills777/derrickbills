@@ -1,6 +1,3 @@
-import React from "react";
-import { ReactLogo, VsCode } from "./Icons.jsx";
-import ApplicationLogo from "./ApplicationLogo";
 import { motion } from "framer-motion";
 const WelcomeHero = () => {
     const imgURL = "http://localhost:8000/images/Circle.jpg";
@@ -81,7 +78,6 @@ const WelcomeHero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 10 }}
-                
             >
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content">
