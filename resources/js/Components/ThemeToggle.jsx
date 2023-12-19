@@ -8,13 +8,17 @@ export default function ThemeToggle() {
     const [theme, setTheme] = useState(localStorage.getItem("theme"));
 
     const defaultTheme = localStorage.getItem("theme");
-    // console.log("****dataset", dataset, classList, className, defaultTheme);
 
-    const [isOpen, setIsOpen] = useState(false); // Use useState instead of React.useState
+    const [isOpen, setIsOpen] = useState(false); 
 
     useEffect(() => {
         if (theme) {
-            targetElement.classList.add(theme);
+            targetElement.classList = "";
+            targetElement.classList.add(
+                theme,
+                "bg-background",
+                "text-foreground"
+            );
             targetElement.dataset.theme = theme;
             console.log("data-theme: ", targetElement.dataset.theme);
             localStorage.setItem("theme", theme);
@@ -35,36 +39,7 @@ export default function ThemeToggle() {
     const themes = [
         "light",
         "dark",
-        // "cupcake",
-        // "bumblebee",
-        // "emerald",
-        // "corporate",
-        // "synthwave",
-        // "retro",
-        // "cyberpunk",
-        // "valentine",
-        // "halloween",
-        // "garden",
-        // "forest",
-        "aqua",
-        // "lofi",
-        // "pastel",
-        // "fantasy",
-        // "wireframe",
-        // "black",
-        // "luxury",
-        "dracula",
-        // "cmyk",
-        // "autumn",
-        // "business",
-        // "acid",
-        // "lemonade",
-        // "night",
-        // "coffee",
-        // "winter",
-        // "dim",
-        // "nord",
-        // "sunset",
+        "zerodark",
     ];
 
     return (
@@ -72,19 +47,18 @@ export default function ThemeToggle() {
             <Select
                 classNames={{
                     label: ["text-foreground", "font-bold", "text-sm"],
-                    placeholder: ["text-foreground", "font-bold", "text-sm"],
+                   
                 }}
                 variant="underlined"
                 key={theme}
                 isOpen={isOpen}
                 label="Theme"
-                placeholder={theme}
                 value={theme}
                 onOpenChange={(open) => setIsOpen(open)}
                 className="w-full"
                 onChange={(e) => {
                     handleClick(e.target.value);
-                    setIsOpen(false); // Close the dropdown after selecting a theme
+                    setIsOpen(false); 
                 }}
             >
                 {themes.map((theme) => (
