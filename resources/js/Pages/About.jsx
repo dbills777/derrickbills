@@ -13,12 +13,13 @@ import {
 } from "@nextui-org/react";
 import { ReactLogo, VsCode } from "@/Components/Icons";
 import ApplicationLogo from "@/Components/ApplicationLogo";
+import { ButtonVariant } from "@/Components/Variants/ButtonVariant";
 export default function About({ auth }) {
     return (
         <Layout>
             <Head title="About" />
-            <div className="flex flex-col items-center justify-center">
-                <h1 className="text-3xl font-bold text-center">About</h1>
+            <div className="flex flex-col items-center justify-center ">
+                <h1 className="text-4xl text-center">About</h1>
                 <p className="text-center">
                     About section stuff goes here. Lorem ipsum dolor sit amet
                 </p>
@@ -32,6 +33,7 @@ export default function About({ auth }) {
                 <Button color="success">Success</Button>
                 <Button color="warning">Warning</Button>
                 <Button color="danger">Danger</Button>
+                <ButtonVariant color="ufo">UFO</ButtonVariant>
             </div>
             <div className="py-20 flex w-50 first:rounded-xl justify-around">
                 <VsCode />
@@ -55,7 +57,7 @@ export default function About({ auth }) {
             </div>
             <div className="flex flex-col mx-auto w-full">
                 <Card className="max-w-[400px]">
-                    <CardHeader className="flex gap-3">
+                    <CardHeader className="flex gap-3 ">
                         <Image
                             alt="nextui logo"
                             height={40}

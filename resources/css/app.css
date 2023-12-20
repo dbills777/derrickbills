@@ -10,17 +10,14 @@
     }
 
     .dark {
-        --background: 240 2% 12%; 
+        --background: 240 2% 12%;
         --foreground: 210 4% 18%;
         --neon-green: 137 100% 45%;
-
-        
     }
     .zerodark {
-         --background: 240 2% 12%;
+        --background: 240 2% 12%;
         --foreground: 210 4% 18%;
         --neon-green: 137 100% 45%;
-
     }
 }
 

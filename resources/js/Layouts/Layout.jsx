@@ -1,6 +1,5 @@
-import NavBar from "@/Components/NavBar";
 import Footer from "@/Layouts/Footer";
-import WelcomeHero from "@/Components/WelcomeHero";
+import NavBar from "@/Components/NavBar";
 
 export default function Layout({ auth, children, header, footer, user }) {
     return (

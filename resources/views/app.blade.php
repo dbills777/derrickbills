@@ -8,8 +8,8 @@
 
         <!-- Fonts -->
        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900&display=swap" rel="stylesheet"> 
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin> -->
+        <!-- <link href="href="{{ asset('fonts/MonaspaceRadon-Regular.woff') }} rel="stylesheet">  -->
        
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="{{ asset('db.ico') }}">
@@ -20,7 +20,7 @@
         @vite(['resources/js/app.jsx', "resources/js/Pages/{$page['component']}.jsx"])
         @inertiaHead
     </head>
-    <body class="font-sans antialiased ">
+    <body class="antialiased font-mono ">
         @inertia
     </body>
 </html>

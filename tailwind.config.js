@@ -1,5 +1,5 @@
 // import forms from "@tailwindcss/forms";
-// import typography from "@tailwindcss/typography";
+import typography from "@tailwindcss/typography";
 
 import daisyui from "daisyui";
 const { nextui } = require("@nextui-org/react");
@@ -48,247 +48,26 @@ export default {
                 },
             },
             fontFamily: {
-                sans: [
-                    "Inter",
-                    "ui-sans-serif",
-                    "system-ui",
-                    "-apple-system",
-                    "BlinkMacSystemFont",
-                    "Segoe UI",
-                    "Roboto",
-                    "Helvetica Neue",
-                    "Arial",
-                    "Noto Sans",
-                    "sans-serif",
-                    "Apple Color Emoji",
-                    "Segoe UI Emoji",
-                    "Segoe UI Symbol",
-                    "Noto Color Emoji",
-                ],
-                serif: [
-                    "ui-serif",
-                    "Georgia",
-                    "Cambria",
-                    "Times New Roman",
-                    "Times",
-                    "serif",
-                ],
-                mono: [
-                    "ui-monospace",
-                    "SFMono-Regular",
-                    "Menlo",
-                    "Monaco",
-                    "Consolas",
-                    "Liberation Mono",
-                    "Courier New",
-                    "monospace",
-                ],
+                sans: ["'Monaspace Krypton', monospace"],
+                neoGrotesque: ["'Monaspace Neon', monospace"],
+                HumanistSans: ["'Monaspace Argon', monospace"],
+                SlabSerrif: ["'Monaspace Xenon', monospace"],
+                Handwriting: ["'Monaspace radon', monospace"],
+
+                // options are Neon, Argon, Radon, Krypton, Xenon
             },
             typography: (theme) => ({
                 fontFamily: {
-                    sans: [
-                        "Inter",
-                        "ui-sans-serif",
-                        "system-ui",
-                        "-apple-system",
-                        "BlinkMacSystemFont",
-                        "Segoe UI",
-                        "Roboto",
-                        "Helvetica Neue",
-                        "Arial",
-                        "Noto Sans",
-                        "sans-serif",
-                        "Apple Color Emoji",
-                        "Segoe UI Emoji",
-                        "Segoe UI Symbol",
-                        "Noto Color Emoji",
-                    ],
-                    serif: [
-                        "ui-serif",
-                        "Georgia",
-                        "Cambria",
-                        "Times New Roman",
-                        "Times",
-                        "serif",
-                    ],
-                    mono: [
-                        "ui-monospace",
-                        "SFMono-Regular",
-                        "Menlo",
-                        "Monaco",
-                        "Consolas",
-                        "Liberation Mono",
-                        "Courier New",
-                        "monospace",
-                    ],
-                },
-
-                DEFAULT: {
-                    css: {
-                        color: theme("colors.gray.700"),
-                        a: {
-                            color: theme("colors.primary.500"),
-                            "&:hover": {
-                                color: theme("colors.primary.600"),
-                            },
-                        },
-                    },
-                },
-                dark: {
-                    css: {
-                        color: theme("colors.gray.300"),
-                        a: {
-                            color: theme("colors.primary.500"),
-                            "&:hover": {
-                                color: theme("colors.primary.600"),
-                            },
-                        },
-                        strong: {
-                            color: theme("colors.gray.100"),
-                        },
-                        h1: {
-                            color: theme("colors.gray.100"),
-                        },
-                        h2: {
-                            color: theme("colors.gray.100"),
-                        },
-                        h3: {
-                            color: theme("colors.gray.100"),
-                        },
-                        h4: {
-                            color: theme("colors.gray.100"),
-                        },
-                        h5: {
-                            color: theme("colors.gray.100"),
-                        },
-                        h6: {
-                            color: theme("colors.gray.100"),
-                        },
-                        code: {
-                            color: theme("colors.gray.100"),
-                        },
-                        figcaption: {
-                            color: theme("colors.gray.500"),
-                        },
-                        blockquote: {
-                            color: theme("colors.gray.100"),
-                        },
-                        thead: {
-                            color: theme("colors.gray.100"),
-                        },
-                        tbody: {
-                            color: theme("colors.gray.100"),
-                        },
-                        pre: {
-                            color: theme("colors.gray.100"),
-                        },
-                        kbd: {
-                            color: theme("colors.gray.100"),
-                        },
-                        samp: {
-                            color: theme("colors.gray.100"),
-                        },
-                        code: {
-                            color: theme("colors.gray.100"),
-                        },
-                        "a code": {
-                            color: theme("colors.gray.100"),
-                        },
-                        hr: {
-                            borderColor: theme("colors.gray.800"),
-                        },
-                        "ol > li::before": {
-                            color: theme("colors.gray.500"),
-                        },
-                        "ul > li::before": {
-                            backgroundColor: theme("colors.gray.500"),
-                        },
-                        strong: {
-                            color: theme("colors.gray.100"),
-                        },
-                        thead: {
-                            borderBottomColor: theme("colors.gray.700"),
-                        },
-                        "tbody tr": {
-                            borderBottomColor: theme("colors.gray.800"),
-                        },
-                    },
+                    mono: ["'Monaspace Neon', monospace"],
+                    humanistsans: ["'Monaspace Argon', monospace"],
+                    mechanicalsans: ["'Monaspace Krypton', monospace"],
+                    slabserrif: ["'Mechanical Xenon', monospace"],
+                    handwriting: ["'Mechanical Radon', monospace"],
                 },
             }),
         },
     },
-    variants: {
-        extend: {
-            typography: ["dark"],
-            backgroundColor: ["active"],
-            textColor: ["active"],
-            borderColor: ["active"],
-            ringColor: ["active"],
-            ringWidth: ["active"],
-            ringOffsetColor: ["active"],
-            ringOffsetWidth: ["active"],
-            ringOpacity: ["active"],
-            ringOffsetOpacity: ["active"],
-            ringOpacity: ["active"],
-            ringOffsetOpacity: ["active"],
-            ringOffsetWidth: ["active"],
-            ringWidth: ["active"],
-            ringColor: ["active"],
-            ringOffsetColor: ["active"],
-            ringOffsetWidth: ["active"],
-            ringOpacity: ["active"],
-            ringOffsetOpacity: ["active"],
-            ringOpacity: ["active"],
-            ringOffsetOpacity: ["active"],
-            ringOffsetWidth: ["active"],
-            ringWidth: ["active"],
-            ringColor: ["active"],
-            ringOffsetColor: ["active"],
-            ringOffsetWidth: ["active"],
-            ringOpacity: ["active"],
-            ringOffsetOpacity: ["active"],
-            ringOpacity: ["active"],
-            ringOffsetOpacity: ["active"],
-            ringOffsetWidth: ["active"],
-            ringWidth: ["active"],
-            ringColor: ["active"],
-            ringOffsetColor: ["active"],
-            ringOffsetWidth: ["active"],
-            ringOpacity: ["active"],
-            ringOffsetOpacity: ["active"],
-            ringOpacity: ["active"],
-            ringOffsetOpacity: ["active"],
-            ringOffsetWidth: ["active"],
-            ringWidth: ["active"],
-            ringColor: ["active"],
-            ringOffsetColor: ["active"],
-            ringOffsetWidth: ["active"],
-            ringOpacity: ["active"],
-            ringOffsetOpacity: ["active"],
-            ringOpacity: ["active"],
-            ringOffsetOpacity: ["active"],
-            ringOffsetWidth: ["active"],
-            ringWidth: ["active"],
-            ringColor: ["active"],
-            ringOffsetColor: ["active"],
-            ringOffsetWidth: ["active"],
-            ringOpacity: ["active"],
-            ringOffsetOpacity: ["active"],
-            ringOpacity: ["active"],
-            ringOffsetOpacity: ["active"],
-            ringOffsetWidth: ["active"],
-            ringWidth: ["active"],
-            ringColor: ["active"],
-            ringOffsetColor: ["active"],
-            ringOffsetWidth: ["active"],
-            ringOpacity: ["active"],
-            ringOffsetOpacity: ["active"],
-            ringOpacity: ["active"],
-            ringOffsetOpacity: ["active"],
-            ringOffsetWidth: ["active"],
-            ringWidth: ["active"],
-        },
-    },
+    variants: {},
     content: [
         "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
         "./storage/framework/views/*.php",
@@ -299,6 +78,7 @@ export default {
 
     plugins: [
         require("tailwindcss-animate"),
+        require("@tailwindcss/typography"),
         require("daisyui"),
         nextui({
             prefix: "", // prefix for generated classes
@@ -308,6 +88,8 @@ export default {
             colors: {
                 // background: "hsl(var(--background))",
             },
+
+           
             themes: {
                 light: {
                     layout: {},
@@ -390,18 +172,6 @@ export default {
         prefix: "", // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
         logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
         // themeRoot: ":root", // The element that receives theme color CSS variables
-    },
-    nextui: {
-        prefix: "nextui-",
-        styled: true,
-        themes: ["light", "dark", "zero-dark"],
-        darkTheme: "dark",
-        defaultTheme: "light",
-        base: true,
-        utils: true,
-        prefix: "",
-        logs: true,
-        themeRoot: ":root",
     },
 };
 

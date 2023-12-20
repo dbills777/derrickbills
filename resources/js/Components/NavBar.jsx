@@ -1,7 +1,33 @@
 import { useState } from "react";
 import { Link, usePage } from "@inertiajs/react";
-import { Avatar, Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
-import { Activity, AvengersLogo, ChevronDown, Flash, Lock, LogIn, LogOut, Pirates, Scale, Server, TagUser } from "./Icons.jsx";
+import {
+    Avatar,
+    Button,
+    Dropdown,
+    DropdownItem,
+    DropdownMenu,
+    DropdownTrigger,
+    Navbar,
+    NavbarBrand,
+    NavbarContent,
+    NavbarItem,
+    NavbarMenu,
+    NavbarMenuItem,
+    NavbarMenuToggle,
+} from "@nextui-org/react";
+import {
+    Activity,
+    AvengersLogo,
+    ChevronDown,
+    Flash,
+    Lock,
+    LogIn,
+    LogOut,
+    Pirates,
+    Scale,
+    Server,
+    TagUser,
+} from "./Icons.jsx";
 import ThemeSwitch from "./ThemeSwitch.jsx";
 export default function App() {
     const currentPage = usePage();
@@ -48,7 +74,7 @@ export default function App() {
                 item: [
                     "data-[hover=true]:hover:text-primary-500",
                     "data-[hover=true]:hover:text-primary-50",
-                    "data-[active=true]:text-primary-500",
+                    "data-[active=true]:'text-primary-500'",
                 ],
             }}
         >
@@ -65,7 +91,7 @@ export default function App() {
                         size={64}
                     />
                 </Link> */}
-                <ThemeSwitch />
+                <ThemeSwitch className="leading-8" />
             </NavbarBrand>
             <NavbarContent className="hidden sm:flex gap-16" justify="center">
                 <Dropdown>
@@ -130,7 +156,6 @@ export default function App() {
                     {...(currentPage.component === "Welcome" && {
                         isActive: true,
                     })}
-                    className="active:bg-primary-500 active:text-primary-50"
                 >
                     <Link href="/" aria-current="Welcome">
                         Welcome
@@ -161,17 +186,27 @@ export default function App() {
                             isBordered
                             as="button"
                             className="transition-transform"
-                            color="success"
-                            name="Jason Hughes"
+                            name="DB"
                             type="button"
                             size="sm"
-                            src="https://i.pravatar.cc/150?u=a042581fdsfa9026704d"
+                            // src="https://avatars.githubusercontent.com/u/1399661?v=4"
                         />
                     </DropdownTrigger>
                     <DropdownMenu aria-label="Profile Actions" variant="flat">
                         <DropdownItem key="profile" className="h-14 gap-2">
                             <p className="font-semibold">Signed in as</p>
                             <p className="font-semibold">zoey@example.com</p>
+                        </DropdownItem>
+                        <DropdownItem className="w-1/3" key="login">
+                            <Button
+                                className="w-full"
+                                type="submit"
+                                isIconOnly
+                                variant="light"
+                                as={Link}
+                                href={route("login")}
+                                startContent={<LogIn />}
+                            ></Button>
                         </DropdownItem>
                         <DropdownItem key="settings">Portal</DropdownItem>
                         <DropdownItem key="team_settings">
@@ -185,32 +220,18 @@ export default function App() {
                         <DropdownItem key="help_and_feedback">
                             Help & Feedback
                         </DropdownItem>
-                        <DropdownItem key="logout" color="danger">
+
+                        <DropdownItem className="w-1/3" key="logout">
                             <Button
-                                text="xs"
                                 className="w-full"
                                 type="submit"
-                                variant="bordered"
+                                variant="light"
+                                isIconOnly
                                 as={Link}
                                 href={route("logout")}
                                 method="post"
                                 startContent={<LogOut />}
-                            >
-                                Log out
-                            </Button>
-                        </DropdownItem>
-                        <DropdownItem key="login" color="success">
-                            <Button
-                                className="w-full"
-                                text="xs"
-                                type="submit"
-                                variant="bordered"
-                                as={Link}
-                                href={route("login")}
-                                startContent={<LogIn />}
-                            >
-                                Sign In{" "}
-                            </Button>
+                            ></Button>
                         </DropdownItem>
                     </DropdownMenu>
                 </Dropdown>
