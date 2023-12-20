@@ -15,7 +15,7 @@ import { usePage, Link, useForm } from "@inertiajs/react";
 
 export default function LoginAndRegister(status, canResetPassword) {
     const [selected, setSelected] = useState("login");
-    
+
     const pathName = usePage();
 
     const { data, setData, post, processing, errors, reset } = useForm({
@@ -41,12 +41,12 @@ export default function LoginAndRegister(status, canResetPassword) {
     const handleRegistrationClick = (e) => {
         // console.log(data);
         e.preventDefault();
-        post(route("register"));
+        post(route("register", registrationData));
     };
 
     const handleLoginClick = (e) => {
         e.preventDefault();
-        post(route("login"));
+        post(route("login", data));
     };
 
     return (
@@ -84,10 +84,7 @@ export default function LoginAndRegister(status, canResetPassword) {
                                     placeholder="Enter your email"
                                     type="email"
                                     onChange={(e) =>
-                                        setRegistrationData(
-                                            "email",
-                                            e.target.value
-                                        )
+                                        setData("email", e.target.value)
                                     }
                                 />
                                 <Input
@@ -98,10 +95,7 @@ export default function LoginAndRegister(status, canResetPassword) {
                                     placeholder="Enter your password"
                                     type="password"
                                     onChange={(e) =>
-                                        setRegistrationData(
-                                            "password",
-                                            e.target.value
-                                        )
+                                        setData("password", e.target.value)
                                     }
                                 />
                                 <div className="flex  justify-between">
@@ -113,7 +107,7 @@ export default function LoginAndRegister(status, canResetPassword) {
                                                 name="remember"
                                                 checked={data.remember}
                                                 onChange={(e) =>
-                                                    setRegistrationData(
+                                                    setData(
                                                         "remember",
                                                         e.target.checked
                                                     )
