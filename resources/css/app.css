@@ -1,26 +1,38 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @layer base {
     :root {
         --background: 0 0% 100%;
-        --foreground: 240 10% 3.9%;
-         @apply bg-background text-foreground;
+        --foreground: 202 24% 9%;
+        --neon-green: 137 100% 45%;
     }
 
     .dark {
-        --background: 240 4% 13%;
-        --foreground: 240 4% 13%;
-        /* --foreground: 210 4% 18%; */
-         @apply bg-background text-foreground;
-        
+        --background: 240 2% 12%;
+        --foreground: 210 4% 18%;
+        --neon-green: 137 100% 45%;
+    }
+    .zerodark {
+        --background: 240 2% 12%;
+        --foreground: 210 4% 18%;
+        --neon-green: 137 100% 45%;
     }
 }
 
 @layer base {
-    
     body {
         @apply bg-background text-foreground;
     }
+}
+
+.menu-list {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.8s ease;
+}
+
+.menu-list.open {
+    height: auto;
 }

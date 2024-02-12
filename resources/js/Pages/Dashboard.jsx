@@ -1,9 +1,9 @@
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
-import { Head } from '@inertiajs/react';
+import { Head } from "@inertiajs/react";
 import SalesDisplay from "./Profile/Partials/SalesDisplay";
+import Layout from "@/Layouts/Layout";
 export default function Dashboard({ auth }) {
     return (
-        <AuthenticatedLayout
+        <Layout
             user={auth.user}
             header={
                 <h2 className="font-semibold text-xl -800 leading-tight">
@@ -20,6 +20,6 @@ export default function Dashboard({ auth }) {
                     </div>
                 </div>
             </div>
-        </AuthenticatedLayout>
+        </Layout>
     );
 }

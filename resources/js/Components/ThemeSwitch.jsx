@@ -1,38 +1,47 @@
-import { MoonIcon } from "./Icons/MoonIcon";
-import { SunIcon } from "./Icons/SunIcon";
-// import { useTheme } from "./theme-provider";
+import { useEffect, useState } from "react";
 import { Button } from "@nextui-org/react";
-import { useState, useEffect } from "react";
+import { DarkTheme, LightTheme } from "./Icons.jsx";
 
-const ThemeSwitch = (props) => {
+export default function ThemeSwitch(props) {
     const [isLightTheme, setIsLightTheme] = useState(true);
 
     useEffect(() => {
-        // Get the theme preference from local storage
         const savedTheme = localStorage.getItem("theme");
         if (savedTheme) {
             setIsLightTheme(savedTheme === "light");
-            document.documentElement.setAttribute("data-theme", savedTheme); // Set theme on the root element
+            document.documentElement.setAttribute("data-theme", savedTheme);
         }
     }, []);
 
     const toggleTheme = () => {
         setIsLightTheme((prevIsLightTheme) => !prevIsLightTheme);
-        const newTheme = isLightTheme ? "dark" : "light";
-        document.documentElement.setAttribute("data-theme", newTheme); // Set theme on the root element
+        document.documentElement.setAttribute(
+            "data-theme",
+            isLightTheme ? "dark" : "light"
+        );
+        document.documentElement.classList.add("transition");
+        window.setTimeout(() => {
+            document.documentElement.classList.remove("transition");
+        }, 300);
 
-        // Save the theme preference to local storage
-        localStorage.setItem("theme", newTheme);
+        localStorage.setItem("theme", isLightTheme ? "dark" : "light");
     };
 
     return (
-        <Button isIconOnly variant="outline" onClick={toggleTheme}>
-            {isLightTheme ? <SunIcon /> : <MoonIcon />}
-        </Button>
+        <>
+            <Button
+                color="black"
+                onClick={toggleTheme}
+                className="flex swap swap-rotate items-center justify-center"
+                whileHover="hover"
+                whileTap="tap"
+            >
+                {isLightTheme ? (
+                    <LightTheme className="swap-off" />
+                ) : (
+                    <DarkTheme className="swap-on" />
+                )}
+            </Button>
+        </>
     );
-};
-
-
-export default function App() {
-    return <ThemeSwitch />;
 }
