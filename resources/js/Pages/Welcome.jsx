@@ -30,7 +30,7 @@ export default function Welcome({ auth }) {
                 >
                     <section className="flex flex-col space-y-8 ms-6 ">
                         <div>
-                            <h1 className="text-4xl font-bold ">
+                            <h1 className="text-5xl font md:text-7xl">
                                 Derrick Bills
                             </h1>
                             <h2 className="text-3xl font-medium">
@@ -185,7 +185,7 @@ export default function Welcome({ auth }) {
                     </div>
                 </div>
                 <div className="flex flex-col md:flex-row-reverse max-w-7xl mx-auto items-center justify-between ">
-                    <section className="">
+                    <section>
                         <Card className="min-w-[480px] ">
                             <CardHeader className="flex gap-3">
                                 <div className="flex flex-col mx-auto">
@@ -208,10 +208,8 @@ export default function Welcome({ auth }) {
                             </CardBody>
                         </Card>
                     </section>
-                    <section className="w-full space-y-6 md:w-1/2">
-                        <h1 className="text-5xl font-bold">
-                            sction heading h1 text
-                        </h1>
+                    <section className="w-full space-y-6 py-[48px] md:w-1/2">
+                        <h2 className="text-5xl">Why use this architecture?</h2>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Odit consequatur consequuntur aspernatur
