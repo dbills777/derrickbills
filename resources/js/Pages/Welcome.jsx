@@ -99,7 +99,7 @@ export default function Welcome({ auth }) {
                         <Image
                             className="inline-block max-h-64"
                             // src="http://localhost:8000/images/monitor.gif"
-                            src="{{ asset('/public/images/monitor.gif') }}"
+                            src="{{ asset('/images/monitor.gif') }}"
                             alt=""
                         />
                     </section>
