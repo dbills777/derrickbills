@@ -31,7 +31,7 @@ export default function ThemeSwitch(props) {
         <>
             <Button
                 isIcon
-                color="black"
+                color="primary"
                 onClick={toggleTheme}
                 className="flex swap swap-rotate items-center justify-center"
                 whileHover="hover"
