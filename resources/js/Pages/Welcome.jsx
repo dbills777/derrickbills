@@ -98,7 +98,8 @@ export default function Welcome({ auth }) {
                     <section className="opacity-70 mx-auto lg:me-6">
                         <Image
                             className="inline-block max-h-64"
-                            src="http://localhost:8000/images/monitor.gif"
+                            // src="http://localhost:8000/images/monitor.gif"
+                            src="{{ asset('/public/images/monitor.gif') }}"
                             alt=""
                         />
                     </section>
