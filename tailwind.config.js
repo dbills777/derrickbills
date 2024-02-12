@@ -48,11 +48,11 @@ export default {
                 },
             },
             fontFamily: {
-                sans: ["'Monaspace Krypton', monospace"],
-                neoGrotesque: ["'Monaspace Neon', monospace"],
-                HumanistSans: ["'Monaspace Argon', monospace"],
-                SlabSerrif: ["'Monaspace Xenon', monospace"],
-                Handwriting: ["'Monaspace radon', monospace"],
+                mono: ["'Monaspace Neon', monospace"],
+                humanistsans: ["'Monaspace Argon', monospace"],
+                mechanicalsans: ["'Monaspace Krypton', monospace"],
+                slabserrif: ["'Monaspace Xenon', monospace"],
+                handwriting: ["'Monaspace Radon', monospace"],
 
                 // options are Neon, Argon, Radon, Krypton, Xenon
             },
@@ -89,7 +89,6 @@ export default {
                 // background: "hsl(var(--background))",
             },
 
-           
             themes: {
                 light: {
                     layout: {},
