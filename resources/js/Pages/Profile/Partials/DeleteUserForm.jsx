@@ -1,5 +1,5 @@
-import { useRef, useState } from 'react';
-import {Button} from "@nextui-org/react";
+import { useRef, useState } from "react";
+import { Button } from "@nextui-org/react";
 import { useForm } from "@inertiajs/react";
 
 export default function DeleteUserForm({ className = "" }) {

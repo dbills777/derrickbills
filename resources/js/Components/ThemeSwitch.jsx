@@ -17,7 +17,7 @@ export default function ThemeSwitch(props) {
         setIsLightTheme((prevIsLightTheme) => !prevIsLightTheme);
         document.documentElement.setAttribute(
             "data-theme",
-            isLightTheme ? "dark" : "light"
+            isLightTheme ? "dark" : "light",
         );
         document.documentElement.classList.add("transition");
         window.setTimeout(() => {

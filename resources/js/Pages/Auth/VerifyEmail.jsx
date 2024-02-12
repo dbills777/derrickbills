@@ -1,6 +1,6 @@
-import GuestLayout from '@/Layouts/GuestLayout';
+import GuestLayout from "@/Layouts/GuestLayout";
 import { Button } from "@nextui-org/react";
-import { Head, Link, useForm } from '@inertiajs/react';
+import { Head, Link, useForm } from "@inertiajs/react";
 
 export default function VerifyEmail({ status }) {
     const { post, processing } = useForm({});
@@ -8,7 +8,7 @@ export default function VerifyEmail({ status }) {
     const submit = (e) => {
         e.preventDefault();
 
-        post(route('verification.send'));
+        post(route("verification.send"));
     };
 
     return (

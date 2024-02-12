@@ -1,6 +1,16 @@
 import { useEffect, useState } from "react";
 import { Link, useForm, usePage } from "@inertiajs/react";
-import { Button, Card, CardBody, CardHeader, Checkbox, Image, Input, Tab, Tabs } from "@nextui-org/react";
+import {
+    Button,
+    Card,
+    CardBody,
+    CardHeader,
+    Checkbox,
+    Image,
+    Input,
+    Tab,
+    Tabs,
+} from "@nextui-org/react";
 
 export default function LoginAndRegister(status, canResetPassword) {
     const [selected, setSelected] = useState("login");
@@ -98,7 +108,7 @@ export default function LoginAndRegister(status, canResetPassword) {
                                                 onChange={(e) =>
                                                     setData(
                                                         "remember",
-                                                        e.target.checked
+                                                        e.target.checked,
                                                     )
                                                 }
                                             />

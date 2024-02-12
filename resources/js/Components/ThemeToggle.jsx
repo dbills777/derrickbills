@@ -12,7 +12,7 @@ export default function ThemeToggle() {
             targetElement.classList.add(
                 theme,
                 "bg-background",
-                "text-foreground"
+                "text-foreground",
             );
             targetElement.dataset.theme = theme;
             console.log("data-theme: ", targetElement.dataset.theme);

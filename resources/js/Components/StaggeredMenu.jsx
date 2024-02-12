@@ -23,7 +23,7 @@ function useMenuAnimation(isOpen) {
                 // type: "tween",
                 bounce: 4,
                 duration: 0.5,
-            }
+            },
         );
         animate(
             "details",
@@ -40,7 +40,7 @@ function useMenuAnimation(isOpen) {
                 // type: "tween",
                 bounce: 5,
                 duration: 2,
-            }
+            },
         );
 
         animate(
@@ -51,7 +51,7 @@ function useMenuAnimation(isOpen) {
             {
                 duration: 0.2,
                 delay: isOpen ? staggerMenuItems : 0,
-            }
+            },
         );
     }, [isOpen]);
 
