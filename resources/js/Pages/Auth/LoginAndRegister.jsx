@@ -1,17 +1,6 @@
-import { useState, useEffect } from "react";
-import {
-    Checkbox,
-    Tabs,
-    Tab,
-    Input,
-    CardHeader,
-    Button,
-    Card,
-    CardBody,
-    Image,
-} from "@nextui-org/react";
-
-import { usePage, Link, useForm } from "@inertiajs/react";
+import { useEffect, useState } from "react";
+import { Link, useForm, usePage } from "@inertiajs/react";
+import { Button, Card, CardBody, CardHeader, Checkbox, Image, Input, Tab, Tabs } from "@nextui-org/react";
 
 export default function LoginAndRegister(status, canResetPassword) {
     const [selected, setSelected] = useState("login");
@@ -118,6 +107,7 @@ export default function LoginAndRegister(status, canResetPassword) {
                                             </span>
                                         </label>
                                     </div>
+                                    {/* // TODO: Add forgot password link */}
                                     {/* <div className="block mt-4">
                                         <label className="flex items-center">
                                             <Checkbox

@@ -21,11 +21,11 @@ export default function Edit({ auth, mustVerifyEmail, status }) {
             </div>
 
             <div className="max-w-7xl mx-auto p-4 my-6  sm:p-6 shadow sm:rounded-lg">
-                <UpdatePasswordForm />
+                {/* <UpdatePasswordForm /> */}
             </div>
 
             <div className="max-w-7xl mx-auto p-4 sm:p-6 shadow sm:rounded-lg">
-                <DeleteUserForm />
+                {/* <DeleteUserForm /> */}
             </div>
         </Layout>
     );
