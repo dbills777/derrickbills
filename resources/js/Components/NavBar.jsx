@@ -6,6 +6,7 @@ import {
     Dropdown,
     DropdownItem,
     DropdownMenu,
+    DropdownSection,
     DropdownTrigger,
     Navbar,
     NavbarBrand,
@@ -15,36 +16,33 @@ import {
     NavbarMenuItem,
     NavbarMenuToggle,
 } from "@nextui-org/react";
+import ThemeSwitch from "./ThemeSwitch.jsx";
 import {
     Activity,
-    AvengersLogo,
     ChevronDown,
+    EditDocumentIcon,
     Flash,
     Lock,
     LogIn,
     LogOut,
-    Pirates,
     Scale,
     Server,
     TagUser,
 } from "./Icons.jsx";
-import ThemeSwitch from "./ThemeSwitch.jsx";
 export default function App() {
     const currentPage = usePage();
+    const user = currentPage.props.auth.user;
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const menuItems = [
+        "Welcome",
+        "About",
         "Profile",
         "Dashboard",
-        "Activity",
-        "Analytics",
-        "System",
-        "Deployments",
-        "My Settings",
-        "Team Settings",
+        // "Team Settings",
         "Help & Feedback",
-        "Log Out",
+        // "Log Out",
     ];
 
     const icons = {
@@ -62,7 +60,20 @@ export default function App() {
         server: (
             <Server className="text-success" fill="currentColor" size={30} />
         ),
-        user: <TagUser className="text-danger" fill="currentColor" size={30} />,
+        user: (
+            <TagUser
+                className="text-orange-500"
+                fill="currentColor"
+                size={50}
+            />
+        ),
+        edit: (
+            <EditDocumentIcon
+                className="text-green-500"
+                fill="currentColor"
+                size={30}
+            />
+        ),
     };
 
     return (
@@ -83,17 +94,7 @@ export default function App() {
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                 />
             </NavbarContent>
-            <NavbarBrand className="max-w-['30px']">
-                {/* <Link href="/">
-                    <AvengersLogo
-                        className="text-primary"
-                        fill="currentColor"
-                        size={64}
-                    />
-                </Link> */}
-                <ThemeSwitch className="leading-8" />
-            </NavbarBrand>
-            <NavbarContent className="hidden sm:flex gap-16" justify="center">
+            <NavbarContent className="hidden sm:flex gap-8" justify="center">
                 <Dropdown>
                     <NavbarItem>
                         <DropdownTrigger>
@@ -103,6 +104,7 @@ export default function App() {
                                 endContent={icons.chevron}
                                 radius="sm"
                                 variant="light"
+                                font-size="xl"
                             >
                                 Features
                             </Button>
@@ -145,6 +147,7 @@ export default function App() {
                         </DropdownItem>
                         <DropdownItem
                             key="supreme_support"
+                            href={"/profile"}
                             description="Overcome any challenge with a supporting team ready to respond."
                             startContent={icons.user}
                         >
@@ -172,43 +175,89 @@ export default function App() {
                 </NavbarItem>
             </NavbarContent>
             <NavbarContent justify="end">
-                {/* <NavbarItem className="hidden lg:flex">
-                    <Link href="#">Login</Link>
-                </NavbarItem>
-                <NavbarItem>
-                    <Button as={Link} color="primary" href="#" variant="flat">
-                        Sign Up
-                    </Button>
-                </NavbarItem> */}
+                <ThemeSwitch className="leading-8" />
+                {/* <ThemeToggle className="leading-8" /> */}
+
                 <Dropdown placement="bottom-end">
                     <DropdownTrigger>
                         <Avatar
                             isBordered
                             as="button"
                             className="transition-transform"
-                            name="DB"
+                            // name="DB"
                             type="button"
                             size="sm"
                             // src="https://avatars.githubusercontent.com/u/1399661?v=4"
                         />
                     </DropdownTrigger>
-                    <DropdownMenu aria-label="Profile Actions" variant="flat">
-                        <DropdownItem key="profile" className="h-14 gap-2">
-                            <p className="font-semibold">Signed in as</p>
-                            <p className="font-semibold">zoey@example.com</p>
-                        </DropdownItem>
-                        <DropdownItem className="w-1/3" key="login">
-                            <Button
-                                className="w-full"
-                                type="submit"
-                                isIconOnly
-                                variant="light"
-                                as={Link}
-                                href={route("login")}
-                                startContent={<LogIn />}
-                            ></Button>
-                        </DropdownItem>
-                        <DropdownItem key="settings">Portal</DropdownItem>
+                    <DropdownMenu
+                        aria-label="User Display Actions"
+                        variant="flat"
+                    >
+                        <DropdownSection className="progress text-primary">
+                            dfasd
+                        </DropdownSection>
+                        <DropdownSection
+                            // title={`Hi ${user.name}, click here to update your information.`}
+                            showDivider
+                        >
+                            <DropdownItem
+                                key="supreme_support"
+                                description="Overcome any challenge with a supporting team ready to respond."
+                                startContent={icons.user}
+                            >
+                                {user && user.name && (
+                                    <>
+                                        <p className="font-semibold">Welcome</p>
+                                        <p className="font-semibold">
+                                            {user.name}
+                                        </p>
+                                        <p className="font-semibold">
+                                            {user.email}
+                                        </p>
+                                    </>
+                                )}
+                                {/* {`Hi ${user.name}, click here to view your profile`} */}
+                            </DropdownItem>
+                            {/* <DropdownItem
+                                as={Button}
+                                key="user-info"
+                                href="#"
+                                isPressible={true}
+                                className="h-14 gap-2"
+                            >
+                                {user &&
+                                    user.name &&
+                                    ((
+                                        <>
+                                            <p className="font-semibold">
+                                                Welcome
+                                            </p>
+                                            <p className="font-semibold">
+                                                {user.name}
+                                            </p>
+                                        </>
+                                    ) || (
+                                        <p className="font-semibold">
+                                            {user.email}
+                                        </p>
+                                    ))}
+                            </DropdownItem> */}
+                        </DropdownSection>
+                        <DropdownSection
+                            title="Need to update your profile?"
+                            showDivider
+                        >
+                            <DropdownItem
+                                key="supreme_support"
+                                href={"/profile"}
+                                description="Update Your Username and Email"
+                                startContent={icons.edit}
+                            >
+                                Update Profile
+                            </DropdownItem>
+                        </DropdownSection>
+
                         <DropdownItem key="team_settings">
                             Team Settings
                         </DropdownItem>
@@ -220,18 +269,29 @@ export default function App() {
                         <DropdownItem key="help_and_feedback">
                             Help & Feedback
                         </DropdownItem>
-
-                        <DropdownItem className="w-1/3" key="logout">
-                            <Button
-                                className="w-full"
-                                type="submit"
-                                variant="light"
-                                isIconOnly
-                                as={Link}
-                                href={route("logout")}
-                                method="post"
-                                startContent={<LogOut />}
-                            ></Button>
+                        <DropdownItem className="w-1/3" key="login">
+                            {(!user && (
+                                <Button
+                                    className="w-full"
+                                    type="submit"
+                                    // isIconOnly
+                                    variant="light"
+                                    as={Link}
+                                    href={"/login"}
+                                    startContent={<LogIn />}
+                                ></Button>
+                            )) || (
+                                <Button
+                                    className="w-full"
+                                    type="submit"
+                                    isIconOnly
+                                    variant="light"
+                                    as={Link}
+                                    href={"/logout"}
+                                    method="post"
+                                    startContent={<LogOut />}
+                                ></Button>
+                            )}
                         </DropdownItem>
                     </DropdownMenu>
                 </Dropdown>
@@ -249,7 +309,13 @@ export default function App() {
                                     ? "danger"
                                     : "foreground"
                             }
-                            href="#"
+                            href={
+                                index !== 0
+                                    ? `/${item
+                                          .toLowerCase()
+                                          .replaceAll(" ", "")}`
+                                    : "/"
+                            }
                             size="lg"
                         >
                             {item}
