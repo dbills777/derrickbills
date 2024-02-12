@@ -10,7 +10,7 @@
        <!-- Fonts -->
         <!-- <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin> -->
         <!-- <link href="href="{{ asset('fonts/MonaspaceRadon-Regular.woff') }} rel="stylesheet">  -->
-       
+
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="{{ asset('db.ico') }}">
 
