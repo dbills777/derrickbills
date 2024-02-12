@@ -7,8 +7,6 @@ const Intro = () => {
                 className="w-full hero min-h-screen "
                 style={{
                     backgroundImage: `url(${imgURL})`,
-                    // position: "relative",
-                    // margintop: "-100px",
                 }}
             >
                 <div className="hero-overlay bg-opacity-60" />
