@@ -3,9 +3,7 @@ import { Select, SelectItem } from "@nextui-org/react";
 
 export default function ThemeToggle() {
     const targetElement = document.documentElement;
-
     const [theme, setTheme] = useState(localStorage.getItem("theme"));
-
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
