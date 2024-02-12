@@ -15,6 +15,8 @@ import {
     Tooltip,
 } from "@nextui-org/react";
 export default function Welcome({ auth }) {
+    const heroBgUrl = "http://localhost:8000/images/section-bg-h-half.jpg";
+
     return (
         <>
             <Layout>
@@ -93,9 +95,18 @@ export default function Welcome({ auth }) {
                             </Tooltip>
                         </div>
                     </section>
-                    <section className="opacity-70 mx-auto lg:me-6"></section>
+                    <section className="opacity-70 mx-auto lg:me-6">
+                        <ReactLogo height={200} width={200} />
+                    </section>
                 </motion.div>
-                <div className="w-full hero lg:h-[17rem] my-4 ">
+                <div
+                    className="w-full hero lg:h-[17rem] my-4 "
+                    style={{
+                        backgroundImage: `url(${heroBgUrl})`,
+                        position: "relative",
+                        margintop: "",
+                    }}
+                >
                     <div className="flex flex-col w-full lg:flex-row opacity-80 bg-background text-foreground place-content-center">
                         <div className="grid flex-grow card place-items-center ">
                             <div className="grid flex-grow h-[16rem] w-3/4  card text-foreground  place-items-center">
