@@ -1,49 +1,15 @@
 import { useState } from "react";
 import { Link, usePage } from "@inertiajs/react";
-import {
-    Avatar,
-    Button,
-    Dropdown,
-    DropdownItem,
-    DropdownMenu,
-    DropdownSection,
-    DropdownTrigger,
-    Navbar,
-    NavbarBrand,
-    NavbarContent,
-    NavbarItem,
-    NavbarMenu,
-    NavbarMenuItem,
-    NavbarMenuToggle,
-} from "@nextui-org/react";
+import { Avatar, Button, Dropdown, DropdownItem, DropdownMenu, DropdownSection, DropdownTrigger, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
 import ThemeSwitch from "./ThemeSwitch.jsx";
-import {
-    Activity,
-    ChevronDown,
-    EditDocumentIcon,
-    Flash,
-    Lock,
-    LogIn,
-    LogOut,
-    Scale,
-    Server,
-    TagUser,
-} from "./Icons.jsx";
+import { Activity, ChevronDown, EditDocumentIcon, Flash, Lock, LogIn, LogOut, Scale, Server, TagUser } from "./Icons.jsx";
 export default function App() {
     const currentPage = usePage();
     const user = currentPage.props.auth.user;
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const menuItems = [
-        "Welcome",
-        "About",
-        "Profile",
-        "Dashboard",
-        // "Team Settings",
-        "Help & Feedback",
-        // "Log Out",
-    ];
+    const menuItems = ["Welcome", "About", "Profile", "Dashboard"];
 
     const icons = {
         chevron: <ChevronDown fill="currentColor" size={16} />,
@@ -176,31 +142,21 @@ export default function App() {
             </NavbarContent>
             <NavbarContent justify="end">
                 <ThemeSwitch className="leading-8" />
-                {/* <ThemeToggle className="leading-8" /> */}
-
                 <Dropdown placement="bottom-end">
                     <DropdownTrigger>
                         <Avatar
                             isBordered
                             as="button"
                             className="transition-transform"
-                            // name="DB"
                             type="button"
                             size="sm"
-                            // src="https://avatars.githubusercontent.com/u/1399661?v=4"
                         />
                     </DropdownTrigger>
                     <DropdownMenu
                         aria-label="User Display Actions"
                         variant="flat"
                     >
-                        <DropdownSection className="progress text-primary">
-                            dfasd
-                        </DropdownSection>
-                        <DropdownSection
-                            // title={`Hi ${user.name}, click here to update your information.`}
-                            showDivider
-                        >
+                        <DropdownSection showDivider>
                             <DropdownItem
                                 key="supreme_support"
                                 description="Overcome any challenge with a supporting team ready to respond."
@@ -208,41 +164,15 @@ export default function App() {
                             >
                                 {user && user.name && (
                                     <>
-                                        <p className="font-semibold">Welcome</p>
                                         <p className="font-semibold">
-                                            {user.name}
+                                            Welcome {user.name}
                                         </p>
                                         <p className="font-semibold">
                                             {user.email}
                                         </p>
                                     </>
                                 )}
-                                {/* {`Hi ${user.name}, click here to view your profile`} */}
                             </DropdownItem>
-                            {/* <DropdownItem
-                                as={Button}
-                                key="user-info"
-                                href="#"
-                                isPressible={true}
-                                className="h-14 gap-2"
-                            >
-                                {user &&
-                                    user.name &&
-                                    ((
-                                        <>
-                                            <p className="font-semibold">
-                                                Welcome
-                                            </p>
-                                            <p className="font-semibold">
-                                                {user.name}
-                                            </p>
-                                        </>
-                                    ) || (
-                                        <p className="font-semibold">
-                                            {user.email}
-                                        </p>
-                                    ))}
-                            </DropdownItem> */}
                         </DropdownSection>
                         <DropdownSection
                             title="Need to update your profile?"
@@ -258,23 +188,26 @@ export default function App() {
                             </DropdownItem>
                         </DropdownSection>
 
-                        <DropdownItem key="team_settings">
-                            Team Settings
+                        <DropdownItem
+                            key="autoscaling"
+                            description="ACME scales apps to meet user demand, automagically, based on load."
+                            startContent={icons.scale}
+                        >
+                            Autoscaling
                         </DropdownItem>
-                        <DropdownItem key="analytics">Analytics</DropdownItem>
-                        <DropdownItem key="system">System</DropdownItem>
-                        <DropdownItem key="configurations">
-                            Configurations
+                        <DropdownItem
+                            key="usage_metrics"
+                            description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
+                            startContent={icons.activity}
+                        >
+                            Usage Metrics
                         </DropdownItem>
-                        <DropdownItem key="help_and_feedback">
-                            Help & Feedback
-                        </DropdownItem>
-                        <DropdownItem className="w-1/3" key="login">
+                        <DropdownItem className="w-[64px]" key="login">
                             {(!user && (
                                 <Button
                                     className="w-full"
                                     type="submit"
-                                    // isIconOnly
+                                    isIconOnly
                                     variant="light"
                                     as={Link}
                                     href={"/login"}
