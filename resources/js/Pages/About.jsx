@@ -1,12 +1,14 @@
 import Layout from "@/Layouts/Layout";
 import { Head } from "@inertiajs/react";
 import { Button } from "@nextui-org/react";
+import WelcomeHero from "@/Components/WelcomeHero";
 import { ButtonVariant } from "@/Components/Variants/ButtonVariant";
 
 export default function About({ auth }) {
     return (
         <Layout>
             <Head title="About" />
+            <WelcomeHero />
             <div className="flex flex-col items-center justify-center ">
                 <h1 className="text-4xl text-center">About</h1>
                 <p className="text-center">
