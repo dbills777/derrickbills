@@ -1,8 +1,34 @@
 import { useState } from "react";
 import { Link, usePage } from "@inertiajs/react";
-import { Avatar, Button, Dropdown, DropdownItem, DropdownMenu, DropdownSection, DropdownTrigger, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
+import {
+    Avatar,
+    Button,
+    Dropdown,
+    DropdownItem,
+    DropdownMenu,
+    DropdownSection,
+    DropdownTrigger,
+    Navbar,
+    NavbarBrand,
+    NavbarContent,
+    NavbarItem,
+    NavbarMenu,
+    NavbarMenuItem,
+    NavbarMenuToggle,
+} from "@nextui-org/react";
 import ThemeSwitch from "./ThemeSwitch.jsx";
-import { Activity, ChevronDown, EditDocumentIcon, Flash, Lock, LogIn, LogOut, Scale, Server, TagUser } from "./Icons.jsx";
+import {
+    Activity,
+    ChevronDown,
+    EditDocumentIcon,
+    Flash,
+    Lock,
+    LogIn,
+    LogOut,
+    Scale,
+    Server,
+    TagUser,
+} from "./Icons.jsx";
 export default function App() {
     const currentPage = usePage();
     const user = currentPage.props.auth.user;
