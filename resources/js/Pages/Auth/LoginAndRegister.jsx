@@ -1,6 +1,17 @@
 import { useEffect, useState } from "react";
 import { Link, useForm, usePage } from "@inertiajs/react";
-import { Button, Card, CardBody, CardHeader, Checkbox, Image, Input, Tab, Tabs } from "@nextui-org/react";
+import {
+    Button,
+    Card,
+    CardBody,
+    CardHeader,
+    Checkbox,
+    Image,
+    Input,
+    Tab,
+    Tabs,
+} from "@nextui-org/react";
+import { PasswordIcon } from "@/Components/Icons";
 
 export default function LoginAndRegister(status, canResetPassword) {
     const [selected, setSelected] = useState("login");
@@ -39,15 +50,10 @@ export default function LoginAndRegister(status, canResetPassword) {
     };
 
     return (
-        <div className=" h-full grid gap-2 grid-cols-1 grid-rows-1 place-content-center place-items-center ">
-            <Card>
+        <div className=" h-full  grid gap-2 grid-cols-1 grid-rows-1 place-content-center place-items-center ">
+            <Card className="md:min-w-[420px]">
                 <CardHeader>
-                    <Image
-                        alt="animated login lock and key gif"
-                        type="image/x-icon"
-                        src="http://localhost:8000/images/login.gif"
-                        width={390}
-                    />
+                    <PasswordIcon />
                 </CardHeader>
                 <CardBody>
                     <Tabs
@@ -202,7 +208,7 @@ export default function LoginAndRegister(status, canResetPassword) {
                                         type="submit"
                                         color="nui-primary"
                                         variant="bordered"
-                                        disabled={processing}
+                                        isDisabled
                                         onClick={handleRegistrationClick}
                                         // onKeyDown={handleRegistrationClick}
                                         fullWidth
