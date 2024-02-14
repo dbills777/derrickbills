@@ -15,6 +15,7 @@ import {
     Image,
     Tooltip,
 } from "@nextui-org/react";
+import WelcomeHero from "@/Components/WelcomeHero";
 export default function Welcome({ auth }) {
     return (
         <>
