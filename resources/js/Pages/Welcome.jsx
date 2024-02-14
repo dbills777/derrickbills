@@ -97,8 +97,8 @@ export default function Welcome({ auth }) {
                         <ReactLogo height={200} width={200} />
                     </section>
                 </motion.div>
-                <div className="flex flex-col mt-12 gap-2 items-center max-w-screen-xl mx-auto">
-                    <section className="flex flex-col justify-center space-y-8 ms-6">
+                <div className="flex  mt-12 items-center mx-auto max-w-screen-xl ">
+                    <section className="flex flex-col  space-y-8 ms-6">
                         <h2 className="text-5xl">Deployment Process</h2>
                         <p className="md:max-w-screen-md">
                             Application server and MySQL Database is hosted
@@ -112,18 +112,14 @@ export default function Welcome({ auth }) {
                         </h3>
                         <h3 className="text-gray-400 bold text-2xl border-l border-l-info ps-8">
                             Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Unde facere fuga minus molestias quam sit
-                            porro consectetur ea quo quisquam? Veritatis
-                            asperiores nulla iure alias ipsam. Ea rem
-                            exercitationem sit.
+                            elit. 
                         </h3>
-                        <div className="flex flex-col md:flex-row-reverse max-w-7xl mx-auto items-center justify-between ">
+                        <div className="flex flex-col ">
                             <section>
                                 <Card className="min-w-[480px] ">
                                     <CardHeader className="flex gap-3">
                                         <div className="flex flex-col mx-auto">
-                                            <p></p>
-                                            <p className="text-md ">NextUI</p>
+                                            <p className="text-md text-center ">NextUI</p>
                                             <p className="text-small text-default-500">
                                                 company name
                                             </p>
