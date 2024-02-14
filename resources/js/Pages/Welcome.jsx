@@ -33,9 +33,7 @@ export default function Welcome({ auth }) {
                             <h1 className="text-5xl font md:text-7xl">
                                 Welcome Hero Section
                             </h1>
-                            <h2 className="text-3xl font-medium">
-                                Subheading
-                            </h2>
+                            <h2 className="text-3xl font-medium">Subheading</h2>
                         </div>
                         <p className="sm:w-3/4">
                             The application is built using the Laravel
@@ -110,7 +108,7 @@ export default function Welcome({ auth }) {
                         </p>
 
                         <h3 className="text-orange-700 bold text-4xl">
-                            "A Quote from a satisfied customer"
+                            "TODO: Add Github Actions for CI/CD"
                         </h3>
                         <h3 className="text-gray-400 bold text-2xl border-l border-l-info ps-8">
                             Lorem ipsum dolor sit amet consectetur adipisicing
