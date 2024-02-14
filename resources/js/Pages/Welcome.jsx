@@ -111,8 +111,9 @@ export default function Welcome({ auth }) {
                             "TODO: Add Github Actions for CI/CD"
                         </h3>
                         <h3 className="text-gray-400 bold text-2xl border-l border-l-info ps-8">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit.
+                            Dark/Light Mode is available, click the icon in the
+                            top right corner!
+                            Additional Themeing is used on specific components. Those themes are provided by Daisy UI.
                         </h3>
                         <div className="flex flex-col ">
                             <section>
