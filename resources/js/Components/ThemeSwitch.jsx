@@ -30,19 +30,13 @@ export default function ThemeSwitch(props) {
     return (
         <>
             <Button
-                isIcon
+                isIconOnly
+                radius="full"
                 onClick={toggleTheme}
-                variant="ghost"
-                className="flex swap swap-rotate items-center justify-center w-2"
+                className="flex swap swap-rotate items-center justify-center"
                 whileHover="hover"
                 whileTap="tap"
-                endContent={
-                    isLightTheme ? (
-                        <LightTheme className="w-6 h-6" />
-                    ) : (
-                        <DarkTheme className="w-6 h-6" />
-                    )
-                }
+                endContent={isLightTheme ? <LightTheme /> : <DarkTheme />}
             ></Button>
         </>
     );
