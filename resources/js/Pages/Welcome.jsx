@@ -31,10 +31,10 @@ export default function Welcome({ auth }) {
                     <section className="flex flex-col space-y-8 ms-6 ">
                         <div>
                             <h1 className="text-5xl font md:text-7xl">
-                                Sample Hero Section
+                                Welcome Hero Section
                             </h1>
                             <h2 className="text-3xl font-medium">
-                                Hello There
+                                Subheading
                             </h2>
                         </div>
                         <p className="sm:w-3/4">
@@ -100,24 +100,15 @@ export default function Welcome({ auth }) {
                     </section>
                 </motion.div>
                 <div className="flex flex-col mt-12 gap-2 items-center max-w-screen-xl mx-auto">
-                    <section className="flex flex-col justify-center space-y-8 ms-6 ">
-                        <h2 className="text-5xl">
-                            Sample Section
-                        </h2>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Odit consequatur consequuntur aspernatur
-                            recusandae eaque quam placeat, est at obcaecati
-                            voluptatibus, sed mollitia vel dolore iusto in ipsam
-                            fugit illum veritatis.
+                    <section className="flex flex-col justify-center space-y-8 ms-6">
+                        <h2 className="text-5xl">Deployment Process</h2>
+                        <p className="md:max-w-screen-md">
+                            Application server and MySQL Database is hosted
+                            using a DigitalOcean Droplet via Laravel Forge.
+                            Deployment is automated on every push to the main
+                            branch.
                         </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Odit consequatur consequuntur aspernatur
-                            recusandae eaque quam placeat, est at obcaecati
-                            voluptatibus, sed mollitia vel dolore iusto in ipsam
-                            fugit illum veritatis.
-                        </p>
+
                         <h3 className="text-orange-700 bold text-4xl">
                             "A Quote from a satisfied customer"
                         </h3>
