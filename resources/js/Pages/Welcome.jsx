@@ -101,7 +101,9 @@ export default function Welcome({ auth }) {
                 </motion.div>
                 <div className="flex flex-col mt-12 gap-2 items-center max-w-screen-xl mx-auto">
                     <section className="flex flex-col justify-center space-y-8 ms-6 ">
-                        <h2 className="text-5xl">Why use this architecture?</h2>
+                        <h2 className="text-5xl">
+                            This page showcases a few components from NextUI
+                        </h2>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Odit consequatur consequuntur aspernatur
