@@ -112,16 +112,18 @@ export default function Welcome({ auth }) {
                         </h3>
                         <h3 className="text-gray-400 bold text-2xl border-l border-l-info ps-8">
                             Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. 
+                            elit.
                         </h3>
                         <div className="flex flex-col ">
                             <section>
                                 <Card className="min-w-[480px] ">
                                     <CardHeader className="flex gap-3">
                                         <div className="flex flex-col mx-auto">
-                                            <p className="text-md text-center ">NextUI</p>
+                                            <p className="text-md text-center ">
+                                                Derrick Bills
+                                            </p>
                                             <p className="text-small text-default-500">
-                                                company name
+                                                Company Name
                                             </p>
                                         </div>
                                     </CardHeader>
