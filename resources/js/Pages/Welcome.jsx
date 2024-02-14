@@ -1,21 +1,12 @@
-import React from "react";
 import { motion } from "framer-motion";
 import Layout from "@/Layouts/Layout";
-import { MotionIcons } from "@/Components/MotionIcons";
 import Footer from "@/Layouts/Footer";
 import { Head } from "@inertiajs/react";
+import { HeroCloudIcon } from "@/Components/Icons";
+import { MotionIcons } from "@/Components/MotionIcons";
 import LandingPageCard from "@/Components/LandingPageCard";
-import { EditDocumentIcon, HeroCloudIcon } from "@/Components/Icons";
-import {
-    Button,
-    Card,
-    CardBody,
-    CardHeader,
-    Divider,
-    Image,
-    Tooltip,
-} from "@nextui-org/react";
-import WelcomeHero from "@/Components/WelcomeHero";
+import { Button, Card, CardBody, CardHeader, Divider, Tooltip } from "@nextui-org/react";
+
 export default function Welcome({ auth }) {
     return (
         <>
@@ -33,7 +24,7 @@ export default function Welcome({ auth }) {
                             <h1 className="text-5xl font md:text-7xl">
                                 Welcome Hero Section
                             </h1>
-                            <h2 className="text-3xl font-medium">Subheading</h2>
+                            <h2 className="text-2xl font-medium mt-6">Subheading</h2>
                         </div>
                         <p className="sm:w-3/4">
                             The application is built using the Laravel
