@@ -31,10 +31,10 @@ export default function Welcome({ auth }) {
                     <section className="flex flex-col space-y-8 ms-6 ">
                         <div>
                             <h1 className="text-5xl font md:text-7xl">
-                                Derrick Bills
+                                Sample Hero Section
                             </h1>
                             <h2 className="text-3xl font-medium">
-                                Full Stack Web Developer
+                                Hello There
                             </h2>
                         </div>
                         <p className="sm:w-3/4">
@@ -102,7 +102,7 @@ export default function Welcome({ auth }) {
                 <div className="flex flex-col mt-12 gap-2 items-center max-w-screen-xl mx-auto">
                     <section className="flex flex-col justify-center space-y-8 ms-6 ">
                         <h2 className="text-5xl">
-                            This page showcases a few components from NextUI
+                            Sample Section
                         </h2>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing
@@ -119,7 +119,7 @@ export default function Welcome({ auth }) {
                             fugit illum veritatis.
                         </p>
                         <h3 className="text-orange-700 bold text-4xl">
-                            "section of highlight text"
+                            "A Quote from a satisfied customer"
                         </h3>
                         <h3 className="text-gray-400 bold text-2xl border-l border-l-info ps-8">
                             Lorem ipsum dolor sit amet consectetur adipisicing
