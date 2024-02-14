@@ -5,7 +5,7 @@ import { MotionIcons } from "@/Components/MotionIcons";
 import Footer from "@/Layouts/Footer";
 import { Head } from "@inertiajs/react";
 import LandingPageCard from "@/Components/LandingPageCard";
-import { ReactLogo } from "@/Components/Icons";
+import { EditDocumentIcon, HeroCloudIcon } from "@/Components/Icons";
 import {
     Button,
     Card,
@@ -94,7 +94,7 @@ export default function Welcome({ auth }) {
                         </div>
                     </section>
                     <section className="opacity-70 mx-auto lg:me-6">
-                        <ReactLogo height={200} width={200} />
+                        <HeroCloudIcon height={300} width={300} />
                     </section>
                 </motion.div>
                 <div className="flex  mt-12 items-center mx-auto max-w-screen-xl ">
@@ -112,8 +112,9 @@ export default function Welcome({ auth }) {
                         </h3>
                         <h3 className="text-gray-400 bold text-2xl border-l border-l-info ps-8">
                             Dark/Light Mode is available, click the icon in the
-                            top right corner!
-                            Additional Themeing is used on specific components. Those themes are provided by Daisy UI.
+                            top right corner! Additional Themeing is used on
+                            specific components. Those themes are provided by
+                            Daisy UI.
                         </h3>
                         <div className="flex flex-col ">
                             <section>
