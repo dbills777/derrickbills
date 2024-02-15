@@ -1,7 +1,7 @@
 import Layout from "@/Layouts/Layout";
 import { Head } from "@inertiajs/react";
 import { Button } from "@nextui-org/react";
-import WelcomeHero from "@/Components/WelcomeHero";
+import WelcomeHero from "@/Components/AboutHero";
 import { ButtonVariant } from "@/Components/Variants/ButtonVariant";
 
 export default function About({ auth }) {
