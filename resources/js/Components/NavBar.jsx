@@ -9,7 +9,6 @@ import {
     DropdownSection,
     DropdownTrigger,
     Navbar,
-    NavbarBrand,
     NavbarContent,
     NavbarItem,
     NavbarMenu,
