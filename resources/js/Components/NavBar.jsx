@@ -283,7 +283,6 @@ export default function App() {
             <NavbarMenu>
                 {menuItems.map((item, index) => (
                     <NavbarMenuItem key={`${item}-${index}`}>
-                        {console.log(!user, item, index)}{" "}
                         {item === "Logout" && !user && (
                             <Link
                                 className="w-full"
