@@ -6,24 +6,22 @@ export const WelcomeHero = () => {
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 2 } }}
-            className="flex flex-col gap-2 py-20 items-center max-w-screen-xl
-                >
-                    mx-auto lg:flex-row"
+            className="flex flex-col gap-2 py-20 px-6  mx-auto lg:flex-row max-w-screen-xl"
         >
-            <section className="flex flex-col space-y-8 ms-6 ">
+            <section className="flex flex-col space-y-8">
                 <div>
                     <h1 className="text-5xl md:text-6xl xl:text-7xl font-thin min-w-full">
                         Welcome Hero Section
                     </h1>
-                    <h2 className="text-2xl  mt-6">Subheading</h2>
+                    <h2 className="text-3xl  mt-6">Subheading</h2>
                 </div>
-                <p className="sm:w-3/4">
+                <p className="text-2xl font-light sm:w-3/4">
                     The application is built using the Laravel framework, which
                     provides a unique and powerful foundation for the
                     application. This foundation leverages InertiaJS, ReactJS,
                     Tailwind CSS.
                 </p>
-                <p className=" sm:w-3/4">
+                <p className="text-2xl font-light sm:w-3/4">
                     Using a monolithic architecture, allows for a single code
                     base Creating a more efficient and maintainable application.
                 </p>
