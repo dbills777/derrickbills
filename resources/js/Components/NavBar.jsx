@@ -151,6 +151,24 @@ export default function App() {
                         </DropdownItem>
                     </DropdownMenu>
                 </Dropdown>
+                {user && (
+                    <>
+                        <NavbarItem
+                            {...(currentPage.component === "Dashboard" && {
+                                isActive: true,
+                            })}
+                        >
+                            <Link href="/dashboard">Dashboard</Link>
+                        </NavbarItem>
+                        <NavbarItem
+                            {...(currentPage.component === "Profile" && {
+                                isActive: true,
+                            })}
+                        >
+                            <Link href="/profile">Profile</Link>
+                        </NavbarItem>
+                    </>
+                )}
                 <NavbarItem
                     {...(currentPage.component === "Welcome" && {
                         isActive: true,
