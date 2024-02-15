@@ -49,20 +49,20 @@ export default {
             },
             fontFamily: {
                 mono: ["'Monaspace Neon', monospace"],
-                humanistsans: ["'Monaspace Argon', monospace"],
-                mechanicalsans: ["'Monaspace Krypton', monospace"],
-                slabserrif: ["'Monaspace Xenon', monospace"],
-                handwriting: ["'Monaspace Radon', monospace"],
+                argon: ["'Monaspace Argon', monospace"],
+                krypton: ["'Monaspace Krypton', monospace"],
+                xenon: ["'Monaspace Xenon', monospace"],
+                radon: ["'Monaspace Radon', monospace"],
 
                 // options are Neon, Argon, Radon, Krypton, Xenon
             },
             typography: (theme) => ({
                 fontFamily: {
                     mono: ["'Monaspace Neon', monospace"],
-                    humanistsans: ["'Monaspace Argon', monospace"],
-                    mechanicalsans: ["'Monaspace Krypton', monospace"],
-                    slabserrif: ["'Mechanical Xenon', monospace"],
-                    handwriting: ["'Mechanical Radon', monospace"],
+                    argon: ["'Monaspace Argon', monospace"],
+                    krypton: ["'Monaspace Krypton', monospace"],
+                    xenon: ["'Mechanical Xenon', monospace"],
+                    radon: ["'Mechanical Radon', monospace"],
                 },
             }),
         },
