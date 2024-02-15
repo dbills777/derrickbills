@@ -34,21 +34,32 @@ export default function App() {
     const user = currentPage.props.auth.user;
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    const menuItems = ["Welcome", "About", "Profile", "Dashboard"];
+    const menuItems = [
+        "Welcome",
+        "About",
+        "Login",
+        "Profile",
+        "Dashboard",
+        "Logout",
+    ];
 
     const icons = {
-        chevron: <ChevronDown fill="currentColor" size={16} />,
-        scale: <Scale className="text-warning" fill="currentColor" size={30} />,
-        lock: <Lock className="text-success" fill="currentColor" size={30} />,
         activity: (
-            <Activity
-                className="text-secondary"
+            <Activity className="text-primary" fill="currentColor" size={30} />
+        ),
+        chevron: <ChevronDown fill="currentColor" size={16} />,
+        edit: (
+            <EditDocumentIcon
+                className="text-green-500"
                 fill="currentColor"
                 size={30}
             />
         ),
         flash: <Flash className="text-primary" fill="currentColor" size={30} />,
+        lock: <Lock className="text-success" fill="currentColor" size={30} />,
+        login: <LogIn fill="currentColor" size={30} />,
+        logout: <LogOut fill="currentColor" size={30} />,
+        scale: <Scale className="text-warning" fill="currentColor" size={30} />,
         server: (
             <Server className="text-success" fill="currentColor" size={30} />
         ),
@@ -57,13 +68,6 @@ export default function App() {
                 className="text-orange-500"
                 fill="currentColor"
                 size={50}
-            />
-        ),
-        edit: (
-            <EditDocumentIcon
-                className="text-green-500"
-                fill="currentColor"
-                size={30}
             />
         ),
     };
@@ -200,19 +204,22 @@ export default function App() {
                                 )}
                             </DropdownItem>
                         </DropdownSection>
-                        <DropdownSection
-                            title="Need to update your profile?"
-                            showDivider
-                        >
-                            <DropdownItem
-                                key="supreme_support"
-                                href={"/profile"}
-                                description="Update Your Username and Email"
-                                startContent={icons.edit}
+                        {(user && (
+                            <DropdownSection
+                                // title="update your profile?"
+                                showDivider
                             >
-                                Update Profile
-                            </DropdownItem>
-                        </DropdownSection>
+                                <DropdownItem
+                                    key="supreme_support"
+                                    href={"/profile"}
+                                    description="Update Your Username and Email"
+                                    startContent={icons.edit}
+                                >
+                                    Update Profile
+                                </DropdownItem>
+                            </DropdownSection>
+                        )) ||
+                            ""}
 
                         <DropdownItem
                             key="autoscaling"
@@ -228,30 +235,29 @@ export default function App() {
                         >
                             Usage Metrics
                         </DropdownItem>
-                        <DropdownItem className="w-[64px]" key="login">
-                            {(!user && (
-                                <Button
-                                    className="w-full"
-                                    type="submit"
-                                    isIconOnly
-                                    variant="light"
-                                    as={Link}
-                                    href={"/login"}
-                                    startContent={<LogIn />}
-                                ></Button>
-                            )) || (
-                                <Button
-                                    className="w-full"
-                                    type="submit"
-                                    isIconOnly
-                                    variant="light"
-                                    as={Link}
-                                    href={"/logout"}
-                                    method="post"
-                                    startContent={<LogOut />}
-                                ></Button>
-                            )}
-                        </DropdownItem>
+
+                        {(!user && (
+                            <DropdownItem
+                                key="login"
+                                as={Link}
+                                href={"/login"}
+                                description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
+                                startContent={icons.login}
+                            >
+                                Login or Sign up for an account{" "}
+                            </DropdownItem>
+                        )) || (
+                            <DropdownItem
+                                key="logout"
+                                as={Link}
+                                href={"/logout"}
+                                method="post"
+                                description="Logout of your account."
+                                startContent={icons.logout}
+                            >
+                                Logout{" "}
+                            </DropdownItem>
+                        )}
                     </DropdownMenu>
                 </Dropdown>
             </NavbarContent>
@@ -259,26 +265,70 @@ export default function App() {
             <NavbarMenu>
                 {menuItems.map((item, index) => (
                     <NavbarMenuItem key={`${item}-${index}`}>
-                        <Link
-                            className="w-full"
-                            color={
-                                index === 2
-                                    ? "warning"
-                                    : index === menuItems.length - 1
-                                    ? "danger"
-                                    : "foreground"
-                            }
-                            href={
-                                index !== 0
-                                    ? `/${item
-                                          .toLowerCase()
-                                          .replaceAll(" ", "")}`
-                                    : "/"
-                            }
-                            size="lg"
-                        >
-                            {item}
-                        </Link>
+                        {console.log(!user, item, index)}{" "}
+                        {item === "Logout" && !user && (
+                            <Link
+                                className="w-full"
+                                color="foreground"
+                                href="/login"
+                                size="lg"
+                            >
+                                Login
+                            </Link>
+                        )}
+                        {item === "Login" && user && (
+                            <Link
+                                className="w-full"
+                                color="foreground"
+                                href="/logout"
+                                method="post"
+                                size="lg"
+                            >
+                                logout
+                            </Link>
+                        )}
+                        {item === "Profile" && user && (
+                            <Link
+                                className="w-full"
+                                color="foreground"
+                                href="/profile"
+                                size="lg"
+                            >
+                                {item}
+                            </Link>
+                        )}
+                        {item === "Dashboard" && user && (
+                            <Link
+                                className="w-full"
+                                color="foreground"
+                                href="/dashboard"
+                                size="lg"
+                            >
+                                {item}
+                            </Link>
+                        )}
+                        {index < 2 && (
+                            <Link
+                                className="w-full"
+                                color={
+                                    index === 2
+                                        ? "warning"
+                                        : index === menuItems.length - 1
+                                        ? "danger"
+                                        : "foreground"
+                                }
+                                href={
+                                    index !== 0
+                                        ? `/${item
+                                              .toLowerCase()
+                                              .replaceAll(" ", "")}`
+                                        : "/"
+                                }
+                                size="lg"
+                            >
+                                {item}
+                            </Link>
+                        )}
                     </NavbarMenuItem>
                 ))}
             </NavbarMenu>
