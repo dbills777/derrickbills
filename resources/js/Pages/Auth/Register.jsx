@@ -1,10 +1,8 @@
 import { useEffect } from "react";
-import GuestLayout from "@/Layouts/GuestLayout";
 import InputError from "@/Components/InputError";
 import InputLabel from "@/Components/InputLabel";
 import TextInput from "@/Components/TextInput";
 import { Head, Link, useForm } from "@inertiajs/react";
-import { Button } from "@nextui-org/react";
 
 export default function Register() {
     const { data, setData, post, processing, errors, reset } = useForm({
@@ -27,7 +25,7 @@ export default function Register() {
     };
 
     return (
-        <GuestLayout>
+        <div className="flex flex-col items-center mt-20 bg-gray-200 p-20">
             <Head title="Register" />
 
             <form onSubmit={submit}>
@@ -120,6 +118,6 @@ export default function Register() {
                     </button>
                 </div>
             </form>
-        </GuestLayout>
+        </div>
     );
 }

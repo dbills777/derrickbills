@@ -29,7 +29,8 @@ export default function Login({ status, canResetPassword }) {
     };
 
     return (
-        <>
+       <div className="flex flex-col items-center mt-20">
+
             <Head title="Log in" />
 
             {status && (
@@ -100,6 +101,7 @@ export default function Login({ status, canResetPassword }) {
                     </button>
                 </div>
             </form>
-        </>
+            </div>
+
     );
 }
