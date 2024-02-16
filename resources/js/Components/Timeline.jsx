@@ -78,7 +78,7 @@ const Timeline = () => {
                     <div className="timeline-start md:text-end mb-10">
                         <time className="font-mono italic">2021-2023</time>
                         <div className="text-lg font-black">
-                            Sofwtware Engineer I
+                           CHG Healthcare - Sofwtware Engineer I
                         </div>
                         Lorem, ipsum dolor sit amet consectetur adipisicing
                         elit. Repellat nulla sequi aperiam esse quasi
