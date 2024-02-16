@@ -1,13 +1,9 @@
 import { useEffect } from "react";
-// import Checkbox from '@/Components/Checkbox';
 import { Checkbox } from "@nextui-org/react";
-import GuestLayout from "@/Layouts/GuestLayout";
 import InputError from "@/Components/InputError";
 import InputLabel from "@/Components/InputLabel";
-// import PrimaryButton from "@/Components/PrimaryButton";
 import TextInput from "@/Components/TextInput";
 import { Head, Link, useForm } from "@inertiajs/react";
-import { Button } from "@nextui-org/react";
 
 export default function Login({ status, canResetPassword }) {
     const { data, setData, post, processing, errors, reset } = useForm({
@@ -29,8 +25,7 @@ export default function Login({ status, canResetPassword }) {
     };
 
     return (
-       <div className="flex flex-col items-center mt-20">
-
+        <div className="flex flex-col items-center mt-20">
             <Head title="Log in" />
 
             {status && (
@@ -78,7 +73,9 @@ export default function Login({ status, canResetPassword }) {
                         <Checkbox
                             name="remember"
                             checked={data.remember}
-                            onChange={(e) => setData('remember', e.target.checked)}
+                            onChange={(e) =>
+                                setData("remember", e.target.checked)
+                            }
                         />
                         <span className="ms-2 text-sm text-gray-600">
                             Remember me
@@ -101,7 +98,6 @@ export default function Login({ status, canResetPassword }) {
                     </button>
                 </div>
             </form>
-            </div>
-
+        </div>
     );
 }

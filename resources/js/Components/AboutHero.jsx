@@ -26,13 +26,9 @@ const WelcomeHero = () => {
                             It also uses Nextui, DaisyUI, and Framer Motion.
                         </p>
                         <ButtonVariant>NextUI Variant</ButtonVariant>
-                        <div className="hero-content min-h-unit-11">
-                        </div>
+                        <div className="hero-content min-h-unit-11"></div>
                     </div>
-                    
                 </div>
-                
-                
             </motion.div>
         </>
     );
