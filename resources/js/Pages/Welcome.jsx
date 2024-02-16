@@ -17,9 +17,6 @@ export default function Welcome({ auth }) {
                 <WelcomeSection />
                 <WelcomeCards />
                 <MotionIcons />
-                <div>
-                    <Footer />
-                </div>
             </Layout>
         </>
     );
