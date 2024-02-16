@@ -1,6 +1,6 @@
 export const Stats = () => {
     return (
-        <div className="stats shadow">
+        <div className="stats shadow flex flex-col md:flex-row">
             <div className="stat">
                 <div className="stat-figure text-primary">
                     <svg
