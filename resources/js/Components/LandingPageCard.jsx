@@ -1,12 +1,19 @@
 import React from "react";
-import { Avatar, Button, Card, CardBody, CardFooter, CardHeader } from "@nextui-org/react";
+import {
+    Avatar,
+    Button,
+    Card,
+    CardBody,
+    CardFooter,
+    CardHeader,
+} from "@nextui-org/react";
 
 export default function App() {
     const [isFollowed, setIsFollowed] = React.useState(false);
-    
+
     return (
         <Card>
-            <CardHeader className="justify-between">
+            <CardHeader className="flex flex-col gap-2 sm:flex-row justify-between">
                 <div className="flex gap-5">
                     <Avatar
                         isBordered
