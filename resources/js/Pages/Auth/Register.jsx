@@ -1,7 +1,10 @@
 import { useEffect } from "react";
 import GuestLayout from "@/Layouts/GuestLayout";
+import InputError from "@/Components/InputError";
+import InputLabel from "@/Components/InputLabel";
+import TextInput from "@/Components/TextInput";
 import { Head, Link, useForm } from "@inertiajs/react";
-import LoginAndRegister from "@/Pages/Auth/LoginAndRegister";
+import { Button } from "@nextui-org/react";
 
 export default function Register() {
     const { data, setData, post, processing, errors, reset } = useForm({
@@ -26,8 +29,8 @@ export default function Register() {
     return (
         <GuestLayout>
             <Head title="Register" />
-            <LoginAndRegister />
-            {/* <form onSubmit={submit}>
+
+            <form onSubmit={submit}>
                 <div>
                     <InputLabel htmlFor="name" value="Name" />
 
@@ -107,16 +110,16 @@ export default function Register() {
                 <div className="flex items-center justify-end mt-4">
                     <Link
                         href={route("login")}
-                        className="underline text-sm -600 hover:-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                        className="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     >
                         Already registered?
                     </Link>
 
-                    <Button className="ms-4" disabled={processing}>
+                    <button className="ms-4" disabled={processing}>
                         Register
-                    </Button>
+                    </button>
                 </div>
-            </form> */}
+            </form>
         </GuestLayout>
     );
 }
