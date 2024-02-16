@@ -22,17 +22,13 @@ const Timeline = () => {
                     <div className="timeline-start md:text-end mb-10">
                         <time className="font-mono italic">2000 - 2021</time>
                         <div className="text-lg font-black">
-                            First Macintosh computer
+                            Pharmacy Technician
                         </div>
-                        The Apple Macintosh—later rebranded as the Macintosh
-                        128K—is the original Apple Macintosh personal computer.
-                        It played a pivotal role in establishing desktop
-                        publishing as a general office function. The
-                        motherboard, a 9 in (23 cm) CRT monitor, and a floppy
-                        drive were housed in a beige case with integrated
-                        carrying handle; it came with a keyboard and
-                        single-button mouse.
+                       
+                        Minus, modi consequatur, fuga hic rerum, quidem tempore
+                        quasi sint cum aspernatur similique pariatur eligendi?
                     </div>
+                    
                     <hr className="bg-secondary" />
                 </li>
                 <li>
@@ -53,12 +49,13 @@ const Timeline = () => {
                     </div>
                     <div className="timeline-end mb-10">
                         <time className="font-mono italic">2018-2021</time>
-                        <div className="text-lg font-black">iMac</div>
-                        iMac is a family of all-in-one Mac desktop computers
-                        designed and built by Apple Inc. It has been the primary
-                        part of Apple's consumer desktop offerings since its
-                        debut in August 1998, and has evolved through seven
-                        distinct forms
+                        <div className="text-lg font-black">
+                            Utah Valley University - Associates & Bachelors
+                            Degree
+                        </div>
+                        Completed an Associates Degree in Web Design and
+                        Development and a Bachelors Degree Web Design and
+                        Development
                     </div>
                     <hr className="bg-primary" />
                 </li>
@@ -80,15 +77,16 @@ const Timeline = () => {
                     </div>
                     <div className="timeline-start md:text-end mb-10">
                         <time className="font-mono italic">2021-2023</time>
-                        <div className="text-lg font-black">iPod</div>
-                        The iPod is a discontinued series of portable media
-                        players and multi-purpose mobile devices designed and
-                        marketed by Apple Inc. The first version was released on
-                        October 23, 2001, about 8+1⁄2 months after the Macintosh
-                        version of iTunes was released. Apple sold an estimated
-                        450 million iPod products as of 2022. Apple discontinued
-                        the iPod product line on May 10, 2022. At over 20 years,
-                        the iPod brand is the oldest to be discontinued by Apple
+                        <div className="text-lg font-black">
+                            Sofwtware Engineer I
+                        </div>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Repellat nulla sequi aperiam esse quasi
+                        necessitatibus, id sint rerum accusamus ab dolores
+                        dolorem qui, odio harum earum voluptate blanditiis
+                        ducimus doloremque quas? Modi odio reiciendis animi!
+                        Minus, modi consequatur, fuga hic rerum, quidem tempore
+                        quasi sint cum aspernatur similique pariatur eligendi?
                     </div>
                     <hr className="bg-[#EA8000]" />
                 </li>
@@ -109,16 +107,18 @@ const Timeline = () => {
                         </svg>
                     </div>
                     <div className="timeline-end mb-10">
-                        <time className="font-mono italic">2024</time>
-                        <div className="text-lg font-black">iPhone</div>
-                        iPhone is a line of smartphones produced by Apple Inc.
-                        that use Apple's own iOS mobile operating system. The
-                        first-generation iPhone was announced by then-Apple CEO
-                        Steve Jobs on January 9, 2007. Since then, Apple has
-                        annually released new iPhone models and iOS updates. As
-                        of November 1, 2018, more than 2.2 billion iPhones had
-                        been sold. As of 2022, the iPhone accounts for 15.6% of
-                        global smartphone market share
+                        <time className="font-mono italic">2023 - 2024 </time>
+                        <div className="text-lg font-black">
+                            derrickbills.com
+                        </div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Accusantium repudiandae dolore perspiciatis accusamus
+                        optio omnis corrupti quaerat qui, recusandae nostrum hic
+                        officiis iste, eos aut, repellat aspernatur. Distinctio
+                        et maiores dicta illum perferendis cum aliquid velit?
+                        Molestias, praesentium quos quo cum nobis expedita
+                        suscipit? Assumenda facilis recusandae reiciendis
+                        quaerat nisi.
                     </div>
                     <hr className="bg-[#36FF6F]" />
                 </li>
@@ -140,12 +140,18 @@ const Timeline = () => {
                     </div>
                     <div className="timeline-start md:text-end mb-10">
                         <time className="font-mono italic">Present</time>
-                        <div className="text-lg font-black">Apple Watch</div>
-                        The Apple Watch is a line of smartwatches produced by
-                        Apple Inc. It incorporates fitness tracking,
-                        health-oriented capabilities, and wireless
-                        telecommunication, and integrates with iOS and other
-                        Apple products and services
+                        <div className="text-lg font-black">Open to work</div>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Natus perferendis adipisci, obcaecati dicta quia
+                        culpa accusamus architecto ratione repellendus corporis
+                        sint dolorum optio, nobis velit nostrum! Possimus est
+                        eligendi fugit corporis dolorum, aliquam quos similique,
+                        reiciendis provident dignissimos ad cum earum! Error
+                        expedita alias qui culpa impedit? Id numquam sint
+                        temporibus porro asperiores minima quibusdam, et dicta
+                        mollitia qui voluptatibus atque, maiores impedit eveniet
+                        sapiente aliquid eligendi dolore cum perspiciatis
+                        consequatur est ratione molestias? Dolor?
                     </div>
                 </li>
             </ul>
