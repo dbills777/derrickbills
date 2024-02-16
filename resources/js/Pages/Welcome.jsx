@@ -5,6 +5,7 @@ import { WelcomeHero } from "@/Components/WelcomeHero";
 import { WelcomeSection } from "@/Components/WelcomeSection";
 import { MotionIcons } from "@/Components/MotionIcons";
 import { WelcomeCards } from "@/Components/WelcomeCards";
+import Timeline from "@/Components/Timeline";
 
 export default function Welcome({ auth }) {
     return (
@@ -12,6 +13,7 @@ export default function Welcome({ auth }) {
             <Layout>
                 <Head title="Welcome" />
                 <WelcomeHero />
+                <Timeline />
                 <WelcomeSection />
                 <WelcomeCards />
                 <MotionIcons />
