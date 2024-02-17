@@ -1,7 +1,8 @@
 import { Head } from "@inertiajs/react";
 import SalesDisplay from "./Profile/Partials/SalesDisplay";
 import Layout from "@/Layouts/Layout";
-export default function Dashboard({ auth }) {
+
+const Dashboard = ({ auth }) => {
     return (
         <Layout
             user={auth.user}
@@ -22,4 +23,5 @@ export default function Dashboard({ auth }) {
             </div>
         </Layout>
     );
-}
+};
+export default Dashboard;

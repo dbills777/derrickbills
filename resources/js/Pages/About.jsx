@@ -2,9 +2,9 @@ import Layout from "@/Layouts/Layout";
 import { Head } from "@inertiajs/react";
 import { AboutHero } from "@/Components/AboutHero";
 import { Stats } from "@/Components/Stats";
-import Timeline from "@/Components/Timeline";
+import { Timeline } from "@/Components/Timeline";
 
-export default function About({ auth }) {
+const About = ({ auth }) => {
     return (
         <Layout>
             <Head title="About" />
@@ -19,4 +19,5 @@ export default function About({ auth }) {
             </section>
         </Layout>
     );
-}
+};
+export default About;

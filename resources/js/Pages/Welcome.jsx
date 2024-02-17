@@ -4,9 +4,9 @@ import { WelcomeHero } from "@/Components/WelcomeHero";
 import { WelcomeSection } from "@/Components/WelcomeSection";
 import { MotionIcons } from "@/Components/MotionIcons";
 import { WelcomeCards } from "@/Components/WelcomeCards";
-import Timeline from "@/Components/Timeline";
+import { Timeline } from "@/Components/Timeline";
 
-export default function Welcome({ auth }) {
+const Welcome = () => {
     return (
         <>
             <Layout>
@@ -19,4 +19,5 @@ export default function Welcome({ auth }) {
             </Layout>
         </>
     );
-}
+};
+export default Welcome;

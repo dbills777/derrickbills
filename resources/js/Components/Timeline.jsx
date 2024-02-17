@@ -1,6 +1,6 @@
 import React from "react";
 
-const Timeline = () => {
+export const Timeline = () => {
     return (
         <div>
             <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical px-4 mx-auto max-w-7xl">
@@ -159,4 +159,3 @@ const Timeline = () => {
     );
 };
 
-export default Timeline;

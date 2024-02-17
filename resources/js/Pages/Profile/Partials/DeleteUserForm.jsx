@@ -1,5 +1,5 @@
-import { useRef, useState } from 'react';
-import {Button} from "@nextui-org/react";
+import { useRef, useState } from "react";
+import { Button } from "@nextui-org/react";
 import { useForm } from "@inertiajs/react";
 
 export default function DeleteUserForm({ className = "" }) {
@@ -55,7 +55,7 @@ export default function DeleteUserForm({ className = "" }) {
 
             <Modal show={confirmingUserDeletion} onClose={closeModal}>
                 <form onSubmit={deleteUser} className="p-6">
-                    {/* <h2 className="text-lg font-medium -900">
+                    <h2 className="text-lg font-medium -900">
                         Are you sure you want to delete your account?
                     </h2>
 
@@ -101,7 +101,7 @@ export default function DeleteUserForm({ className = "" }) {
                         <DangerButton className="ms-3" disabled={processing}>
                             Delete Account
                         </DangerButton>
-                    </div> */}
+                    </div>
                 </form>
             </Modal>
         </section>

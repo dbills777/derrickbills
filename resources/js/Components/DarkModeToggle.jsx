@@ -19,6 +19,7 @@ export default function ThemeSwitch(props) {
             "data-theme",
             isLightTheme ? "dark" : "light"
         );
+
         document.documentElement.classList.add("transition");
         window.setTimeout(() => {
             document.documentElement.classList.remove("transition");
@@ -30,6 +31,7 @@ export default function ThemeSwitch(props) {
     return (
         <>
             <Button
+                variant="text"
                 isIconOnly
                 radius="full"
                 onClick={toggleTheme}

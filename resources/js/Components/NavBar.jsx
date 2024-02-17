@@ -15,7 +15,7 @@ import {
     NavbarMenuItem,
     NavbarMenuToggle,
 } from "@nextui-org/react";
-import ThemeSwitch from "./ThemeSwitch.jsx";
+import ThemeSwitch from "./DarkModeToggle.jsx";
 import {
     Activity,
     ChevronDown,
@@ -184,6 +184,15 @@ export default function App() {
                 >
                     <Link color="foreground" href="/about">
                         About
+                    </Link>
+                </NavbarItem>
+                <NavbarItem
+                    {...(currentPage.component === "Products" && {
+                        isActive: true,
+                    })}
+                >
+                    <Link color="foreground" href="/products">
+                        Products
                     </Link>
                 </NavbarItem>
             </NavbarContent>

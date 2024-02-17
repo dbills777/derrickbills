@@ -1,17 +1,7 @@
-import * as React from "react";
-
-import {
-    Card,
-    CardBody,
-    CardFooter,
-    CardHeader,
-    Button,
-    Input,
-} from "@nextui-org/react";
 import { Link } from "@inertiajs/react";
-
 import { Transition } from "@headlessui/react";
 import { useForm, usePage } from "@inertiajs/react";
+import { Button, Card, CardBody, CardFooter, CardHeader, Input } from "@nextui-org/react";
 
 export default function UpdateProfileInformation({
     mustVerifyEmail,
@@ -49,53 +39,57 @@ export default function UpdateProfileInformation({
                 </div>
             </Transition>
             <CardBody>
-                {/* <form onSubmit={submit}> */}
-                <div className="grid md:w-3/4 lg:w-1/2 items-center gap-4">
-                    <div className="flex flex-col space-y-1.5">
-                        <Input
-                            id="name"
-                            value={data.name}
-                            onChange={(e) => setData("name", e.target.value)}
-                            required
-                            autoComplete="name"
-                            placeholder="Update your name"
-                        />
-                    </div>
-                    <div className="flex flex-col space-y-1.5">
-                        <Input
-                            id="email"
-                            value={data.email}
-                            onChange={(e) => setData("email", e.target.value)}
-                            required
-                            autoComplete="email"
-                            placeholder="Update your email Address"
-                        />
-                    </div>
-                    {mustVerifyEmail && user.email_verified_at === null && (
-                        <div>
-                            <p className="text-sm mt-2 -800">
-                                Your email address is unverified.
-                                <Link
-                                    href={route("verification.send")}
-                                    method="post"
-                                    as="button"
-                                    className="underline text-sm -600 hover:-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                                >
-                                    Click here to re-send the verification
-                                    email.
-                                </Link>
-                            </p>
-
-                            {status === "verification-link-sent" && (
-                                <div className="mt-2 font-medium text-sm text-green-600">
-                                    A new verification link has been sent to
-                                    your email address.
-                                </div>
-                            )}
+                <form onSubmit={submit}>
+                    <div className="grid md:w-3/4 lg:w-1/2 items-center gap-4">
+                        <div className="flex flex-col space-y-1.5">
+                            <Input
+                                id="name"
+                                value={data.name}
+                                onChange={(e) =>
+                                    setData("name", e.target.value)
+                                }
+                                required
+                                autoComplete="name"
+                                placeholder="Update your name"
+                            />
                         </div>
-                    )}
-                </div>
-                {/* </form> */}
+                        <div className="flex flex-col space-y-1.5">
+                            <Input
+                                id="email"
+                                value={data.email}
+                                onChange={(e) =>
+                                    setData("email", e.target.value)
+                                }
+                                required
+                                autoComplete="email"
+                                placeholder="Update your email Address"
+                            />
+                        </div>
+                        {mustVerifyEmail && user.email_verified_at === null && (
+                            <div>
+                                <p className="text-sm mt-2 -800">
+                                    Your email address is unverified.
+                                    <Link
+                                        href={route("verification.send")}
+                                        method="post"
+                                        as="button"
+                                        className="underline text-sm -600 hover:-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                    >
+                                        Click here to re-send the verification
+                                        email.
+                                    </Link>
+                                </p>
+
+                                {status === "verification-link-sent" && (
+                                    <div className="mt-2 font-medium text-sm text-green-600">
+                                        A new verification link has been sent to
+                                        your email address.
+                                    </div>
+                                )}
+                            </div>
+                        )}
+                    </div>
+                </form>
             </CardBody>
 
             <CardFooter className="flex justify-start">
