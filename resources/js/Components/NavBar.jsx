@@ -142,12 +142,12 @@ export default function App() {
                             +99% Uptime
                         </DropdownItem>
                         <DropdownItem
-                            key="supreme_support"
-                            href={"/profile"}
-                            description="Overcome any challenge with a supporting team ready to respond."
+                            key="register"
+                            href={"/register"}
+                            description="Register for an account to view more features."
                             startContent={icons.user}
                         >
-                            +Supreme Support
+                            Register for an Account
                         </DropdownItem>
                     </DropdownMenu>
                 </Dropdown>
