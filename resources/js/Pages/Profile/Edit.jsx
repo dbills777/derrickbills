@@ -13,20 +13,22 @@ export default function Edit({ auth, mustVerifyEmail, status }) {
             }
         >
             <Head title="Profile" />
-            <div className="max-w-7xl md:p-6  mt-6 mx-auto shadow sm:rounded-lg">
-                <UpdateProfileInformation
-                    mustVerifyEmail={mustVerifyEmail}
-                    status={status}
-                />
-            </div>
+            <section className="min-h-screen">
+                <div className="max-w-7xl md:p-6  mt-6 mx-auto shadow sm:rounded-lg ">
+                    <UpdateProfileInformation
+                        mustVerifyEmail={mustVerifyEmail}
+                        status={status}
+                    />
+                </div>
+            </section>
 
-            <div className="max-w-7xl mx-auto p-4 my-6  sm:p-6 shadow sm:rounded-lg">
-                {/* <UpdatePasswordForm /> */}
+            {/* <div className="max-w-7xl mx-auto p-4 my-6  sm:p-6 shadow sm:rounded-lg">
+                <UpdatePasswordForm />
             </div>
 
             <div className="max-w-7xl mx-auto p-4 sm:p-6 shadow sm:rounded-lg">
-                {/* <DeleteUserForm /> */}
-            </div>
+                <DeleteUserForm />
+            </div> */}
         </Layout>
     );
 }
