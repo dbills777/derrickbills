@@ -1,8 +1,6 @@
 import Layout from "@/Layouts/Layout";
 import { Head } from "@inertiajs/react";
-import { Button } from "@nextui-org/react";
-import WelcomeHero from "@/Components/AboutHero";
-import { ButtonVariant } from "@/Components/Variants/ButtonVariant";
+import { WelcomeHero } from "@/Components/AboutHero";
 import { Stats } from "@/Components/Stats";
 import Timeline from "@/Components/Timeline";
 
