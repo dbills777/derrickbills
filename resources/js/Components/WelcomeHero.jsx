@@ -65,7 +65,7 @@ export const WelcomeHero = () => {
                 </div>
             </section>
             <section className="mx-auto lg:me-6">
-                <HeroCloudIcon height={400} width={400} />
+                <HeroCloudIcon height={350} width={350} />
             </section>
         </motion.div>
     );
