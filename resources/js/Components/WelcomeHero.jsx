@@ -11,7 +11,7 @@ export const WelcomeHero = () => {
             <section className="flex flex-col space-y-8">
                 <div>
                     <h1 className="text-5xl md:text-6xl xl:text-7xl font-thin min-w-full">
-                        Laravel, Inertia & React
+                        Laravel, MySQL, Inertia & React
                     </h1>
                     <h2 className="text-3xl  mt-6">Dark Mode Available</h2>
                 </div>
@@ -19,7 +19,7 @@ export const WelcomeHero = () => {
                     The application is built using the Laravel framework, which
                     provides a unique and powerful foundation for the
                     application. This foundation leverages InertiaJS, ReactJS,
-                    Tailwind CSS.
+                    Tailwind CSS & Framer motion.
                 </p>
                 <p className="text-2xl font-light sm:w-3/4">
                     Using a monolithic architecture, allows for a single code
