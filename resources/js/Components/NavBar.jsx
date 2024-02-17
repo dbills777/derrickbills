@@ -28,6 +28,7 @@ import {
     Server,
     TagUser,
 } from "./Icons.jsx";
+import ThemeToggle from "./ThemeToggle.jsx";
 export default function App() {
     const currentPage = usePage();
     const user = currentPage.props.auth.user;
@@ -199,6 +200,7 @@ export default function App() {
             </NavbarContent>
             <NavbarContent justify="end">
                 <ThemeSwitch className="leading-8" />
+                <ThemeToggle />
                 <Dropdown placement="bottom-end">
                     <DropdownTrigger>
                         <Avatar
