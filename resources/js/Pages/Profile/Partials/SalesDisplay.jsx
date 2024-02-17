@@ -4,8 +4,8 @@ export default function SalesDisplay() {
     return (
         <div className="min-h-screen">
             <Card className="p-4 md:m-8">
-                <h1 className="text-2xl font my-4 ">Monthy Sales</h1>
-                <div className="flex items-center motion-safe:hover:scale-[1.01] transition-all duration-250 motion-safe:hover:text-primary ">
+                <h1 className="text-2xl font my-4">Monthy Sales</h1>
+                <div className="flex items-center motion-safe:hover:scale-[1.01] transition-all duration-250 motion-safe:hover:text-primary">
                     <Avatar
                         isBordered
                         color="default"
@@ -21,7 +21,7 @@ export default function SalesDisplay() {
                     </div>
                     <div className="ml-auto font-medium">+$1,999.00</div>
                 </div>
-                <div className="flex items-center motion-safe:hover:scale-[1.01] transition-all duration-250 motion-safe:hover:text-primary ">
+                <div className="flex items-center motion-safe:hover:scale-[1.01] transition-all duration-250 motion-safe:hover:text-primary">
                     <Avatar
                         isBordered
                         color="primary"
@@ -31,11 +31,11 @@ export default function SalesDisplay() {
                         <p className="text-sm font-medium leading-none mt-4">
                             Jackson Lee
                         </p>
-                        <p className="text-sm ">jackson.lee@email.com</p>
+                        <p className="text-sm">jackson.lee@email.com</p>
                     </div>
                     <div className="ml-auto font-medium">+$39.00</div>
                 </div>
-                <div className="flex items-center motion-safe:hover:scale-[1.01] transition-all duration-250 motion-safe:hover:text-primary ">
+                <div className="flex items-center motion-safe:hover:scale-[1.01] transition-all duration-250 motion-safe:hover:text-primary">
                     <Avatar
                         isBordered
                         color="secondary"
@@ -45,11 +45,11 @@ export default function SalesDisplay() {
                         <p className="text-sm font-medium leading-none mt-4">
                             Isabella Nguyen
                         </p>
-                        <p className="text-sm ">isabella.nguyen@email.com</p>
+                        <p className="text-sm">isabella.nguyen@email.com</p>
                     </div>
                     <div className="ml-auto font-medium">+$299.00</div>
                 </div>
-                <div className="flex items-center motion-safe:hover:scale-[1.01] transition-all duration-250 motion-safe:hover:text-primary ">
+                <div className="flex items-center motion-safe:hover:scale-[1.01] transition-all duration-250 motion-safe:hover:text-primary">
                     <Avatar
                         isBordered
                         color="success"
@@ -59,11 +59,11 @@ export default function SalesDisplay() {
                         <p className="text-sm font-medium leading-none mt-4">
                             William Kim
                         </p>
-                        <p className="text-sm ">will@email.com</p>
+                        <p className="text-sm">will@email.com</p>
                     </div>
                     <div className="ml-auto font-medium">+$99.00</div>
                 </div>
-                <div className="flex items-center motion-safe:hover:scale-[1.01] transition-all duration-250 motion-safe:hover:text-primary ">
+                <div className="flex items-center motion-safe:hover:scale-[1.01] transition-all duration-250 motion-safe:hover:text-primary">
                     <Avatar
                         isBordered
                         color="warning"
@@ -73,7 +73,7 @@ export default function SalesDisplay() {
                         <p className="text-sm font-medium leading-none mt-4">
                             Sofia Davis
                         </p>
-                        <p className="text-sm ">sofia.davis@email.com</p>
+                        <p className="text-sm">sofia.davis@email.com</p>
                     </div>
                     <div className="ml-auto font-medium">+$39.00</div>
                 </div>

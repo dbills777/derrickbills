@@ -34,7 +34,7 @@ export default function UpdateProfileInformation({
                 leave="transition ease-in-out"
                 leaveTo="opacity-0"
             >
-                <div className="alert bg-backbround ">
+                <div className="alert bg-backbround">
                     <span>Saved!</span>
                 </div>
             </Transition>
@@ -67,7 +67,7 @@ export default function UpdateProfileInformation({
                         </div>
                         {mustVerifyEmail && user.email_verified_at === null && (
                             <div>
-                                <p className="text-sm mt-2 -800">
+                                <p className="text-sm mt-2">
                                     Your email address is unverified.
                                     <Link
                                         href={route("verification.send")}

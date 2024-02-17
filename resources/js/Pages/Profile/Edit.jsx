@@ -14,7 +14,7 @@ export default function Edit({ auth, mustVerifyEmail, status }) {
         >
             <Head title="Profile" />
             <section className="min-h-screen">
-                <div className="max-w-7xl md:p-6  mt-6 mx-auto shadow sm:rounded-lg ">
+                <div className="max-w-7xl md:p-6 mt-6 mx-auto shadow sm:rounded-lg ">
                     <UpdateProfileInformation
                         mustVerifyEmail={mustVerifyEmail}
                         status={status}
@@ -22,7 +22,7 @@ export default function Edit({ auth, mustVerifyEmail, status }) {
                 </div>
             </section>
 
-            {/* <div className="max-w-7xl mx-auto p-4 my-6  sm:p-6 shadow sm:rounded-lg">
+            {/* <div className="max-w-7xl mx-auto p-4 my-6 sm:p-6 shadow sm:rounded-lg">
                 <UpdatePasswordForm />
             </div>
 

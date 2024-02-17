@@ -1,8 +1,8 @@
 import Layout from "@/Layouts/Layout";
 import { Head } from "@inertiajs/react";
-import { AboutHero } from "@/Components/AboutHero";
-import { Stats } from "@/Components/Stats";
-import { Timeline } from "@/Components/Timeline";
+import { AboutHero } from "@/Pages/About/Partials/AboutHero";
+import { Stats } from "@/Pages/About/Partials/Stats";
+import { Timeline } from "@/Pages/About/Partials/Timeline";
 
 const About = ({ auth }) => {
     return (
