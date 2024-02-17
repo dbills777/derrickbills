@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ButtonVariant } from "@/Components/Variants/ButtonVariant";
 
-export const AboutHero = () => {
+export const About = () => {
     return (
         <>
             <motion.div
