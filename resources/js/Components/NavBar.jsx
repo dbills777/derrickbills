@@ -36,6 +36,7 @@ export default function App() {
     const menuItems = [
         "Welcome",
         "About",
+        "Products",
         "Login",
         "Profile",
         "Dashboard",
@@ -332,7 +333,7 @@ export default function App() {
                                 {item}
                             </Link>
                         )}
-                        {index < 2 && (
+                        {index < 3 && (
                             <Link
                                 className="w-full"
                                 color={
