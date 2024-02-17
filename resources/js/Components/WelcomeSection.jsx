@@ -3,14 +3,13 @@ export const WelcomeSection = () => {
         <div className="flex flex-col gap-2 py-20 px-6 mx-auto lg:flex-row max-w-screen-xl">
             <section className="flex flex-col space-y-12 ">
                 <h2 className="text-5xl md:text-6xl xl:text-7xl font-thin min-w-full">
-                    Deployment Process
+                    Development Process
                 </h2>
                 <p className="md:max-w-screen-md">
                     Application server and MySQL Database is hosted using a
                     DigitalOcean Droplet via Laravel Forge. Deployment is
                     automated on every push to the main branch.
                 </p>
-
                 <h3 className="text-orange-700 bold text-4xl">
                     "TODO: Add Github Actions for CI/CD"
                 </h3>
