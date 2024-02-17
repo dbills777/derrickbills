@@ -10,7 +10,7 @@ const Timeline = () => {
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20"
                             fill="#a11acd"
-                            className="h-5 w-5"
+                            className="h-8 w-8"
                         >
                             <path
                                 fillRule="evenodd"
@@ -38,7 +38,7 @@ const Timeline = () => {
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20"
                             fill="#0e32d8"
-                            className="h-5 w-5"
+                            className="h-8 w-8"
                         >
                             <path
                                 fillRule="evenodd"
@@ -66,7 +66,7 @@ const Timeline = () => {
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20"
                             fill="#EA8000"
-                            className="h-5 w-5"
+                            className="h-8 w-8"
                         >
                             <path
                                 fillRule="evenodd"
@@ -97,7 +97,7 @@ const Timeline = () => {
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20"
                             fill="#36FF6F"
-                            className="h-5 w-5"
+                            className="h-8 w-8"
                         >
                             <path
                                 fillRule="evenodd"
@@ -129,7 +129,7 @@ const Timeline = () => {
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20"
                             fill="#B1B1B0"
-                            className="h-5 w-5"
+                            className="h-8 w-8"
                         >
                             <path
                                 fillRule="evenodd"
