@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ButtonVariant } from "@/Components/Variants/ButtonVariant";
 
-export const About = () => {
+export const AboutHero = () => {
     return (
         <>
             <motion.div
@@ -23,7 +23,7 @@ export const About = () => {
                             The application is built using the Laravel
                             framework, powerful foundation for the application.
                             This foundation leverages InertiaJS, ReactJS,
-                            Tailwind CSS.
+                            TailwindCSS.
                         </p>
                         <p className="mb-5">
                             It also uses Nextui, DaisyUI, and Framer Motion.
