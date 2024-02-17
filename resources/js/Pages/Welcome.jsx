@@ -1,5 +1,4 @@
 import Layout from "@/Layouts/Layout";
-import Footer from "@/Layouts/Footer";
 import { Head } from "@inertiajs/react";
 import { WelcomeHero } from "@/Components/WelcomeHero";
 import { WelcomeSection } from "@/Components/WelcomeSection";
