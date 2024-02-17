@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ButtonVariant } from "@/Components/Variants/ButtonVariant";
 
-const WelcomeHero = () => {
+export const WelcomeHero = () => {
     return (
         <>
             <motion.div
@@ -14,8 +14,11 @@ const WelcomeHero = () => {
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md">
                         <h1 className="mb-5 text-5xl font-bold md:text-7xl">
-                            Hello There
+                            Derrick Bills
                         </h1>
+                        <h2 className="mb-5 text-2xl font-bold md:text-4xl">
+                            Full Stack Developer
+                        </h2>
                         <p className="mb-5">
                             The application is built using the Laravel
                             framework, powerful foundation for the application.
@@ -33,4 +36,3 @@ const WelcomeHero = () => {
         </>
     );
 };
-export default WelcomeHero;
