@@ -1,4 +1,5 @@
-import React from "react";
+import { Button, Link } from "@nextui-org/react";
+import { GitHubGradientIcon } from "./Icons.jsx";
 
 export const Timeline = () => {
     return (
@@ -110,14 +111,26 @@ export const Timeline = () => {
                         <div className="text-lg font-black">
                             derrickbills.com
                         </div>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Accusantium repudiandae dolore perspiciatis accusamus
-                        optio omnis corrupti quaerat qui, recusandae nostrum hic
-                        officiis iste, eos aut, repellat aspernatur. Distinctio
-                        et maiores dicta illum perferendis cum aliquid velit?
-                        Molestias, praesentium quos quo cum nobis expedita
-                        suscipit? Assumenda facilis recusandae reiciendis
-                        quaerat nisi.
+                        <Button
+                            variant="text"
+                            isIconOnly
+                            as={Link}
+                            target="_blank"
+                            href="https://github.com/dbills777/derrickbills"
+                            radius="full"
+                            className="flex swap swap-rotate items-center justify-center"
+                            whileHover="hover"
+                            endContent={<GitHubGradientIcon />}
+                        ></Button>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Suscipit corporis ullam inventore expedita
+                            iure corrupti laboriosam laborum praesentium, ipsam
+                            cum molestias beatae id quidem placeat, iste debitis
+                            nesciunt rerum fugiat similique possimus velit? Quo
+                            modi vel tenetur ea, ad corrupti? Perspiciatis sequi
+                            pariatur odio enim cum a quasi vitae tenetur.
+                        </p>
                     </div>
                     <hr className="bg-[#36FF6F]" />
                 </li>

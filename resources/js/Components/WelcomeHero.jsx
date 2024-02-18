@@ -1,6 +1,6 @@
-import { HeroCloudIcon } from "@/Components/Icons";
-import { Button, Tooltip } from "@nextui-org/react";
 import { motion } from "framer-motion";
+import { HeroCloudIcon } from "@/Components/Icons";
+import { Button, Link, Tooltip } from "@nextui-org/react";
 export const WelcomeHero = () => {
     return (
         <motion.div
@@ -62,6 +62,15 @@ export const WelcomeHero = () => {
                             Learn More
                         </Button>
                     </Tooltip>
+                    <Button
+                        href="https://github.com/nextui-org/nextui"
+                        as={Link}
+                        color="primary"
+                        showAnchorIcon
+                        variant="faded"
+                    >
+                        Button Link
+                    </Button>
                 </div>
             </section>
             <section className="mx-auto lg:me-6">
