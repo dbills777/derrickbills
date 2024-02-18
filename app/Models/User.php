@@ -20,6 +20,8 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'avatar',
+        'email_verified_at',
         'password',
     ];
 
@@ -42,4 +44,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    /**
+     * Get 25 users from the database from the most recent to the oldest.
+     *
+     * @return \Illuminate\Database\Eloquent\Collection<\App\Models\User>
+     */
+    public static function getLatestUsers(): \Illuminate\Database\Eloquent\Collection
+    {
+        return static::latest()->get();
+    }
 }

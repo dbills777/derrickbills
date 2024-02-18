@@ -8,7 +8,7 @@ import {
     CardHeader,
 } from "@nextui-org/react";
 
-export default function App() {
+export default function App({users}) {
     const [isFollowed, setIsFollowed] = React.useState(false);
 
     return (

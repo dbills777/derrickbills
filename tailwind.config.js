@@ -74,6 +74,7 @@ export default {
         "./resources/views/**/*.blade.php",
         "./resources/js/**/*.jsx",
         "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+        "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
     ],
 
     plugins: [
