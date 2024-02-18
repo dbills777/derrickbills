@@ -15,10 +15,11 @@
         <!-- Scripts -->
         @routes
         @viteReactRefresh
-        @vite(['resources/js/app.jsx', "resources/js/Pages/{$page['component']}.jsx"])
+        @vite(['resources/js/app.jsx', "resources/js/Pages/{$page['component']}.jsx", "public/images/*"])
         @inertiaHead
     </head>
     <body class="antialiased bg-background text-foreground font-Xenon">
+    <!-- <body class="text-accecnt bg-primary-content dark:text-primary-content dark:bg-primary-content"> -->
         @inertia
     </body>
 </html>

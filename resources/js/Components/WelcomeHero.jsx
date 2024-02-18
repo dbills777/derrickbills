@@ -6,7 +6,7 @@ export const WelcomeHero = () => {
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 2 } }}
-            className="flex flex-col gap-2 py-20 px-6  mx-auto lg:flex-row max-w-screen-xl"
+            className="flex flex-col gap-2 py-20 px-6  mx-auto lg:flex-row max-w-screen-xl "
         >
             <section className="flex flex-col space-y-8">
                 <div>
