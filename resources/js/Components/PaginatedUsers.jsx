@@ -1,5 +1,4 @@
-import React from "react";
-
+import { useState, useMemo } from "react";
 import {
     Table,
     TableHeader,
@@ -14,12 +13,12 @@ import {
 import UserList from "./UsersList";
 
 export default function App({ users }) {
-    const [page, setPage] = React.useState(1);
-    const rowsPerPage = 20;
+    const [page, setPage] = useState(1);
+    const rowsPerPage = 25;
 
     const pages = Math.ceil(users.length / rowsPerPage);
 
-    const items = React.useMemo(() => {
+    const items = useMemo(() => {
         const start = (page - 1) * rowsPerPage;
         const end = start + rowsPerPage;
 
@@ -28,44 +27,44 @@ export default function App({ users }) {
 
     return (
         <>
-        <Table
-            aria-label="Example table with client side pagination"
-            bottomContent={
-                <div className="flex w-full justify-center">
-                    <Pagination
-                        isCompact
-                        showControls
-                        showShadow
-                        color="secondary"
-                        page={page}
-                        total={pages}
-                        onChange={(page) => setPage(page)}
-                    />
-                </div>
-            }
-            classNames={{
-                wrapper: "min-h-[855px]",
-            }}
-        >
-            <TableHeader>
-                <TableColumn key="name">name</TableColumn>
-                <TableColumn key="email">email</TableColumn>
-                {/* <TableColumn key="created_at">created </TableColumn> */}
-            </TableHeader>
+            <Table
+                className="flex flex-col w-full max-w-7xl mx-auto mt-4"
+                aria-label="client-side pagination table example"
+                bottomContent={
+                    <div className="flex w-full justify-center">
+                        <Pagination
+                            showControls
+                            showShadow
+                            color="primary"
+                            page={page}
+                            total={pages}
+                            onChange={(page) => setPage(page)}
+                        />
+                    </div>
+                }
+            >
+                <TableHeader>
+                    <TableColumn key="name">name</TableColumn>
+                    <TableColumn key="email">email</TableColumn>
+                    <TableColumn key="created_at">created </TableColumn>
+                </TableHeader>
 
-            <TableBody items={items}>
-                {(item) => (
-                    <TableRow key={item.email}>
-                        {(columnKey) => (
-                            <TableCell>
-                                {getKeyValue(item, columnKey)}
-                            </TableCell>
-                        )}
-                    </TableRow>
-                )}
-            </TableBody>
-        </Table>
-        <UserList users={users} />
+                <TableBody
+                    items={items}
+                    className="flex justify-between w-full max-w-7xl  mt-4 "
+                >
+                    {(item) => (
+                        <TableRow key={item.email}>
+                            {(columnKey) => (
+                                <TableCell className="">
+                                    {getKeyValue(item, columnKey)}
+                                </TableCell>
+                            )}
+                        </TableRow>
+                    )}
+                </TableBody>
+            </Table>
+            <UserList users={users} />
         </>
     );
 }
