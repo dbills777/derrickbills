@@ -62,15 +62,6 @@ export const WelcomeHero = () => {
                             Learn More
                         </Button>
                     </Tooltip>
-                    <Button
-                        href="https://github.com/nextui-org/nextui"
-                        as={Link}
-                        color="primary"
-                        showAnchorIcon
-                        variant="faded"
-                    >
-                        Button Link
-                    </Button>
                 </div>
             </section>
             <section className="mx-auto lg:me-6">
