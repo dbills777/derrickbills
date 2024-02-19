@@ -40,7 +40,6 @@ class RegisteredUserController extends Controller
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'avatar' => 'https://i.pravatar.cc/64?u=' . fake()->unique()->numberBetween(1, 1000),
             'password' => Hash::make($request->password),
         ]);
 
