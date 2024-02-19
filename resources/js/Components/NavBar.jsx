@@ -28,7 +28,7 @@ import {
     Server,
     TagUser,
 } from "./Icons.jsx";
-// import ThemeToggle from "./ThemeToggle.jsx";
+
 export default function App() {
     const currentPage = usePage();
     const user = currentPage.props.auth.user;
@@ -38,6 +38,7 @@ export default function App() {
         "Welcome",
         "About",
         "Users",
+        "Products",
         "Login",
         "Profile",
         "Dashboard",
@@ -197,6 +198,15 @@ export default function App() {
                         Users
                     </Link>
                 </NavbarItem>
+                <NavbarItem
+                    {...(currentPage.component === "Products" && {
+                        isActive: true,
+                    })}
+                >
+                    <Link color="foreground" href="/products">
+                        Products
+                    </Link>
+                </NavbarItem>
             </NavbarContent>
             <NavbarContent justify="end">
                 <ThemeSwitch className="leading-8" />
@@ -335,7 +345,7 @@ export default function App() {
                                 {item}
                             </Link>
                         )}
-                        {index < 3 && (
+                        {index < 4 && (
                             <Link
                                 className="w-full"
                                 color={
