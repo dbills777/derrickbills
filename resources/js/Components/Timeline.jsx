@@ -22,7 +22,7 @@ export const Timeline = () => {
                     </div>
                     <div className="timeline-start md:text-end mb-10">
                         <time className="font-mono italic">2000 - 2021</time>
-                        <div className="text-lg font-black">
+                        <div className="my-2 text-2xl font-medium">
                             Pharmacy Technician
                         </div>
                         Minus, modi consequatur, fuga hic rerum, quidem tempore
@@ -49,7 +49,7 @@ export const Timeline = () => {
                     </div>
                     <div className="timeline-end mb-10">
                         <time className="font-mono italic">2018-2021</time>
-                        <div className="text-lg font-black">
+                        <div className="my-2 text-2xl font-medium">
                             Utah Valley University - Associates & Bachelors
                             Degree
                         </div>
@@ -77,7 +77,7 @@ export const Timeline = () => {
                     </div>
                     <div className="timeline-start md:text-end mb-10">
                         <time className="font-mono italic">2021-2023</time>
-                        <div className="text-lg font-black">
+                        <div className="my-2 text-2xl font-medium">
                             CHG Healthcare - Sofwtware Engineer I
                         </div>
                         Lorem, ipsum dolor sit amet consectetur adipisicing
@@ -108,7 +108,7 @@ export const Timeline = () => {
                     </div>
                     <div className="timeline-end mb-10">
                         <time className="font-mono italic">2023 - 2024 </time>
-                        <div className="text-lg font-black">
+                        <div className="my-2 text-2xl font-medium">
                             derrickbills.com
                         </div>
                         <Button
@@ -152,7 +152,9 @@ export const Timeline = () => {
                     </div>
                     <div className="timeline-start md:text-end mb-10">
                         <time className="font-mono italic">Present</time>
-                        <div className="text-lg font-black">Open to work</div>
+                        <div className="my-2 text-2xl font-medium">
+                            Open to work
+                        </div>
                         Lorem ipsum dolor, sit amet consectetur adipisicing
                         elit. Natus perferendis adipisci, obcaecati dicta quia
                         culpa accusamus architecto ratione repellendus corporis

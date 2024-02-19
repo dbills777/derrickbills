@@ -1,6 +1,6 @@
 export const WelcomeSection = () => {
     return (
-        <div className="flex flex-col gap-2 py-20 px-6 mx-auto lg:flex-row max-w-screen-xl">
+        <div className="my-40 flex flex-col gap-2 px-6 mx-auto lg:flex-row max-w-screen-xl">
             <section className="flex flex-col space-y-12 ">
                 <h2 className="text-5xl md:text-6xl xl:text-7xl font-thin min-w-full">
                     Development Process

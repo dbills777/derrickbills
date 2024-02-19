@@ -3,7 +3,7 @@ import { LaravelLogo, ReactLogo, TailWind } from "./Icons";
 
 export const MotionIcons = () => {
     return (
-        <div className="w-full hero  lg:h-[17rem] my-20">
+        <div className="w-full hero lg:h-[17rem] my-40">
             <div className="flex flex-col w-full lg:flex-row opacity-80 bg-background text-foreground place-content-center">
                 <div className="grid flex-grow card place-items-center ">
                     <div className="grid flex-grow h-[16rem] w-3/4  card text-foreground  place-items-center">

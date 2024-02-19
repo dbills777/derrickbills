@@ -1,8 +1,9 @@
 import Layout from "@/Layouts/Layout";
 import { Head } from "@inertiajs/react";
-import { AboutHero } from "@/Components/AboutHero";
 import { Stats } from "@/Components/Stats";
 import { Timeline } from "@/Components/Timeline";
+import { AboutHero } from "@/Components/AboutHero";
+import { WelcomeCards } from "@/Components/WelcomeCards";
 
 const About = ({ auth }) => {
     return (
@@ -37,6 +38,8 @@ const About = ({ auth }) => {
                 <div className="flex flex-col items-center justify-center py-10">
                     <Stats />
                 </div>
+                <WelcomeCards />
+
                 <div className="flex flex-col items-center justify-center py-10">
                     <Timeline />
                 </div>
