@@ -10,7 +10,6 @@ const Welcome = () => {
         <>
             <Layout>
                 <Head title="Welcome" />
-
                 <WelcomeHero />
                 <MotionIcons />
                 <Timeline />
