@@ -119,7 +119,7 @@ export const Timeline = () => {
                             href="https://github.com/dbills777/derrickbills"
                             radius="full"
                             className="flex swap swap-rotate items-center justify-center"
-                            whileHover="hover"
+                            whilehover="hover"
                             endContent={<GitHubGradientIcon />}
                         ></Button>
                         <p>
