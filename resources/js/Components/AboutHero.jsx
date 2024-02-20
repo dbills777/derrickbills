@@ -13,7 +13,7 @@ export const AboutHero = () => {
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="space-y-6 max-w-md">
-                        <h1 className="text-5xl md:text-6xl xl:text-7xl font-thin">
+                        <h1 className="text-5xl md:text-6xl xl:text-8xl font-thin">
                             Derrick Bills
                         </h1>
                         <h2 className="text-2xl font-bold md:text-4xl font-thin">
