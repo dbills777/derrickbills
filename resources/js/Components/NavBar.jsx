@@ -76,7 +76,7 @@ export default function App() {
 
     return (
         <Navbar
-            className="text-4xl font-thin lg:text-8xl"
+            className="text-4xl font-extralight lg:text-8xl"
             maxWidth="full"
             isMenuOpen={isMenuOpen}
             onMenuOpenChange={setIsMenuOpen}
