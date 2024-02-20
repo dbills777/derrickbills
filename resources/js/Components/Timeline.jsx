@@ -22,11 +22,9 @@ export const Timeline = () => {
                     </div>
                     <div className="timeline-start md:text-end mb-10">
                         <time className="font-mono italic">2000 - 2021</time>
-                        <div className="my-2 text-2xl font-medium">
+                        <div className="my-2 text-3xl font-thin md:text-5xl">
                             Pharmacy Technician
                         </div>
-                        Minus, modi consequatur, fuga hic rerum, quidem tempore
-                        quasi sint cum aspernatur similique pariatur eligendi?
                     </div>
 
                     <hr className="bg-secondary" />
@@ -49,7 +47,7 @@ export const Timeline = () => {
                     </div>
                     <div className="timeline-end mb-10">
                         <time className="font-mono italic">2018-2021</time>
-                        <div className="my-2 text-2xl font-medium">
+                        <div className="my-2 text-3xl font-thin md:text-5xl">
                             Utah Valley University - Associates & Bachelors
                             Degree
                         </div>
@@ -77,16 +75,39 @@ export const Timeline = () => {
                     </div>
                     <div className="timeline-start md:text-end mb-10">
                         <time className="font-mono italic">2021-2023</time>
-                        <div className="my-2 text-2xl font-medium">
+                        <div className="my-2 text-3xl font-thin md:text-5xl">
                             CHG Healthcare - Sofwtware Engineer I
                         </div>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Repellat nulla sequi aperiam esse quasi
-                        necessitatibus, id sint rerum accusamus ab dolores
-                        dolorem qui, odio harum earum voluptate blanditiis
-                        ducimus doloremque quas? Modi odio reiciendis animi!
-                        Minus, modi consequatur, fuga hic rerum, quidem tempore
-                        quasi sint cum aspernatur similique pariatur eligendi?
+                        <div className="space-y-2">
+                            <p>
+                                Creation of API's and full stack apppcations
+                                using Laravel, MySQL JavaScript and AlpineJS
+                            </p>
+                            <p>
+                                Migrated consumption of source data to Kafka,
+                                including building endpoints, Controllers,
+                                Models, Schemas and tables
+                            </p>
+                            <p>
+                                Experienced with Jira, Git, Figma, Sketch,
+                                Laravel Forge, Jenkins, GitHub Actions, Digital
+                                Ocean and Rack Space. Including exposure to AWS
+                                Kubernetes
+                            </p>
+                            <p>Built customer facing and internal tools.</p>
+                            <p>
+                                implemented NodeJS service worker to post data
+                                to an API endpoint
+                            </p>
+                            <p>
+                                Wrote unit and feature tests using Pest and PHP
+                                Unit and Jest
+                            </p>
+                            <p>
+                                Worked closely with cross functional teams to
+                                achieve business objectives
+                            </p>
+                        </div>
                     </div>
                     <hr className="bg-[#EA8000]" />
                 </li>
@@ -108,7 +129,7 @@ export const Timeline = () => {
                     </div>
                     <div className="timeline-end mb-10">
                         <time className="font-mono italic">2023 - 2024 </time>
-                        <div className="my-2 text-2xl font-medium">
+                        <div className="my-2 text-3xl font-thin md:text-5xl">
                             derrickbills.com
                         </div>
                         <Button
@@ -122,15 +143,36 @@ export const Timeline = () => {
                             whilehover="hover"
                             endContent={<GitHubGradientIcon />}
                         ></Button>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Suscipit corporis ullam inventore expedita
-                            iure corrupti laboriosam laborum praesentium, ipsam
-                            cum molestias beatae id quidem placeat, iste debitis
-                            nesciunt rerum fugiat similique possimus velit? Quo
-                            modi vel tenetur ea, ad corrupti? Perspiciatis sequi
-                            pariatur odio enim cum a quasi vitae tenetur.
-                        </p>
+                        <div className="space-y-2">
+                            <p>
+                                Built a personal web application to familiarize
+                                myself with the latest versions of React to
+                                build accessible, responsive pages using
+                                Tailwind‑ CSS and various UI libraries
+                            </p>
+                            <p>
+                                Laravel 10, InertiaJs, Laravel Breeze, and React
+                            </p>
+                            <p>
+                                UI Components build with TailwindCSS, NextUI and
+                                DaisyUI
+                            </p>
+                            <p>Dark / Light mode Themes</p>
+                            <p>
+                                Hosted via Digital Ocean droplet using Nginx and
+                                NodeJs
+                            </p>
+                            <p>Site deployment managed with Laravel Forge</p>
+                            <p>
+                                Laravel Breeze for User Creation and
+                                Authentication{" "}
+                                <p>
+                                    Refactored boilerplate pages with react SSR
+                                    Components
+                                </p>
+                                <p>Routing done with Inertia</p>
+                            </p>
+                        </div>
                     </div>
                     <hr className="bg-[#36FF6F]" />
                 </li>
@@ -152,20 +194,9 @@ export const Timeline = () => {
                     </div>
                     <div className="timeline-start md:text-end mb-10">
                         <time className="font-mono italic">Present</time>
-                        <div className="my-2 text-2xl font-medium">
+                        <div className="my-2 text-3xl font-thin md:text-5xl">
                             Open to work
                         </div>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Natus perferendis adipisci, obcaecati dicta quia
-                        culpa accusamus architecto ratione repellendus corporis
-                        sint dolorum optio, nobis velit nostrum! Possimus est
-                        eligendi fugit corporis dolorum, aliquam quos similique,
-                        reiciendis provident dignissimos ad cum earum! Error
-                        expedita alias qui culpa impedit? Id numquam sint
-                        temporibus porro asperiores minima quibusdam, et dicta
-                        mollitia qui voluptatibus atque, maiores impedit eveniet
-                        sapiente aliquid eligendi dolore cum perspiciatis
-                        consequatur est ratione molestias? Dolor?
                     </div>
                 </li>
             </ul>
