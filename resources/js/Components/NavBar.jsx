@@ -76,6 +76,7 @@ export default function App() {
 
     return (
         <Navbar
+            className="text-4xl font-thin lg:text-8xl"
             maxWidth="full"
             isMenuOpen={isMenuOpen}
             onMenuOpenChange={setIsMenuOpen}
@@ -98,7 +99,7 @@ export default function App() {
                         <DropdownTrigger>
                             <Button
                                 disableRipple
-                                className="p-0 bg-transparent data-[hover=true]:bg-transparent"
+                                className="p-0 bg-transparent data-[hover=true]:bg-transparenttext-4xl font-thin "
                                 endContent={icons.chevron}
                                 radius="sm"
                                 variant="light"
