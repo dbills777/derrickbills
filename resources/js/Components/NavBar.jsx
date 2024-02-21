@@ -88,12 +88,12 @@ export default function App() {
                 ],
             }}
         >
-            <NavbarContent className="sm:hidden" justify="start">
+            <NavbarContent className="md:hidden" justify="start">
                 <NavbarMenuToggle
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                 />
             </NavbarContent>
-            <NavbarContent className="hidden sm:flex gap-8" justify="center">
+            <NavbarContent className="hidden md:flex gap-8" justify="center">
                 <Dropdown>
                     <NavbarItem>
                         <DropdownTrigger>
