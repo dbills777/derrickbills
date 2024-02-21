@@ -51,7 +51,7 @@ export default function App({ users }) {
 
                 <TableBody
                     items={items}
-                    className="flex justify-between w-full max-w-7xl  mt-4 "
+                    className="flex justify-between w-full max-w-7xl"
                 >
                     {(item) => (
                         <TableRow key={item.email}>
