@@ -76,7 +76,7 @@ export const Timeline = () => {
                     <div className="timeline-start md:text-end mb-10">
                         <time className="font-mono italic">2021-2023</time>
                         <div className="my-2 text-3xl font-thin md:text-5xl">
-                            CHG Healthcare - Sofwtware Engineer I
+                            CHG Healthcare - Software Engineer I
                         </div>
                         <div className="space-y-2">
                             <p>
