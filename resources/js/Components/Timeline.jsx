@@ -165,13 +165,14 @@ export const Timeline = () => {
                             <p>Site deployment managed with Laravel Forge</p>
                             <p>
                                 Laravel Breeze for User Creation and
-                                Authentication{" "}
-                                <p>
-                                    Refactored boilerplate pages with react SSR
-                                    Components
-                                </p>
-                                <p>Routing done with Inertia</p>
+                                Authentication
                             </p>
+
+                            <p>
+                                Refactored boilerplate pages with react SSR
+                                Components
+                            </p>
+                            <p>Routing done with Inertia</p>
                         </div>
                     </div>
                     <hr className="bg-[#36FF6F]" />
