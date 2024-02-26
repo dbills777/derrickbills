@@ -52,17 +52,17 @@ export default function App({ users }) {
                         </p>
                     </div>
                 );
-            case "status":
-                return (
-                    <Chip
-                        className="capitalize"
-                        color={statusColorMap[user.status]}
-                        size="sm"
-                        variant="flat"
-                    >
-                        {cellValue}
-                    </Chip>
-                );
+            // case "status":
+            //     return (
+            //         <Chip
+            //             className="capitalize"
+            //             color={statusColorMap[user.status]}
+            //             size="sm"
+            //             variant="flat"
+            //         >
+            //             {cellValue}
+            //         </Chip>
+            //     );
             case "actions":
                 return (
                     <div className="relative flex items-center gap-2">
@@ -89,26 +89,32 @@ export default function App({ users }) {
     }, []);
 
     return (
-        <Table aria-label="Example table with custom cells">
-            <TableHeader columns={columns}>
-                {(column) => (
-                    <TableColumn
-                        key={column.uid}
-                        align={column.uid === "actions" ? "center" : "start"}
-                    >
-                        {column.name}
-                    </TableColumn>
-                )}
-            </TableHeader>
-            <TableBody items={users}>
-                {(item) => (
-                    <TableRow key={item.id}>
-                        {(columnKey) => (
-                            <TableCell>{renderCell(item, columnKey)}</TableCell>
-                        )}
-                    </TableRow>
-                )}
-            </TableBody>
-        </Table>
+        <div className="max-w-4xl mx-auto">
+            <Table aria-label="Example table with custom cells ">
+                <TableHeader columns={columns}>
+                    {(column) => (
+                        <TableColumn
+                            key={column.uid}
+                            align={
+                                column.uid === "actions" ? "center" : "start"
+                            }
+                        >
+                            {column.name}
+                        </TableColumn>
+                    )}
+                </TableHeader>
+                <TableBody items={users}>
+                    {(item) => (
+                        <TableRow key={item.id}>
+                            {(columnKey) => (
+                                <TableCell>
+                                    {renderCell(item, columnKey)}
+                                </TableCell>
+                            )}
+                        </TableRow>
+                    )}
+                </TableBody>
+            </Table>
+        </div>
     );
 }
