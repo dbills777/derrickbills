@@ -24,7 +24,10 @@ export const WelcomeHero = () => {
                 <p className="text-2xl font-light sm:w-3/4">
                     Using a monolithic architecture, allows for a single code
                     base Creating a more efficient and maintainable application.
+                    
                 </p>
+                <p className="font-light">Navigating the application is seamless and fast, with no
+                    page refreshes.</p>
                 <div className="space-x-4">
                     <Tooltip
                         className="ms-3"
