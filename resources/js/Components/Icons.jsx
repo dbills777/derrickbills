@@ -133,7 +133,6 @@ export const EditDocumentIcon = ({
         </svg>
     );
 };
-
 export const DeleteIcon = (props) => (
     <svg
         aria-hidden="true"
@@ -337,7 +336,6 @@ export const DarkTheme = ({ fill, size, height, width, ...props }) => {
         </svg>
     );
 };
-
 export const ChevronDown = ({ fill, size, height, width, ...props }) => {
     return (
         <svg
@@ -360,7 +358,6 @@ export const ChevronDown = ({ fill, size, height, width, ...props }) => {
         </svg>
     );
 };
-
 export const Lock = ({ fill, size, height, width, ...props }) => {
     const color = fill;
 
@@ -407,7 +404,6 @@ export const Lock = ({ fill, size, height, width, ...props }) => {
         </svg>
     );
 };
-
 export const Activity = ({ fill, size, height, width, ...props }) => {
     return (
         <svg
@@ -432,7 +428,6 @@ export const Activity = ({ fill, size, height, width, ...props }) => {
         </svg>
     );
 };
-
 export const Flash = ({
     fill = "currentColor",
     size,
@@ -460,7 +455,6 @@ export const Flash = ({
         </svg>
     );
 };
-
 export const Server = ({
     fill = "currentColor",
     size,
@@ -487,7 +481,6 @@ export const Server = ({
         </svg>
     );
 };
-
 export const TagUser = ({
     fill = "currentColor",
     size,
@@ -522,7 +515,6 @@ export const TagUser = ({
         </svg>
     );
 };
-
 export const Scale = ({
     fill = "currentColor",
     size,
@@ -973,8 +965,8 @@ export const PasswordIcon = ({
                 gradientUnits="userSpaceOnUse"
                 spreadMethod="reflect"
             >
-                <stop offset="0" stop-color="#8ab4ff" />
-                <stop offset="1" stop-color="#e492ff" />
+                <stop offset="0" stopColor="#8ab4ff" />
+                <stop offset="1" stopColor="#e492ff" />
             </linearGradient>
             <path
                 fill="url(#Tz2XUOsfxgFw8DN_AXgE5a)"
@@ -989,8 +981,8 @@ export const PasswordIcon = ({
                 gradientUnits="userSpaceOnUse"
                 spreadMethod="reflect"
             >
-                <stop offset="0" stop-color="#8ab4ff" />
-                <stop offset="1" stop-color="#e492ff" />
+                <stop offset="0" stopColor="#8ab4ff" />
+                <stop offset="1" stopColor="#e492ff" />
             </linearGradient>
             <path
                 fill="url(#Tz2XUOsfxgFw8DN_AXgE5b)"
@@ -1005,8 +997,8 @@ export const PasswordIcon = ({
                 gradientUnits="userSpaceOnUse"
                 spreadMethod="reflect"
             >
-                <stop offset="0" stop-color="#8ab4ff" />
-                <stop offset="1" stop-color="#e492ff" />
+                <stop offset="0" stopColor="#8ab4ff" />
+                <stop offset="1" stopColor="#e492ff" />
             </linearGradient>
             <path
                 fill="url(#Tz2XUOsfxgFw8DN_AXgE5c)"
@@ -1021,8 +1013,8 @@ export const PasswordIcon = ({
                 gradientUnits="userSpaceOnUse"
                 spreadMethod="reflect"
             >
-                <stop offset="0" stop-color="#8ab4ff" />
-                <stop offset="1" stop-color="#e492ff" />
+                <stop offset="0" stopColor="#8ab4ff" />
+                <stop offset="1" stopColor="#e492ff" />
             </linearGradient>
             <path
                 fill="url(#Tz2XUOsfxgFw8DN_AXgE5d)"
@@ -1037,8 +1029,8 @@ export const PasswordIcon = ({
                 gradientUnits="userSpaceOnUse"
                 spreadMethod="reflect"
             >
-                <stop offset="0" stop-color="#1A6DFF" />
-                <stop offset="1" stop-color="#C822FF" />
+                <stop offset="0" stopColor="#1A6DFF" />
+                <stop offset="1" stopColor="#C822FF" />
             </linearGradient>
             <path
                 fill="url(#Tz2XUOsfxgFw8DN_AXgE5e)"
@@ -1073,8 +1065,8 @@ export const LogOut = ({
                 gradientUnits="userSpaceOnUse"
                 spreadMethod="reflect"
             >
-                <stop offset="0" stop-color="#8ab4ff" />
-                <stop offset="1" stop-color="#e492ff" />
+                <stop offset="0" stopColor="#8ab4ff" />
+                <stop offset="1" stopColor="#e492ff" />
             </linearGradient>
             <path
                 fill="url(#Tz2XUOsfxgFw8DN_AXgE5a)"
@@ -1089,8 +1081,8 @@ export const LogOut = ({
                 gradientUnits="userSpaceOnUse"
                 spreadMethod="reflect"
             >
-                <stop offset="0" stop-color="#8ab4ff" />
-                <stop offset="1" stop-color="#e492ff" />
+                <stop offset="0" stopColor="#8ab4ff" />
+                <stop offset="1" stopColor="#e492ff" />
             </linearGradient>
             <path
                 fill="url(#Tz2XUOsfxgFw8DN_AXgE5b)"
@@ -1105,8 +1097,8 @@ export const LogOut = ({
                 gradientUnits="userSpaceOnUse"
                 spreadMethod="reflect"
             >
-                <stop offset="0" stop-color="#8ab4ff" />
-                <stop offset="1" stop-color="#e492ff" />
+                <stop offset="0" stopColor="#8ab4ff" />
+                <stop offset="1" stopColor="#e492ff" />
             </linearGradient>
             <path
                 fill="url(#Tz2XUOsfxgFw8DN_AXgE5c)"
@@ -1121,8 +1113,8 @@ export const LogOut = ({
                 gradientUnits="userSpaceOnUse"
                 spreadMethod="reflect"
             >
-                <stop offset="0" stop-color="#8ab4ff" />
-                <stop offset="1" stop-color="#e492ff" />
+                <stop offset="0" stopColor="#8ab4ff" />
+                <stop offset="1" stopColor="#e492ff" />
             </linearGradient>
             <path
                 fill="url(#Tz2XUOsfxgFw8DN_AXgE5d)"
@@ -1137,8 +1129,8 @@ export const LogOut = ({
                 gradientUnits="userSpaceOnUse"
                 spreadMethod="reflect"
             >
-                <stop offset="0" stop-color="#1A6DFF" />
-                <stop offset="1" stop-color="#C822FF" />
+                <stop offset="0" stopColor="#1A6DFF" />
+                <stop offset="1" stopColor="#C822FF" />
             </linearGradient>
             <path
                 fill="url(#Tz2XUOsfxgFw8DN_AXgE5e)"
