@@ -3,6 +3,7 @@ import InputError from "@/Components/InputError";
 import InputLabel from "@/Components/InputLabel";
 import TextInput from "@/Components/TextInput";
 import { Head, Link, useForm } from "@inertiajs/react";
+import LoginAndRegister from "./LoginAndRegister";
 
 export default function Register() {
     const { data, setData, post, processing, errors, reset } = useForm({
@@ -27,8 +28,9 @@ export default function Register() {
     return (
         <div className="flex flex-col items-center mt-20 bg-gray-200 p-20">
             <Head title="Register" />
+            <LoginAndRegister />
 
-            <form onSubmit={submit}>
+            {/* <form onSubmit={submit}>
                 <div>
                     <InputLabel htmlFor="name" value="Name" />
 
@@ -117,7 +119,7 @@ export default function Register() {
                         Register
                     </button>
                 </div>
-            </form>
+            </form> */}
         </div>
     );
 }

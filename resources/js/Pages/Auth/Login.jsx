@@ -4,6 +4,7 @@ import InputError from "@/Components/InputError";
 import InputLabel from "@/Components/InputLabel";
 import TextInput from "@/Components/TextInput";
 import { Head, Link, useForm } from "@inertiajs/react";
+import LoginAndRegister from "@/Pages/Auth/LoginAndRegister";
 
 export default function Login({ status, canResetPassword }) {
     const { data, setData, post, processing, errors, reset } = useForm({
@@ -33,8 +34,9 @@ export default function Login({ status, canResetPassword }) {
                     {status}
                 </div>
             )}
+            <LoginAndRegister />
 
-            <form onSubmit={submit}>
+            {/* <form onSubmit={submit}>
                 <div>
                     <InputLabel htmlFor="email" value="Email" />
 
@@ -97,7 +99,7 @@ export default function Login({ status, canResetPassword }) {
                         Log in
                     </button>
                 </div>
-            </form>
+            </form> */}
         </div>
     );
 }
