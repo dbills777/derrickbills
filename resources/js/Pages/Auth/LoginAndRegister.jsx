@@ -44,7 +44,7 @@ export const LoginAndRegister = (status, canResetPassword) => {
         <div className="">
             <Card>
                 <CardHeader>
-                    <section className="mx-auto lg:me-6">
+                    <section className="mx-auto">
                         <PasswordIcon height={350} width={350} />
                     </section>
                 </CardHeader>
