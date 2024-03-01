@@ -947,6 +947,106 @@ export const LogIn = ({
         </svg>
     );
 };
+export const PasswordIcon = ({
+    fill = "currentColor",
+    size,
+    height,
+    width,
+    ...props
+}) => {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 64 64"
+            height={size || height}
+            width={size || width}
+            {...props}
+            size={size || height}
+            fill={fill}
+        >
+            <linearGradient
+                id="Tz2XUOsfxgFw8DN_AXgE5a"
+                x1="36"
+                x2="36"
+                y1="39.833"
+                y2="44.179"
+                gradientUnits="userSpaceOnUse"
+                spreadMethod="reflect"
+            >
+                <stop offset="0" stop-color="#8ab4ff" />
+                <stop offset="1" stop-color="#e492ff" />
+            </linearGradient>
+            <path
+                fill="url(#Tz2XUOsfxgFw8DN_AXgE5a)"
+                d="M36 40A2 2 0 1 0 36 44A2 2 0 1 0 36 40Z"
+            />
+            <linearGradient
+                id="Tz2XUOsfxgFw8DN_AXgE5b"
+                x1="42"
+                x2="42"
+                y1="39.833"
+                y2="44.179"
+                gradientUnits="userSpaceOnUse"
+                spreadMethod="reflect"
+            >
+                <stop offset="0" stop-color="#8ab4ff" />
+                <stop offset="1" stop-color="#e492ff" />
+            </linearGradient>
+            <path
+                fill="url(#Tz2XUOsfxgFw8DN_AXgE5b)"
+                d="M42 40A2 2 0 1 0 42 44A2 2 0 1 0 42 40Z"
+            />
+            <linearGradient
+                id="Tz2XUOsfxgFw8DN_AXgE5c"
+                x1="48"
+                x2="48"
+                y1="39.833"
+                y2="44.179"
+                gradientUnits="userSpaceOnUse"
+                spreadMethod="reflect"
+            >
+                <stop offset="0" stop-color="#8ab4ff" />
+                <stop offset="1" stop-color="#e492ff" />
+            </linearGradient>
+            <path
+                fill="url(#Tz2XUOsfxgFw8DN_AXgE5c)"
+                d="M48 40A2 2 0 1 0 48 44A2 2 0 1 0 48 40Z"
+            />
+            <linearGradient
+                id="Tz2XUOsfxgFw8DN_AXgE5d"
+                x1="30"
+                x2="30"
+                y1="39.833"
+                y2="44.179"
+                gradientUnits="userSpaceOnUse"
+                spreadMethod="reflect"
+            >
+                <stop offset="0" stop-color="#8ab4ff" />
+                <stop offset="1" stop-color="#e492ff" />
+            </linearGradient>
+            <path
+                fill="url(#Tz2XUOsfxgFw8DN_AXgE5d)"
+                d="M30 40A2 2 0 1 0 30 44A2 2 0 1 0 30 40Z"
+            />
+            <linearGradient
+                id="Tz2XUOsfxgFw8DN_AXgE5e"
+                x1="32"
+                x2="32"
+                y1="5.333"
+                y2="58.804"
+                gradientUnits="userSpaceOnUse"
+                spreadMethod="reflect"
+            >
+                <stop offset="0" stop-color="#1A6DFF" />
+                <stop offset="1" stop-color="#C822FF" />
+            </linearGradient>
+            <path
+                fill="url(#Tz2XUOsfxgFw8DN_AXgE5e)"
+                d="M52.021,34H47v-3c0-2.757-2.243-5-5-5h-1v-2c0-1.103-0.897-2-2-2h-2v-7c0-4.963-4.037-9-9-9 s-9,4.037-9,9v7h-2c-1.103,0-2,0.897-2,2v2h-1c-2.757,0-5,2.243-5,5v22c0,2.757,2.243,5,5,5h28c2.757,0,5-2.243,5-5v-3h5.021 C53.663,50,55,48.663,55,47.021V36.979C55,35.337,53.663,34,52.021,34z M39,26h-6v-2h6V26z M21,15c0-3.859,3.141-7,7-7s7,3.141,7,7 v7h-2c-1.103,0-2,0.897-2,2v2h-6v-2c0-1.103-0.897-2-2-2h-2V15z M17,24h6v2h-6V24z M45,53c0,1.654-1.346,3-3,3h-7 c0-1.103-0.897-2-2-2H23c-1.103,0-2,0.897-2,2h-7c-1.654,0-3-1.346-3-3v-4h4v-2h-4v-2h4v-2h-4v-2h4v-2h-4v-2h4v-2h-4v-4 c0-1.654,1.346-3,3-3h28c1.654,0,3,1.346,3,3v3H25.979C24.337,34,23,35.337,23,36.979v10.041C23,48.663,24.337,50,25.979,50H45V53z M53,47.021C53,47.561,52.561,48,52.021,48H25.979C25.439,48,25,47.561,25,47.021V36.979C25,36.439,25.439,36,25.979,36h26.041 C52.561,36,53,36.439,53,36.979V47.021z"
+            />
+        </svg>
+    );
+};
 export const LogOut = ({
     fill = "currentColor",
     size,
@@ -965,68 +1065,84 @@ export const LogOut = ({
             fill={fill}
         >
             <linearGradient
-                id="LnVT~IbGOziPdyc7iYouxa"
-                x1="31"
-                x2="31"
-                y1="27.75"
-                y2="38.003"
+                id="Tz2XUOsfxgFw8DN_AXgE5a"
+                x1="36"
+                x2="36"
+                y1="39.833"
+                y2="44.179"
                 gradientUnits="userSpaceOnUse"
                 spreadMethod="reflect"
             >
-                <stop offset="0" stopColor="#8ab4ff" />
-                <stop offset="1" stopColor="#e492ff" />
+                <stop offset="0" stop-color="#8ab4ff" />
+                <stop offset="1" stop-color="#e492ff" />
             </linearGradient>
             <path
-                fill="url(#LnVT~IbGOziPdyc7iYouxa)"
-                d="M31 28A4 4 0 1 0 31 36A4 4 0 1 0 31 28Z"
+                fill="url(#Tz2XUOsfxgFw8DN_AXgE5a)"
+                d="M36 40A2 2 0 1 0 36 44A2 2 0 1 0 36 40Z"
             />
             <linearGradient
-                id="LnVT~IbGOziPdyc7iYouxb"
-                x1="29.958"
-                x2="29.958"
-                y1="5.25"
-                y2="58.279"
-                gradientUnits="userSpaceOnUse"
-                spreadMethod="reflect"
-            >
-                <stop offset="0" stopColor="#1A6DFF" />
-                <stop offset="1" stopColor="#C822FF" />
-            </linearGradient>
-            <path
-                fill="url(#LnVT~IbGOziPdyc7iYouxb)"
-                d="M31,55C18.318,55,8,44.683,8,32S18.318,9,31,9c9.144,0,17.419,5.414,21.084,13.794 l1.832-0.801C49.934,12.885,40.938,7,31,7C17.215,7,6,18.215,6,32s11.215,25,25,25c9.938,0,18.934-5.885,22.917-14.993l-1.832-0.801 C48.42,49.586,40.144,55,31,55z"
-            />
-            <linearGradient
-                id="LnVT~IbGOziPdyc7iYouxc"
-                x1="29.417"
-                x2="29.417"
-                y1="5.25"
-                y2="58.279"
-                gradientUnits="userSpaceOnUse"
-                spreadMethod="reflect"
-            >
-                <stop offset="0" stopColor="#1A6DFF" />
-                <stop offset="1" stopColor="#C822FF" />
-            </linearGradient>
-            <path
-                fill="url(#LnVT~IbGOziPdyc7iYouxc)"
-                d="M31,15c5.686,0,10.971,2.825,14.138,7.557l1.662-1.113C43.261,16.156,37.354,13,31,13 c-10.477,0-19,8.523-19,19s8.523,19,19,19c6.379,0,12.299-3.176,15.834-8.495l-1.666-1.107C42.005,46.158,36.708,49,31,49 c-9.374,0-17-7.626-17-17S21.626,15,31,15z"
-            />
-            <linearGradient
-                id="LnVT~IbGOziPdyc7iYouxd"
+                id="Tz2XUOsfxgFw8DN_AXgE5b"
                 x1="42"
                 x2="42"
-                y1="5.25"
-                y2="58.279"
+                y1="39.833"
+                y2="44.179"
                 gradientUnits="userSpaceOnUse"
                 spreadMethod="reflect"
             >
-                <stop offset="0" stopColor="#1A6DFF" />
-                <stop offset="1" stopColor="#C822FF" />
+                <stop offset="0" stop-color="#8ab4ff" />
+                <stop offset="1" stop-color="#e492ff" />
             </linearGradient>
             <path
-                fill="url(#LnVT~IbGOziPdyc7iYouxd)"
-                d="M56.518,29.44l-7.786-4.219c-0.569-0.31-1.239-0.295-1.793,0.036 C46.36,25.603,46,26.248,46,26.941V31H35.899c-0.465-2.279-2.484-4-4.899-4c-2.757,0-5,2.243-5,5s2.243,5,5,5 c2.414,0,4.434-1.721,4.899-4H46v4.059c0,0.693,0.36,1.339,0.938,1.684C47.227,38.914,47.546,39,47.867,39 c0.296,0,0.592-0.073,0.865-0.222l7.786-4.219C57.432,34.064,58,33.084,58,32S57.432,29.936,56.518,29.44z M31,35 c-1.654,0-3-1.346-3-3s1.346-3,3-3s3,1.346,3,3S32.654,35,31,35z M55.565,32.802L47.999,36.9l-0.05-9.828l7.616,4.126 C55.969,31.417,56,31.867,56,32S55.969,32.583,55.565,32.802z"
+                fill="url(#Tz2XUOsfxgFw8DN_AXgE5b)"
+                d="M42 40A2 2 0 1 0 42 44A2 2 0 1 0 42 40Z"
+            />
+            <linearGradient
+                id="Tz2XUOsfxgFw8DN_AXgE5c"
+                x1="48"
+                x2="48"
+                y1="39.833"
+                y2="44.179"
+                gradientUnits="userSpaceOnUse"
+                spreadMethod="reflect"
+            >
+                <stop offset="0" stop-color="#8ab4ff" />
+                <stop offset="1" stop-color="#e492ff" />
+            </linearGradient>
+            <path
+                fill="url(#Tz2XUOsfxgFw8DN_AXgE5c)"
+                d="M48 40A2 2 0 1 0 48 44A2 2 0 1 0 48 40Z"
+            />
+            <linearGradient
+                id="Tz2XUOsfxgFw8DN_AXgE5d"
+                x1="30"
+                x2="30"
+                y1="39.833"
+                y2="44.179"
+                gradientUnits="userSpaceOnUse"
+                spreadMethod="reflect"
+            >
+                <stop offset="0" stop-color="#8ab4ff" />
+                <stop offset="1" stop-color="#e492ff" />
+            </linearGradient>
+            <path
+                fill="url(#Tz2XUOsfxgFw8DN_AXgE5d)"
+                d="M30 40A2 2 0 1 0 30 44A2 2 0 1 0 30 40Z"
+            />
+            <linearGradient
+                id="Tz2XUOsfxgFw8DN_AXgE5e"
+                x1="32"
+                x2="32"
+                y1="5.333"
+                y2="58.804"
+                gradientUnits="userSpaceOnUse"
+                spreadMethod="reflect"
+            >
+                <stop offset="0" stop-color="#1A6DFF" />
+                <stop offset="1" stop-color="#C822FF" />
+            </linearGradient>
+            <path
+                fill="url(#Tz2XUOsfxgFw8DN_AXgE5e)"
+                d="M52.021,34H47v-3c0-2.757-2.243-5-5-5h-1v-2c0-1.103-0.897-2-2-2h-2v-7c0-4.963-4.037-9-9-9 s-9,4.037-9,9v7h-2c-1.103,0-2,0.897-2,2v2h-1c-2.757,0-5,2.243-5,5v22c0,2.757,2.243,5,5,5h28c2.757,0,5-2.243,5-5v-3h5.021 C53.663,50,55,48.663,55,47.021V36.979C55,35.337,53.663,34,52.021,34z M39,26h-6v-2h6V26z M21,15c0-3.859,3.141-7,7-7s7,3.141,7,7 v7h-2c-1.103,0-2,0.897-2,2v2h-6v-2c0-1.103-0.897-2-2-2h-2V15z M17,24h6v2h-6V24z M45,53c0,1.654-1.346,3-3,3h-7 c0-1.103-0.897-2-2-2H23c-1.103,0-2,0.897-2,2h-7c-1.654,0-3-1.346-3-3v-4h4v-2h-4v-2h4v-2h-4v-2h4v-2h-4v-2h4v-2h-4v-4 c0-1.654,1.346-3,3-3h28c1.654,0,3,1.346,3,3v3H25.979C24.337,34,23,35.337,23,36.979v10.041C23,48.663,24.337,50,25.979,50H45V53z M53,47.021C53,47.561,52.561,48,52.021,48H25.979C25.439,48,25,47.561,25,47.021V36.979C25,36.439,25.439,36,25.979,36h26.041 C52.561,36,53,36.439,53,36.979V47.021z"
             />
         </svg>
     );
@@ -1134,106 +1250,6 @@ export const Sync = ({
         >
             <path d="M.01 0h24v24h-24V0z" fill="none" />
             <path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z" />
-        </svg>
-    );
-};
-export const PasswordIcon = ({
-    fill = "currentColor",
-    size,
-    height,
-    width,
-    ...props
-}) => {
-    return (
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 64 64"
-            height={size || height}
-            width={size || width}
-            {...props}
-            size={size || height}
-            fill={fill}
-        >
-            <linearGradient
-                id="Tz2XUOsfxgFw8DN_AXgE5a"
-                x1="36"
-                x2="36"
-                y1="39.833"
-                y2="44.179"
-                gradientUnits="userSpaceOnUse"
-                spreadMethod="reflect"
-            >
-                <stop offset="0" stopColor="#8ab4ff" />
-                <stop offset="1" stopColor="#e492ff" />
-            </linearGradient>
-            <path
-                fill="url(#Tz2XUOsfxgFw8DN_AXgE5a)"
-                d="M36 40A2 2 0 1 0 36 44A2 2 0 1 0 36 40Z"
-            />
-            <linearGradient
-                id="Tz2XUOsfxgFw8DN_AXgE5b"
-                x1="42"
-                x2="42"
-                y1="39.833"
-                y2="44.179"
-                gradientUnits="userSpaceOnUse"
-                spreadMethod="reflect"
-            >
-                <stop offset="0" stopColor="#8ab4ff" />
-                <stop offset="1" stopColor="#e492ff" />
-            </linearGradient>
-            <path
-                fill="url(#Tz2XUOsfxgFw8DN_AXgE5b)"
-                d="M42 40A2 2 0 1 0 42 44A2 2 0 1 0 42 40Z"
-            />
-            <linearGradient
-                id="Tz2XUOsfxgFw8DN_AXgE5c"
-                x1="48"
-                x2="48"
-                y1="39.833"
-                y2="44.179"
-                gradientUnits="userSpaceOnUse"
-                spreadMethod="reflect"
-            >
-                <stop offset="0" stopColor="#8ab4ff" />
-                <stop offset="1" stopColor="#e492ff" />
-            </linearGradient>
-            <path
-                fill="url(#Tz2XUOsfxgFw8DN_AXgE5c)"
-                d="M48 40A2 2 0 1 0 48 44A2 2 0 1 0 48 40Z"
-            />
-            <linearGradient
-                id="Tz2XUOsfxgFw8DN_AXgE5d"
-                x1="30"
-                x2="30"
-                y1="39.833"
-                y2="44.179"
-                gradientUnits="userSpaceOnUse"
-                spreadMethod="reflect"
-            >
-                <stop offset="0" stopColor="#8ab4ff" />
-                <stop offset="1" stopColor="#e492ff" />
-            </linearGradient>
-            <path
-                fill="url(#Tz2XUOsfxgFw8DN_AXgE5d)"
-                d="M30 40A2 2 0 1 0 30 44A2 2 0 1 0 30 40Z"
-            />
-            <linearGradient
-                id="Tz2XUOsfxgFw8DN_AXgE5e"
-                x1="32"
-                x2="32"
-                y1="5.333"
-                y2="58.804"
-                gradientUnits="userSpaceOnUse"
-                spreadMethod="reflect"
-            >
-                <stop offset="0" stopColor="#1A6DFF" />
-                <stop offset="1" stopColor="#C822FF" />
-            </linearGradient>
-            <path
-                fill="url(#Tz2XUOsfxgFw8DN_AXgE5e)"
-                d="M52.021,34H47v-3c0-2.757-2.243-5-5-5h-1v-2c0-1.103-0.897-2-2-2h-2v-7c0-4.963-4.037-9-9-9 s-9,4.037-9,9v7h-2c-1.103,0-2,0.897-2,2v2h-1c-2.757,0-5,2.243-5,5v22c0,2.757,2.243,5,5,5h28c2.757,0,5-2.243,5-5v-3h5.021 C53.663,50,55,48.663,55,47.021V36.979C55,35.337,53.663,34,52.021,34z M39,26h-6v-2h6V26z M21,15c0-3.859,3.141-7,7-7s7,3.141,7,7 v7h-2c-1.103,0-2,0.897-2,2v2h-6v-2c0-1.103-0.897-2-2-2h-2V15z M17,24h6v2h-6V24z M45,53c0,1.654-1.346,3-3,3h-7 c0-1.103-0.897-2-2-2H23c-1.103,0-2,0.897-2,2h-7c-1.654,0-3-1.346-3-3v-4h4v-2h-4v-2h4v-2h-4v-2h4v-2h-4v-2h4v-2h-4v-4 c0-1.654,1.346-3,3-3h28c1.654,0,3,1.346,3,3v3H25.979C24.337,34,23,35.337,23,36.979v10.041C23,48.663,24.337,50,25.979,50H45V53z M53,47.021C53,47.561,52.561,48,52.021,48H25.979C25.439,48,25,47.561,25,47.021V36.979C25,36.439,25.439,36,25.979,36h26.041 C52.561,36,53,36.439,53,36.979V47.021z"
-            />
         </svg>
     );
 };

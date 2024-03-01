@@ -1,19 +1,18 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Link, useForm, usePage } from "@inertiajs/react";
 import {
-    Checkbox,
-    Tabs,
-    Tab,
-    Input,
-    CardHeader,
     Button,
     Card,
     CardBody,
-    Image,
+    CardHeader,
+    Checkbox,
+    Input,
+    Tab,
+    Tabs,
 } from "@nextui-org/react";
+import { PasswordIcon } from "@/Components/Icons";
 
-import { usePage, Link, useForm } from "@inertiajs/react";
-
-export default function LoginAndRegister(status, canResetPassword) {
+export const LoginAndRegister = (status, canResetPassword) => {
     const [selected, setSelected] = useState("login");
 
     const pathName = usePage();
@@ -25,8 +24,6 @@ export default function LoginAndRegister(status, canResetPassword) {
         password_confirmation: "",
     });
 
-    
-
     useEffect(() => {
         return () => {
             reset("password", "password_confirmation");
@@ -34,7 +31,6 @@ export default function LoginAndRegister(status, canResetPassword) {
     }, []);
 
     const handleRegistrationClick = (e) => {
-        // console.log(data);
         e.preventDefault();
         post(route("register", data));
     };
@@ -45,15 +41,12 @@ export default function LoginAndRegister(status, canResetPassword) {
     };
 
     return (
-        <div className=" h-full grid gap-2 grid-cols-1 grid-rows-1 place-content-center place-items-center ">
+        <div className="">
             <Card>
                 <CardHeader>
-                    <Image
-                        alt="animated login lock and key gif"
-                        type="image/x-icon"
-                        src="http://localhost:8000/images/login.gif"
-                        width={390}
-                    />
+                    <section className="mx-auto lg:me-6">
+                        <PasswordIcon height={350} width={350} />
+                    </section>
                 </CardHeader>
                 <CardBody>
                     <Tabs
@@ -113,41 +106,7 @@ export default function LoginAndRegister(status, canResetPassword) {
                                             </span>
                                         </label>
                                     </div>
-                                    {/* <div className="block mt-4">
-                                        <label className="flex items-center">
-                                            <Checkbox
-                                                name="remember"
-                                                checked={data.remember}
-                                                onChange={(e) =>
-                                                    setData(
-                                                        "remember",
-                                                        e.target.checked
-                                                    )
-                                                }
-                                            />
-                                            <span className="ms-2 text-sm -600">
-                                                Remember me
-                                            </span>
-                                        </label>
-                                    </div>
 
-                                    <div className="flex items-center justify-end mt-4">
-                                        {canResetPassword && (
-                                            <Link
-                                                href={route("password.request")}
-                                                className="underline text-sm -600 hover:-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                                            >
-                                                Forgot your password?
-                                            </Link>
-                                        )}
-
-                                        <PrimaryButton
-                                            className="ms-4"
-                                            disabled={processing}
-                                        >
-                                            Log in
-                                        </PrimaryButton>
-                                    </div> */}
                                     <div className="flex items-center justify-end mt-4">
                                         <Button
                                             type="submit"
@@ -169,7 +128,7 @@ export default function LoginAndRegister(status, canResetPassword) {
                             id="/register"
                             key="/register"
                             href={route("register")}
-                            title="Sign up"
+                            title="Register"
                         >
                             <form className="flex flex-col space-y-5 [300px]">
                                 <Input
@@ -205,24 +164,27 @@ export default function LoginAndRegister(status, canResetPassword) {
                                 <Input
                                     errorMessage={errors.password_confirmation}
                                     isRequired
-                                    label="Password"
+                                    label="Confirm Password"
                                     placeholder="Confirm your password"
                                     type="password"
                                     onChange={(e) =>
-                                        setData("password_confirmation", e.target.value)
+                                        setData(
+                                            "password_confirmation",
+                                            e.target.value
+                                        )
                                     }
                                 />
                                 <div className="flex gap-2 justify-end">
                                     <Button
                                         type="submit"
-                                        color="nui-primary"
-                                        variant="bordered"
+                                        color="primary"
+                                        variant="ghost"
                                         disabled={processing}
                                         onClick={handleRegistrationClick}
                                         onKeyDown={handleRegistrationClick}
                                         fullWidth
                                     >
-                                        Registration
+                                        Register
                                     </Button>
                                 </div>
                             </form>
@@ -232,4 +194,5 @@ export default function LoginAndRegister(status, canResetPassword) {
             </Card>
         </div>
     );
-}
+};
+export default LoginAndRegister;
