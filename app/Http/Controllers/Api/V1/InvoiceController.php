@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V1;
 
+use App\Models\Invoice;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreInvoiceRequest;
 use App\Http\Requests\UpdateInvoiceRequest;
-use App\Models\Invoice;
 
 class InvoiceController extends Controller
 {
@@ -13,7 +14,7 @@ class InvoiceController extends Controller
      */
     public function index()
     {
-        //
+        return Invoice::all();
     }
 
     /**
@@ -37,7 +38,7 @@ class InvoiceController extends Controller
      */
     public function show(Invoice $invoice)
     {
-        //
+        return $invoice;
     }
 
     /**
