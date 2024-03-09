@@ -16,9 +16,6 @@ class CustomerSeeder extends Seeder
             ->count(240)
             ->hasInvoices(31)
             ->create();
-        Customer::factory()
-            ->count(10)
-            ->hasInvoices(0)
-            ->create();
+        
     }
 }

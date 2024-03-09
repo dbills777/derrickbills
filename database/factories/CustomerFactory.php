@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Customer;
+use Illuminate\Support\Arr;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,18 +19,18 @@ class CustomerFactory extends Factory
      */
     public function definition(): array
     {
-        $accountType =  $this->fake()->randomElement(['individual', 'business']);
-        $name = $accountType === 'individual' ? $this->fake()->firstName() : $this->fake()->company();
+        $accountType = Arr::random(['individual', 'business']);
+        $name = $accountType === 'individual' ? fake()->firstName() : fake()->company();
         return [
             'account_type' => $accountType,
-            'name' => $name,
-            'email' => $this->fake()->unique()->safeEmail(),
-            'address' => $this->fake()->streetAddress(),
-            'city' => $this->fake()->city(),
-            'state' => $this->fake()->state(),
-            'postal_code' => $this->fake()->postcode(),
-            'phone_number' => $this->fake()->phoneNumber(),
-            'country' => $this->fake()->country(),
+            'name' => fake()->name(),
+            'email' => fake()->unique()->safeEmail(),
+            'address' => fake()->streetAddress(),
+            'city' => fake()->city(),
+            'state' => fake()->state(),
+            'postal_code' => fake()->postcode(),
+            'phone_number' => fake()->phoneNumber(),
+            'country' => fake()->country(),
         ];
     }
 }

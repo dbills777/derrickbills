@@ -17,14 +17,14 @@ class InvoiceFactory extends Factory
      */
     public function definition(): array
     {
-        $status = $this->fake()->randomElement(['paid', 'billed', 'void']);
+        $status = fake()->randomElement(['paid', 'billed', 'void']);
         return [
             'customer_id' => \App\Models\Customer::factory(),
             'status' => $status,
-            'billed_date' => $this->fake()->dateTimeThisDecade(),
-            'paid_date' => $this->fake()->dateTime(),
-            'amount' => $this->fake()->randomFloat(2, 100, 1000),
-            // 'total' => $this->fake()->randomFloat(2, 100, 1000),
+            'billed_date' => fake()->dateTimeThisDecade(),
+            'paid_date' => fake()->dateTime(),
+            'amount' => fake()->randomFloat(2, 100, 1000),
+            // 'total' => fake()->randomFloat(2, 100, 1000),
         ];
     }
 }
