@@ -3,8 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Customer;
-use Database\Factories\CustomerFactory;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class CustomerSeeder extends Seeder
@@ -14,13 +12,13 @@ class CustomerSeeder extends Seeder
      */
     public function run(): void
     {
-        CustomerFactory::maka
+        Customer::factory()
+            ->count(240)
+            ->hasInvoices(31)
+            ->create();
+        Customer::factory()
             ->count(10)
             ->hasInvoices(0)
-            ->create();
-        CustomerFactory::maka
-            ->count(100)
-            ->hasInvoices( 24)
             ->create();
     }
 }
