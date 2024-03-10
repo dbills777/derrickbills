@@ -16,7 +16,8 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        return new CustomerCollection(Customer::paginate());
+
+        return new CustomerCollection(Customer::with('invoices')->paginate());
     }
 
     /**
