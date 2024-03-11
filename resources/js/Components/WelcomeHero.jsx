@@ -11,9 +11,9 @@ export const WelcomeHero = () => {
             <section className="flex flex-col space-y-8">
                 <div>
                     <h1 className="text-5xl md:text-6xl xl:text-7xl font-thin min-w-full">
-                        Laravel, MySQL, Inertia & React
+                        Laravel, MySQL, Inertia & React 
                     </h1>
-                    <h2 className="text-3xl  mt-6">Dark Mode Available</h2>
+                    <h2 className="text-3xl  mt-6">REST api and darkmode available</h2>
                 </div>
                 <p className="text-2xl font-light sm:w-3/4">
                     The application is built using the Laravel framework, which
