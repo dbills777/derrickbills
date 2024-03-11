@@ -16,7 +16,7 @@ class CustomerSearchController extends Controller
             \App\Filters\V1\ByAccountType::class,
             \App\Filters\V1\ByEmail::class,
             \App\Filters\V1\ByDateOfBirth::class,
-            
+
 
 
         ];

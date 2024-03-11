@@ -16,6 +16,6 @@ class CustomerSeeder extends Seeder
             ->count(240)
             ->hasInvoices(31)
             ->create();
-        
+
     }
 }

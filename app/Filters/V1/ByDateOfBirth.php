@@ -22,8 +22,7 @@ class ByDateOfBirth
         return $next($builder)
             ->when(
                 $this->request->has('date_of_birth'),
-                fn ($query) => $query->where('date_of_birth','REGEXP',$this->request->date_of_birth)
+                fn ($query) => $query->where('date_of_birth', 'REGEXP', $this->request->date_of_birth)
             );
     }
 }
-
