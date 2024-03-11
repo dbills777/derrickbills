@@ -8,7 +8,7 @@ export default function App() {
             <Card className="py-4">
                 <CardHeader className="pb-0 pt-2 px-4 flex-col ">
                     <p className="text-tiny uppercase font-bold">product</p>
-                    <small className="text-default-500">placeholder</small>
+                    <small className="text-default-500">Product details</small>
                     <h4 className="font-bold text-large">Robot</h4>
                 </CardHeader>
                 <CardBody className="flex-col items-center overflow-visible">
