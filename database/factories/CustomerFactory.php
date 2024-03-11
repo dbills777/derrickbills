@@ -19,18 +19,18 @@ class CustomerFactory extends Factory
      */
     public function definition(): array
     {
-        $accountType = Arr::random(['individual', 'business']);
-        $name = $accountType === 'individual' ? fake()->firstName() : fake()->company();
+        $accountType = Arr::random(['i', 'b']);
+        $name = $accountType === 'i' ? fake()->firstName() : fake()->company();
         return [
             'account_type' => $accountType,
             'name' => fake()->name(),
+            'date_of_birth' => fake()->date(),
             'email' => fake()->unique()->safeEmail(),
-            'address' => fake()->streetAddress(),
-            'city' => fake()->city(),
-            'state' => fake()->state(),
-            'postal_code' => fake()->postcode(),
+            'state' => fake('en_US')->stateAbbr(),
+            'city' => fake('en_US')->city(),
+            'street' => fake('en_US')->streetName(),
+            'postal_code' => fake('en_US')->postcode(),
             'phone_number' => fake()->phoneNumber(),
-            'country' => fake()->country(),
         ];
     }
 }
