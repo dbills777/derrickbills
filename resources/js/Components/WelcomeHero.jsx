@@ -24,10 +24,61 @@ export const WelcomeHero = () => {
                 <p className="text-2xl font-light sm:w-3/4">
                     Using a monolithic architecture, allows for a single code
                     base Creating a more efficient and maintainable application.
-                    
                 </p>
-                <p className="font-light">Navigating the application is seamless and fast, with no
-                    page refreshes.</p>
+                <p className="text-2xl font-light sm:w-3/4">
+                    Example REST API endpoints are available. at the following:
+                    <Link href="/api/v1/customers" color="primary" underline>
+                        /api/v1/customers
+                    </Link>
+                    <br />
+                    <Link href="/api/v1/customers/1" color="primary" underline>
+                        /api/v1/customers/1
+                    </Link>
+                    <br />
+                    <Link href="/api/v1/invoices" color="primary" underline>
+                        /api/v1/invoices
+                    </Link>
+                    <br />
+                    <Link href="/api/v1/invoices/1" color="primary" underline>
+                        /api/v1/invoices/1
+                    </Link>
+                    <br />
+                    <Link
+                        href="/api/v1/search?name=john"
+                        color="primary"
+                        underline
+                    >
+                        /api/v1/search?name=jonn
+                    </Link>
+                    <br />
+                    <Link
+                        href="/api/v1/search?email=org"
+                        color="primary"
+                        underline
+                    >
+                        /api/v1/search?email=org
+                    </Link>
+                    <br />
+                    <Link
+                        href="/api/v1/search?date_of_birth=1980"
+                        color="primary"
+                        underline
+                    >
+                        /api/v1/search?date_of_birth=1980
+                    </Link>
+                    <br />
+                    <Link
+                        href=" api/v1/search?date_of_birth=01-01&name=hillary"
+                        color="primary"
+                        underline
+                    >
+                        api/v1/search?date_of_birth=01-01&name=hillary
+                    </Link>
+                </p>
+                <p className="font-light">
+                    Navigating the application is seamless and fast, with no
+                    page refreshes.
+                </p>
                 <div className="space-x-4">
                     <Tooltip
                         className="ms-3"
