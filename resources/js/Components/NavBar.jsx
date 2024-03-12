@@ -38,7 +38,7 @@ export default function App() {
         "Welcome",
         "About",
         "Users",
-        "Products",
+        "Api",
         "Login",
         "Profile",
         "Dashboard",
@@ -200,12 +200,12 @@ export default function App() {
                     </Link>
                 </NavbarItem>
                 <NavbarItem
-                    {...(currentPage.component === "Products" && {
+                    {...(currentPage.component === "Api" && {
                         isActive: true,
                     })}
                 >
-                    <Link color="foreground" href="/products">
-                        Products
+                    <Link color="foreground" href="/api">
+                        Api
                     </Link>
                 </NavbarItem>
             </NavbarContent>

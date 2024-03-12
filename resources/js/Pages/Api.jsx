@@ -2,7 +2,7 @@ import Layout from "@/Layouts/Layout";
 import { Head } from "@inertiajs/react";
 import Product from "@/Components/Product";
 
-const Products = () => {
+const Api = () => {
     return (
         <>
             <Layout>
@@ -12,4 +12,4 @@ const Products = () => {
         </>
     );
 };
-export default Products;
+export default Api;

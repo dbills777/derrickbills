@@ -28,8 +28,8 @@ Route::get('/about', function () {
     return Inertia::render('About');
 });
 
-Route::get('/products', function () {
-    return Inertia::render('Products');
+Route::get('/api', function () {
+    return Inertia::render('Api');
 });
 
 Route::get('/users', function () {

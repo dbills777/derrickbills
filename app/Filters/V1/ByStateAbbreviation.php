@@ -5,7 +5,7 @@ namespace App\Filters\V1;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Builder;
 
-class ByDateOfBirth
+class ByStateAbbreviation
 {
     public function __construct(protected Request $request)
     {
@@ -21,8 +21,11 @@ class ByDateOfBirth
     {
         return $next($builder)
             ->when(
-                $this->request->has('d_o_b'),
-                fn ($query) => $query->where('date_of_birth', 'REGEXP', $this->request->d_o_b)
+                $this->request->has('state'),
+                fn ($query) => $query->where('state', 'REGEXP', $this->request->state)
             );
     }
+}
+{
+  
 }
