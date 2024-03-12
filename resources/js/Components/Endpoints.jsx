@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "@nextui-org/react";
 
-export default function App() {
+export default function EndPoints() {
     const image = Math.floor(Math.random() * 1000);
     return (
         <>
