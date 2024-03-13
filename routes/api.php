@@ -25,4 +25,5 @@ Route::prefix('v1')->group(function () {
     Route::apiResource('invoices', InvoiceController::class);
     Route::apiResource('customers', CustomerController::class);
     Route::get('search', CustomerSearchController::class);
+    Route::post('invoices/bulk', [InvoiceController::class, 'bulkStore']);
 });
