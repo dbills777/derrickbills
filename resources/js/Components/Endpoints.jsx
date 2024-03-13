@@ -121,6 +121,32 @@ export default function EndPoints() {
                         </Link>
                     </p>
                     <p>
+                        post:
+                        <Link
+                        isDisabled
+                            className="ms-6"
+                            isBlock
+                            href="#"
+                            color="primary"
+                            size="lg"
+                        >
+                            /api/v1/invoices/bulk
+                        </Link>
+                    </p>
+                    <p>
+                        post:
+                        <Link
+                        isDisabled
+                            className="ms-6"
+                            isBlock
+                            href="#"
+                            color="primary"
+                            size="lg"
+                        >
+                            /api/v1/invoices
+                        </Link>
+                    </p>
+                    <p>
                         get:
                         <Link
                             className="ms-6"
