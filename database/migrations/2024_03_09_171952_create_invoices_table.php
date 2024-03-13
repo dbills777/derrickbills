@@ -4,7 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class () extends Migration {
+return new class() extends Migration
+{
     /**
      * Run the migrations.
      */
@@ -14,9 +15,9 @@ return new class () extends Migration {
             $table->id();
             $table->foreignId('customer_id')->constrained();
             $table->string('status');
-            $table->dateTime('billed_date')->nullable();
-            $table->date('paid_date');
             $table->integer('amount');
+            $table->dateTime('billed_date')->nullable();
+            $table->dateTime('paid_date')->nullable();
             $table->timestamps();
         });
     }

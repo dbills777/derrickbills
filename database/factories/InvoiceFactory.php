@@ -21,10 +21,9 @@ class InvoiceFactory extends Factory
         return [
             'customer_id' => \App\Models\Customer::factory(),
             'status' => $status,
+            'amount' => fake()->randomFloat(2, 100, 1000),
             'billed_date' => fake()->dateTime(),
             'paid_date' => fake()->dateTime(),
-            'amount' => fake()->randomFloat(2, 100, 1000),
-            // 'total' => fake()->randomFloat(2, 100, 1000),
         ];
     }
 }
