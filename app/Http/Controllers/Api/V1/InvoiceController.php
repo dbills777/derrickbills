@@ -38,17 +38,17 @@ class InvoiceController extends Controller
         //
     }
 
-    
+
     /**
      * Bulk insert an array resource in storage.
      */
     public function bulkStore(BulkStoreInvoiceRequest $request)
     {
-       $bulk = Collection::make($request->all())->map(function ($arr, $key) {
+        $bulk = Collection::make($request->all())->map(function ($arr, $key) {
             return Arr::except($arr, ['custonmerId', 'billedDate', 'paidDate']);
         });
 
-      Invoice::insert($bulk->toArray());
+        Invoice::insert($bulk->toArray());
     }
 
 
