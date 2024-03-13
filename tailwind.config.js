@@ -195,8 +195,8 @@ export default {
             ],
             // }, // ...
         },
-        styled: true,
-        themes: true, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
+        styled: false,
+        themes: false, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
         darkTheme: "dark", // name of one of the included themes for dark mode
         defaultTheme: "dark", // options: 'dark' | 'light' | 'cupcake'
         base: true, // applies background color and foreground color for root element by default
