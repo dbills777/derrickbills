@@ -3,11 +3,14 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Models\Invoice;
+use Illuminate\Support\Arr;
 use App\Http\Controllers\Controller;
-use App\Http\Resources\V1\InvoiceResource;
-use App\Http\Resources\V1\InvoiceCollection;
 use App\Http\Requests\StoreInvoiceRequest;
+use App\Http\Requests\BulkStoreInvoiceRequest;
+use App\Http\Resources\V1\InvoiceResource;
 use App\Http\Requests\UpdateInvoiceRequest;
+use App\Http\Resources\V1\InvoiceCollection;
+use Illuminate\Database\Eloquent\Collection;
 
 class InvoiceController extends Controller
 {
@@ -34,6 +37,21 @@ class InvoiceController extends Controller
     {
         //
     }
+
+    
+    /**
+     * Bulk insert an array resource in storage.
+     */
+    public function bulkStore(BulkStoreInvoiceRequest $request)
+    {
+       $bulk = Collection::make($request->all())->map(function ($arr, $key) {
+            return Arr::except($arr, ['custonmerId', 'billedDate', 'paidDate']);
+        });
+
+      Invoice::insert($bulk->toArray());
+    }
+
+
 
     /**
      * Display the specified resource.
