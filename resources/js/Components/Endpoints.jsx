@@ -27,7 +27,7 @@ export default function EndPoints() {
                     <h1 className="text-3xl mb-4 md:text-5xl xl:text-6xl font-thin ">
                         Customer endpoints
                     </h1>
-                    <div className="mockup-code bg-green-600/60 text-primary-content my-4 px-11">
+                    <div className="mockup-code bg-green-600/60 text-primary-content px-11">
                         <pre id="json" className="font-krypton">
                             <p> GET: /api/v1/customers</p>
                         </pre>
@@ -84,7 +84,6 @@ export default function EndPoints() {
                             <code>
                                 {`
     {
-   
     "email": "john@example.net",
     "phoneNumber": "8018018011",
     "street": "1234 s State",
@@ -103,60 +102,45 @@ export default function EndPoints() {
                 </div>
 
                 <div className="divider lg:divider-horizontal">API</div>
-                <div className="grid flex-grow min-h-[400px] card bg-background rounded-box place-items-center">
+                <div className="grid flex-grow  card bg-background rounded-box place-items-center space-y-6">
                     <h1 className="text-3xl md:text-5xl xl:text-7xl font-thin ">
                         Invoice endpoints
                     </h1>
-                    <p>
-                        get:
-                        <Link
-                            className="ms-6"
-                            isBlock
-                            href="/api/v1/invoices"
-                            color="primary"
-                            size="lg"
-                        >
-                            /api/v1/invoices
-                        </Link>
-                    </p>
-                    <p>
-                        post:
-                        <Link
-                            isDisabled
-                            className="ms-6"
-                            isBlock
-                            href="#"
-                            color="primary"
-                            size="lg"
-                        >
-                            /api/v1/invoices/bulk
-                        </Link>
-                    </p>
-                    <p>
-                        post:
-                        <Link
-                            isDisabled
-                            className="ms-6"
-                            isBlock
-                            href="#"
-                            color="primary"
-                            size="lg"
-                        >
-                            /api/v1/invoices
-                        </Link>
-                    </p>
-                    <p>
-                        get:
-                        <Link
-                            className="ms-6"
-                            href="/api/v1/invoices/1"
-                            color="primary"
-                            isBlock
-                        >
-                            /api/v1/invoices/1
-                        </Link>
-                    </p>
-                </div>
+                    <div className="mockup-code bg-green-600/60 text-primary-content px-14 lg:mt-64">
+                        <pre id="json" className="font-krypton">
+                            <p> GET: /api/v1/invoices</p>
+                        </pre>
+                    </div>
+                    <div className="mockup-code bg-green-600/60 text-primary-content px-11 lg:mt-64">
+                        <pre id="json" className="font-krypton">
+                            <p> GET: /api/v1/invoices/4</p>
+                        </pre>
+                    </div>
+                    <div className="mockup-code bg-primary-500/80 text-primary-content lg:mt-64">
+                        <pre id="json" className="font-krypton">
+                            <p> POST: /api/v1/invoices/bulk</p>
+                            <code>
+                                {`
+    {
+    "customerId": 2,
+    "status": "paid",
+    "amount": 55555,
+    "billedDate": "2023-01-01 19:19:46",
+    "paidDate": "2023-01-02 11:46:09"
+    },
+    {
+    "customerId": 1,
+    "status": "void",
+    "amount": 88888,
+    "billedDate": "2010-80-18 19:19:46",
+    "paidDate": "2010-08-17 11:46:09"
+    }
+`}
+                            </code>
+                        </pre>
+                    </div>
+                   
+            </div>
             </div>
             <div className="grid flex-grow min-h-[800px] card bg-background rounded-box place-items-center">
                 <h1 className="text-3xl md:text-5xl xl:text-7xl font-thin ">

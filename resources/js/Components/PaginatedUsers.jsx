@@ -10,7 +10,6 @@ import {
     getKeyValue,
     User,
 } from "@nextui-org/react";
-import UserList from "./UsersList";
 
 export default function App({ users }) {
     const [page, setPage] = useState(1);
