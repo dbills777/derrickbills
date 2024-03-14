@@ -24,85 +24,84 @@ export default function EndPoints() {
             </section>
             <div className="flex flex-col w-full my-32 lg:flex-row my-48">
                 <div className="grid flex-grow min-h-[400px] card bg-background rounded-box place-items-center">
-                    <h1 className="text-3xl md:text-5xl xl:text-6xl font-thin ">
+                    <h1 className="text-3xl mb-4 md:text-5xl xl:text-6xl font-thin ">
                         Customer endpoints
                     </h1>
-                    <p>
-                        post:
-                        <Link
-                            isBlock
-                            isDisabled
-                            className="ms-6"
-                            href="#"
-                            color="primary"
-                            size="lg"
-                        >
-                            /api/v1/customers
-                        </Link>
-                    </p>
-                    <p>
-                        put:
-                        <Link
-                            isBlock
-                            isDisabled
-                            className="ms-6"
-                            href="#"
-                            color="primary"
-                            size="lg"
-                        >
-                            /api/v1/customers/1
-                        </Link>
-                    </p>
-                    <p>
-                        patch:
-                        <Link
-                            isBlock
-                            isDisabled
-                            className="ms-6"
-                            href="#"
-                            color="primary"
-                            size="lg"
-                        >
-                            /api/v1/customers/1
-                        </Link>
-                    </p>
-                    <p>
-                        delete:
-                        <Link
-                            isDisabled
-                            isBlock
-                            className="ms-6"
-                            href="/api/v1/customers/1"
-                            color="primary"
-                        >
-                            /api/v1/customers/1
-                        </Link>
-                    </p>
-                    <p>
-                        get:
-                        <Link
-                            isBlock
-                            className="ms-6"
-                            href="/api/v1/customers"
-                            color="primary"
-                            size="lg"
-                        >
-                            /api/v1/customers
-                        </Link>
-                    </p>
+                    <div className="mockup-code bg-green-600/60 text-primary-content my-4 px-11">
+                        <pre id="json" className="font-krypton">
+                            <p> GET: /api/v1/customers</p>
+                        </pre>
+                    </div>
+                    <div className="mockup-code bg-green-600/60 text-primary-content my-4 px-9">
+                        <pre id="json" className="font-krypton">
+                            <p> GET: /api/v1/customers/4</p>
+                        </pre>
+                    </div>
 
-                    <p>
-                        get:
-                        <Link
-                            isBlock
-                            className="ms-6"
-                            href="/api/v1/customers/1"
-                            color="primary"
-                        >
-                            /api/v1/customers/1
-                        </Link>
-                    </p>
+                    <div className="mockup-code bg-primary-500/80 text-primary-content">
+                        <pre id="json" className="font-krypton">
+                            <p> POST: /api/v1/customers</p>
+                            <code>
+                                {`
+    {
+    "accountType": "i",
+    "name": "John Doe",
+    "dateOfBirth": "1990-01-01",
+    "email": "john@example.net",
+    "phoneNumber": "8018018011",
+    "state": "UT",
+    "city": "EM",
+    "street": "1234 s State",
+    "postalCode": "12345"
+    }
+`}
+                            </code>
+                        </pre>
+                    </div>
+                    <div className="mockup-code bg-primary-500/80 text-primary-content my-4">
+                        <pre id="json" className="font-krypton">
+                            <p> PUT: /api/v1/customers/4</p>
+                            <code>
+                                {`
+    {
+    "accountType": "i",
+    "name": "John Doe",
+    "dateOfBirth": "1990-01-01",
+    "email": "john@example.net",
+    "phoneNumber": "8018018011",
+    "state": "UT",
+    "city": "EM",
+    "street": "1234 s State",
+    "postalCode": "12345"
+    }
+`}
+                            </code>
+                        </pre>
+                    </div>
+                    <div className="mockup-code bg-primary-500/80 text-primary-content my-4">
+                        <pre id="json" className="font-krypton">
+                            <p> PATCH: /api/v1/customers/4</p>
+                            <code>
+                                {`
+    {
+   
+    "email": "john@example.net",
+    "phoneNumber": "8018018011",
+    "street": "1234 s State",
+    "postalCode": "12345"
+    }
+`}
+                            </code>
+                        </pre>
+                    </div>
+
+                    <div className="mockup-code bg-red-600/80 text-primary-content my-4 p-5">
+                        <pre id="json" className="font-krypton">
+                            <p> DELETE: /api/v1/customers/4</p>
+                        </pre>
+                    </div>
                 </div>
+
                 <div className="divider lg:divider-horizontal">API</div>
                 <div className="grid flex-grow min-h-[400px] card bg-background rounded-box place-items-center">
                     <h1 className="text-3xl md:text-5xl xl:text-7xl font-thin ">
@@ -123,7 +122,7 @@ export default function EndPoints() {
                     <p>
                         post:
                         <Link
-                        isDisabled
+                            isDisabled
                             className="ms-6"
                             isBlock
                             href="#"
@@ -136,7 +135,7 @@ export default function EndPoints() {
                     <p>
                         post:
                         <Link
-                        isDisabled
+                            isDisabled
                             className="ms-6"
                             isBlock
                             href="#"
