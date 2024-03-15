@@ -22,7 +22,7 @@ export default function EndPoints() {
                 </p>
                 {/* <FileExplorer /> */}
             </section>
-            <div className="flex flex-col w-full my-32 lg:flex-row my-48">
+            <div className="flex flex-col w-full lg:flex-row my-48">
                 <div className="grid flex-grow min-h-[400px] card bg-background rounded-box place-items-center">
                     <h1 className="text-3xl mb-4 md:text-5xl xl:text-6xl font-thin ">
                         Customer endpoints
