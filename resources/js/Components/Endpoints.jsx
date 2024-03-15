@@ -23,7 +23,7 @@ export default function EndPoints() {
                 {/* <FileExplorer /> */}
             </section>
             <div className="flex flex-col w-full lg:flex-row my-48">
-                <div className="grid flex-grow min-h-[400px] card bg-background rounded-box place-items-center">
+                <div className="grid flex-grow min-h-[400px] card bg-background rounded-box place-items-center space-y-4">
                     <h1 className="text-3xl mb-4 md:text-5xl xl:text-6xl font-thin ">
                         Customer endpoints
                     </h1>
@@ -32,7 +32,7 @@ export default function EndPoints() {
                             <p> GET: /api/v1/customers</p>
                         </pre>
                     </div>
-                    <div className="mockup-code bg-green-600/60 text-primary-content my-4 px-9">
+                    <div className="mockup-code bg-green-600/60 text-primary-content px-9">
                         <pre id="json" className="font-krypton">
                             <p> GET: /api/v1/customers/4</p>
                         </pre>
@@ -58,7 +58,7 @@ export default function EndPoints() {
                             </code>
                         </pre>
                     </div>
-                    <div className="mockup-code bg-primary-500/80 text-primary-content my-4">
+                    <div className="mockup-code bg-primary-500/80 text-primary-content">
                         <pre id="json" className="font-krypton">
                             <p> PUT: /api/v1/customers/4</p>
                             <code>
@@ -78,7 +78,7 @@ export default function EndPoints() {
                             </code>
                         </pre>
                     </div>
-                    <div className="mockup-code bg-primary-500/80 text-primary-content my-4">
+                    <div className="mockup-code bg-primary-500/80 text-primary-content">
                         <pre id="json" className="font-krypton">
                             <p> PATCH: /api/v1/customers/4</p>
                             <code>
@@ -94,7 +94,7 @@ export default function EndPoints() {
                         </pre>
                     </div>
 
-                    <div className="mockup-code bg-red-600/80 text-primary-content my-4 p-5">
+                    <div className="mockup-code bg-red-600/80 text-primary-content p-5">
                         <pre id="json" className="font-krypton">
                             <p> DELETE: /api/v1/customers/4</p>
                         </pre>
