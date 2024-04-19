@@ -428,6 +428,25 @@ export const Activity = ({ fill, size, height, width, ...props }) => {
         </svg>
     );
 };
+export const Application = ({
+    fill = "currentColor",
+    size,
+    height,
+    width,
+    ...props
+}) => {
+    return (
+        <svg
+            height={size || height || 24}
+            viewBox="0 0 24 24"
+            width={size || width || 24}
+            xmlns="http://www.w3.org/2000/svg"
+            {...props}
+        >
+            <path d="M13 4c-4.96 0-9 4.04-9 9v24c0 4.95 4.04 9 9 9h24c4.95 0 9-4.05 9-9V13c0-4.96-4.05-9-9-9H13Zm0 2h24c1.13 0 2.19.27 3.13.74l-1.81 2.93v1.41c1.01.91 3.78 2.71 5.66 3.49v1.87c-1.53-.53-4.41-1.96-6.35-3.74 -1.09 1.81-2.92 4.93-4.64 8.26H13.97v0c-.56-.01-1.01.43-1.02.98 -.01.55.43 1 .98 1.01 0 0 .01 0 .02 0h18.03c-.67 1.35-1.3 2.7-1.82 4H13.93v0c-.56-.01-1.01.43-1.02.98 -.01.55.43 1 .98 1.01 0 0 .01 0 .02 0h15.47c-.58 1.72-.88 3.21-.74 4.28l-.1.18c-.7 1-2.52 1.51-3.64 1.52 -.99 0-1.44-.32-2.11-.81 -.67-.49-1.58-1.19-2.91-1.19 -1.34 0-2.24.67-3.02 1.14 -.79.46-1.52.85-2.99.85v0c-.56-.01-1.01.43-1.02.98 -.01.55.43 1 .98 1.01 0 0 .01 0 .02 0 1.86 0 3.13-.62 4.01-1.15 .88-.54 1.31-.86 1.98-.86 .66 0 1.01.29 1.73.81 .71.51 1.76 1.18 3.28 1.17 .77-.01 1.72-.13 2.64-.46h-.001c.3.46.92.59 1.38.29 .14-.1.26-.24.34-.4l.87-1.76c3.76-1.14 12.82-16.03 13.72-17.52v19.84c0 3.87-3.13 7-7 7h-24c-3.88 0-7-3.13-7-7v-24c0-3.88 3.12-7 7-7Zm1 9v0c-.56-.01-1.01.43-1.02.98 -.01.55.43 1 .98 1.01 0 0 .01 0 .02 0h18v0c.55 0 1-.44 1.01-.99 0-.56-.44-1.01-.99-1.02 -.01-.01-.02-.01-.03 0h-18Z" />
+        </svg>
+    );
+};
 export const Flash = ({
     fill = "currentColor",
     size,
@@ -438,9 +457,9 @@ export const Flash = ({
     return (
         <svg
             fill="none"
-            height={size || height}
+            height={size || height || 24}
             viewBox="0 0 24 24"
-            width={size || width}
+            width={size || width || 24}
             xmlns="http://www.w3.org/2000/svg"
             {...props}
         >
@@ -1233,9 +1252,9 @@ export const Sync = ({
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 64 64"
-            height={size || height}
-            width={size || width}
+            viewBox="0 0 24 24"
+            height={size || height || 24}
+            width={size || width || 24}
             {...props}
             size={size || height}
             fill={fill}
