@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "@nextui-org/react";
-import FileExplorer from "@/Components/FileExplorer";
+import { Card, CardBody, Link } from "@nextui-org/react";
 
 export default function EndPoints() {
     return (
@@ -20,23 +19,116 @@ export default function EndPoints() {
                     updates and changes to be made without breaking existing api
                     calls.
                 </p>
-                {/* <FileExplorer /> */}
             </section>
             <div className="flex flex-col w-full lg:flex-row my-48">
                 <div className="grid flex-grow min-h-[400px] card bg-background rounded-box place-items-center space-y-4">
                     <h1 className="text-3xl mb-4 md:text-5xl xl:text-6xl font-thin ">
                         Customer endpoints
                     </h1>
-                    <div className="mockup-code bg-green-600/60 text-primary-content px-11">
-                        <pre id="json" className="font-krypton">
-                            <p> GET: /api/v1/customers</p>
-                        </pre>
-                    </div>
-                    <div className="mockup-code bg-green-600/60 text-primary-content px-9">
-                        <pre id="json" className="font-krypton">
-                            <p> GET: /api/v1/customers/4</p>
-                        </pre>
-                    </div>
+                    <Card className="mockup-code max-w-sm md:max-w-2xl">
+                        <div className="flex gap-4">
+                            <Link
+                                className="ms-8"
+                                size="lg"
+                                color="primary"
+                                isExternal
+                                href="/api/v1/customers"
+                                showAnchorIcon
+                            >
+                                /api/v1/customers
+                            </Link>
+                        </div>
+                        <CardBody>
+                            <pre data-prefix="1">
+                                <code>Get all customers</code>
+                            </pre>
+                            <pre data-prefix="2">
+                                <code>Customers with invoices</code>
+                            </pre>
+                            <pre>
+                                {`    
+    {
+        "id": 1,
+        "accountType": "i",
+        "name": "Maeve Boyle",
+        "dateOfBirth": "1997-06-25",
+        "email": "john@example.net",
+        "phoneNumber": "8018018011",
+        "state": "TX",
+        "city": "East Carlosburgh",
+        "street": "Lakin Cape",
+        "postalCode": "97174"
+        "invoicesCount": 36,
+        "invoices": [
+            {
+            "id": 1,
+            "customerId": 1,
+            "status": "void",
+            "amount": 837,
+            "billedDate": "2001-12-20 19:19:46"",
+            "paidDate": "1971-08-17 11:46:09"
+            "created_at": 
+            "2024-03-13T15:47:48.000000Z",
+            "updated_at": 
+            "2024-03-13T15:47:48.000000Z"
+            }
+        ],
+    }
+    `}
+                            </pre>
+                        </CardBody>
+                    </Card>
+                    <Card className="mockup-code max-w-sm md:max-w-2xl">
+                        <div className="flex gap-4">
+                            <Link
+                                className="ms-8"
+                                size="lg"
+                                color="primary"
+                                isExternal
+                                href="/api/v1/customers/33"
+                                showAnchorIcon
+                            >
+                                /api/v1/customers/33
+                            </Link>
+                        </div>
+                        <CardBody>
+                            <pre data-prefix="1">
+                                <code>Get customer</code>
+                            </pre>
+                            <pre data-prefix="2">
+                                <code>Customer with invoice(s)</code>
+                            </pre>
+                            <pre>
+                                {`    
+    {
+        "accountType": "b",
+        "name": "Fidel Barrows",
+        "dateOfBirth": "2010-02-03",
+        "email": "kub.jett@example.org",
+        "phoneNumber": "+1 (262) 808-2460",
+        "state": "MT",
+        "city": "South Jakobburgh",
+        "street": "Kutch Creek",
+        "postalCode": "58586"
+        "invoices": [
+            {
+            "id": 1,
+            "customerId": 33,
+            "status": "paid",
+            "amount": 421,
+            "billedDate": "2002-09-14 03:23:44",
+            "paidDate": "1994-07-27 14:35:27"
+            "created_at": 
+            "2024-03-13T15:47:49.000000Z",
+            "updated_at": 
+            "2024-03-13T15:47:49.000000Z"
+            }
+        ],
+    }
+    `}
+                            </pre>
+                        </CardBody>
+                    </Card>
 
                     <div className="mockup-code bg-primary-500/80 text-primary-content">
                         <pre id="json" className="font-krypton">
@@ -106,11 +198,83 @@ export default function EndPoints() {
                     <h1 className="text-3xl md:text-5xl xl:text-7xl font-thin lg:mb-32">
                         Invoice endpoints
                     </h1>
-                    <div className="mockup-code bg-green-600/60 text-primary-content px-14 my-8 lg:mt-32">
-                        <pre id="json" className="font-krypton">
-                            <p> GET: /api/v1/invoices</p>
-                        </pre>
-                    </div>
+
+                    <Card className="mockup-code max-w-sm md:max-w-2xl">
+                        <div className="flex gap-4">
+                            <Link
+                                className="ms-8"
+                                size="lg"
+                                color="primary"
+                                isExternal
+                                href="/api/v1/invoices"
+                                showAnchorIcon
+                            >
+                                /api/v1/invoices
+                            </Link>
+                        </div>
+                        <CardBody>
+                            <pre data-prefix="1">
+                                <code>Get all invoices</code>
+                            </pre>
+
+                            <pre>
+                                {`    
+    {
+        "data": [
+            {
+            "InvoiceId": 994,
+            "status": "paid",
+            "billedDate": "1998-12-13 05:41:52",
+            "total": 110,
+            "balance": null,
+            notes: null, 
+            items: null,
+            "customerId": 1,
+            }
+        ],
+    }
+    `}
+                            </pre>
+                        </CardBody>
+                    </Card>
+                    <Card className="mockup-code max-w-sm md:max-w-2xl">
+                        <div className="flex gap-4">
+                            <Link
+                                className="ms-8"
+                                size="lg"
+                                color="primary"
+                                isExternal
+                                href="/api/v1/invoices/59"
+                                showAnchorIcon
+                            >
+                                /api/v1/invoices/591
+                            </Link>
+                        </div>
+                        <CardBody>
+                            <pre data-prefix="1">
+                                <code>Get an invoice</code>
+                            </pre>
+
+                            <pre>
+                                {`    
+   {
+    "data": {
+      "invoiceId": 591,
+      "status": "void",
+      "billedDate": "1983-10-25 19:52:27",
+      "paidDate": "2007-10-23 05:47:41",
+      "total": 556,
+      "balance": null,
+      "notes": null,
+      "items": null,
+      "customerId": 20
+    }
+  }
+    `}
+                            </pre>
+                        </CardBody>
+                    </Card>
+
                     <div className="mockup-code bg-green-600/60 text-primary-content px-11">
                         <pre id="json" className="font-krypton">
                             <p> GET: /api/v1/invoices/4</p>
@@ -160,11 +324,11 @@ export default function EndPoints() {
                     <Link
                         className="ms-6"
                         isBlock
-                        href="/api/v1/search?d_o_b=1991-01-02"
+                        href="/api/v1/search?d_o_b=1991-06"
                         color="primary"
                         size="lg"
                     >
-                        /api/v1/search?d_o_b=1991-01-02
+                        /api/v1/search?d_o_b=1991-06
                     </Link>
                 </p>
                 <p>
