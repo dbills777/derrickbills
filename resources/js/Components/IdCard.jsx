@@ -7,15 +7,16 @@ const IntroCard = () => {
                     <CardBody className="space-y-4 ">
                         <Avatar
                             icon={<AvatarIcon />}
+                            size="lg"
                             classNames={{
-                                base: "bg-gradient-to-br from-[#FFB457] to-[#FF705B]",
+                                base: "bg-gradient-to-br from-primary-500 to-primary-200",
                                 icon: "text-black/80",
                             }}
                         />
-                        <h1 className="text-3xl">
+                        <h1 className="text-2xl">
                             Welcome to my portfolio!
                         </h1>
-                        <p className="md:text-2xl font-extralight text-foreground-400">
+                        <p className="md:text-xl font-extralight text-foreground-400">
                             Derrick Bills &bull; Full Stack Developer
                         </p>
                     </CardBody>

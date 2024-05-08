@@ -8,8 +8,8 @@ const LocationCard = () => {
                         <h2 className="text-2xl md:text-3xl text-foreground-400">
                             Based in
                         </h2>
-                        <h3 className="text-2xl">Eagle Mountain, UT</h3>
-                        <p className="text-tiny text-foreground-400">
+                        <h3 className="text-xl">Eagle Mountain, UT</h3>
+                        <p className="text-foreground-400">
                             Seeking opportunities in the Austin TX & Salt Lake
                             City UT areas.
                         </p>
