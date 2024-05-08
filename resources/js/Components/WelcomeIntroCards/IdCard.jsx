@@ -3,7 +3,7 @@ const IntroCard = () => {
     return (
         <>
             <div className="flex items-center justify-center">
-                <Card className="lg:min-w-[360px]">
+                <Card className="w-[360px]">
                     <CardBody className="space-y-4 ">
                         <Avatar
                             icon={<AvatarIcon />}

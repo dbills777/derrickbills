@@ -11,7 +11,7 @@ const Welcome = () => {
         <>
             <Layout>
                 <Head title="Welcome" />
-                <div className="flex flex-col xl:flex-row justify-center xl:space-x-6">
+                <div className="mt-32 flex flex-col xl:flex-row justify-center xl:space-x-6">
                     <IdCard />
                     <TitleCard />
                     <LocationCard />
