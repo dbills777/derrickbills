@@ -18,10 +18,10 @@ const Welcome = () => {
                     <TitleCard />
                     <LocationCard />
                 </div>
-                <WelcomeHero />
+                {/* <WelcomeHero /> */}
                 <MotionIcons />
                 <Timeline />
-                <WelcomeSection />
+                {/* <WelcomeSection /> */}
             </Layout>
         </>
     );
