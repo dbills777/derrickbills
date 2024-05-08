@@ -10,7 +10,7 @@ const LocationCard = () => {
                         </h2>
                         <h3 className="text-xl">Eagle Mountain, UT</h3>
                         <p className="text-foreground-400">
-                            Seeking opportunities in the Austin TX & Salt Lake
+                            Seeking opportunities in the Austin TX, <br></br>Salt Lake
                             City UT areas.
                         </p>
                     </CardBody>
