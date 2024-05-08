@@ -8,7 +8,7 @@ const IntroCard = () => {
                         <h2 className="text-2xl md:text-3xl text-foreground-400">
                             Title
                         </h2>
-                        <h3 className="text-2xl">
+                        <h3 className="text-xl">
                          Full Stack Developer
                         </h3>
                     </CardBody>
