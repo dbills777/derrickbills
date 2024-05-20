@@ -15,7 +15,6 @@ const Welcome = () => {
                     <IdCard />
                     <TitleCard />
                     <LocationCard />
-                    {/* <WelcomeHero /> */}
                 </div>
                 <WelcomeSection />
                 <MotionIcons />
