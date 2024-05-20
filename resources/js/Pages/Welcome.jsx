@@ -4,6 +4,7 @@ import { MotionIcons } from "@/Components/MotionIcons";
 import IdCard from "@/Components/WelcomeIntroCards/IdCard";
 import TitleCard from "@/Components/WelcomeIntroCards/TitleCard";
 import LocationCard from "@/Components/WelcomeIntroCards/LocationCard";
+import { WelcomeSection } from "@/Components/WelcomeSection";
 
 const Welcome = () => {
     return (
@@ -14,7 +15,9 @@ const Welcome = () => {
                     <IdCard />
                     <TitleCard />
                     <LocationCard />
+                    {/* <WelcomeHero /> */}
                 </div>
+                <WelcomeSection />
                 <MotionIcons />
             </Layout>
         </>
