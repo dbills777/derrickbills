@@ -1,5 +1,5 @@
 import { Card, CardBody } from "@nextui-org/react";
-import { Activity, Flash, TagUser, Sync } from "./Icons.jsx";
+import { Activity, Flash, TagUser, Sync } from "../Icons.jsx";
 export const AboutPageSkills = () => {
     return (
         <>
