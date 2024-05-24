@@ -10,9 +10,9 @@ const About = ({ auth }) => {
             <Head title="About" />
             <section className="flex flex-col items-center my-32 space-y-6">
                 <p className="text-md light text-gray-500/80 lg:text-2xl">
-                    ABOUT ME SECTION
+                    Development Approach
                 </p>
-                <h1 className="text-3xl md:text-5xl lg:text-7xl">What I do</h1>
+                {/* <h1 className="text-3xl md:text-5xl lg:text-7xl">What I do</h1> */}
             </section>
             <section className="flex flex-col  my-32 min-w-3xl  items-center lg:flex-row lg:justify-center">
                 <AboutPageCard />
