@@ -13,7 +13,7 @@ const Intro = () => {
                 <div className="text-center hero-content text-neutral-content ">
                     <div className="w-full">
                         <h1 className="mb-6 text-5xl font-bold ">
-                            Laravel, InertiaJS & ReactJS.
+                            Laravel, InertiaJS & React.js
                         </h1>
                         <h2>
                             No Page Loads... No Lag... Plus Server Side
