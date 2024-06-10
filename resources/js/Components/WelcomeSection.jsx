@@ -3,12 +3,18 @@ export const WelcomeSection = () => {
         <div className="my-40 flex flex-col gap-2 px-6 mx-auto lg:flex-row max-w-screen-xl">
             <section className="flex flex-col space-y-12 ">
                 <h2 className="text-5xl md:text-6xl xl:text-7xl font-thin min-w-full">
-                    Full Stack Web Apllication
+                    Full Stack Web Developer
                 </h2>
                 <p className="md:max-w-screen-md">
                     This is a Full Stack Web Application built with Laravel,
-                    InertiaJS, React, and TailwindCSS. The application is a
-                    demonstration of using multiple UI libraries in a single
+                    InertiaJS, React, and TailwindCSS. The application
+                    demonstrates the integration and use of multiple UI
+                    libraries within a single project, showcasing the power and
+                    flexibility of combining these technologies to create a
+                    cohesive and dynamic user experience. Additionally, it
+                    includes a DevOps pipeline using DigitalOcean with an Nginx
+                    Ubuntu server and Forge as the deployment tool, ensuring
+                    seamless and efficient deployment and management of the
                     application.
                 </p>
                 <h3 className="text-orange-700 bold text-4xl"></h3>
@@ -24,7 +30,6 @@ export const WelcomeSection = () => {
                     enthusiast, always looking for inspiration to infuse
                     creativity into my projects.
                 </h3>
-                
             </section>
         </div>
     );
