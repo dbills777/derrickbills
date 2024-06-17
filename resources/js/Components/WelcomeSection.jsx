@@ -26,9 +26,7 @@ export const WelcomeSection = () => {
                     years of experience in Full Stack Web Application
                     Development, I am passionate about building robust and
                     dynamic web applications that deliver seamless user
-                    experiences. Beyond coding, I am a coffee lover and art
-                    enthusiast, always looking for inspiration to infuse
-                    creativity into my projects.
+                    experiences.
                 </h3>
             </section>
         </div>
