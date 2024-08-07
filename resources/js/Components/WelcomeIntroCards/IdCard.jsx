@@ -17,8 +17,7 @@ const IntroCard = () => {
                             Welcome to my portfolio!
                         </h1>
                         <p className="md:text-xl font-extralight text-foreground-400">
-                            {/* Derrick Bills &bull; Full Stack Developer */}
-                            Derrick Bills Full Stack Developer
+                            Derrick Bills &bull; Full Stack Developer
                         </p>
                     </CardBody>
                 </Card>
