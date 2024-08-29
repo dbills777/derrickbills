@@ -10,7 +10,7 @@ const About = ({ auth }) => {
             <Head title="About" />
             <section className="flex flex-col items-center my-32 space-y-6">
                 <p className="text-md light text-gray-500/80 lg:text-2xl">
-                    Web Developer
+                    Full Stack Web Developer
                 </p>
             </section>
             <section className="flex flex-col  my-32 min-w-3xl  items-center lg:flex-row lg:justify-center">
