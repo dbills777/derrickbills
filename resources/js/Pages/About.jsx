@@ -21,7 +21,7 @@ const About = ({ auth }) => {
                     </h2>
                     <p className="text-gray-500/70">
                         The application is built using the Laravel framework,
-                        powerful foundation for the application. This foundation
+                        As a powerful foundation for the application. This foundation
                         leverages InertiaJS, ReactJS, TailwindCSS. It also uses
                         Nextui, DaisyUI with responsive design in mind.
                         Animations and some transitions are implemented with
