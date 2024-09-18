@@ -19,11 +19,11 @@ export const WelcomeSection = () => {
                 </p>
                 <h3 className="text-orange-700 bold text-4xl"></h3>
                 <h3 className="text-gray-500 bold text-2xl border-l border-l-info ps-8">
-                    I’m Derrick Bills, a dedicated and skilled Full Stack
-                    Developer specializing in React, Laravel, MySQL and NODE, based
-                    in Eagle Mountain, UT with interest in opportunities in the
-                    Salt Lake City area and/or Relocating to Austin, TX. With 2
-                    years of experience in Full Stack Web Application
+                    I am Derrick Bills, a dedicated and skilled Full Stack
+                    Developer specializing in ReactJS, Laravel, MySQL and NODE,
+                    based in Eagle Mountain, UT. I am interest in opportunities
+                    in the Salt Lake City area and/or Relocating to Austin, TX.
+                    With 3 years of experience in Full Stack Web Application
                     Development, I am passionate about building robust and
                     dynamic web applications that deliver seamless user
                     experiences.

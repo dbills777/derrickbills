@@ -18,7 +18,7 @@ export const Stats = () => {
                     </svg>
                 </div>
                 <div className="stat-title">Page Views</div>
-                <div className="stat-value text-orange-500">2.6M</div>
+                <div className="stat-value text-orange-500">2.68M</div>
                 <div className="stat-desc">81% more than last month</div>
             </div>
 
