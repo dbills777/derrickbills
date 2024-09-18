@@ -19,7 +19,7 @@ export const Stats = () => {
                 </div>
                 <div className="stat-title">Page Views</div>
                 <div className="stat-value text-orange-500">2.6M</div>
-                <div className="stat-desc">31% more than last month</div>
+                <div className="stat-desc">81% more than last month</div>
             </div>
 
             <div className="stat">
