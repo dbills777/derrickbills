@@ -3,7 +3,7 @@ export const WelcomeSection = () => {
         <div className="my-40 flex flex-col gap-2 px-6 mx-auto lg:flex-row max-w-screen-xl">
             <section className="flex flex-col space-y-12 ">
                 <h2 className="text-5xl md:text-6xl xl:text-7xl font-thin min-w-full">
-                    Full Stack Web Developer
+                    Full Stack Web Application Developer
                 </h2>
                 <p className="md:max-w-screen-md">
                     This is a Full Stack Web Application built with Laravel,
@@ -13,8 +13,8 @@ export const WelcomeSection = () => {
                     flexibility of combining these technologies to create a
                     cohesive and dynamic user experience. Additionally, it
                     includes a CI/CD pipeline using DigitalOcean with an Nginx
-                    Ubuntu server and Laravel Forge as the deployment Manager, ensuring
-                    seamless and efficient continuous deployment of the
+                    Ubuntu server and Laravel Forge as the deployment Manager,
+                    ensuring seamless and efficient continuous deployment of the
                     application.
                 </p>
                 <h3 className="text-orange-700 bold text-4xl"></h3>
