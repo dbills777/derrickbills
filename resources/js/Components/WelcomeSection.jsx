@@ -12,7 +12,7 @@ export const WelcomeSection = () => {
                     libraries within a single project, showcasing the power and
                     flexibility of combining these technologies to create a
                     cohesive and dynamic user experience. Additionally, it
-                    includes a CI/CD pipeline using DigitalOcean with an Nginx
+                    includes a CI/CD pipeline using Digital Ocean with an Nginx
                     Ubuntu server and Laravel Forge as the deployment Manager,
                     ensuring seamless and efficient continuous deployment of the
                     application.
