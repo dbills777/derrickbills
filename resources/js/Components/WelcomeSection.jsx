@@ -12,9 +12,9 @@ export const WelcomeSection = () => {
                     libraries within a single project, showcasing the power and
                     flexibility of combining these technologies to create a
                     cohesive and dynamic user experience. Additionally, it
-                    includes a DevOps pipeline using DigitalOcean with an Nginx
-                    Ubuntu server and Forge as the deployment tool, ensuring
-                    seamless and efficient deployment and management of the
+                    includes a CI/CD pipeline using DigitalOcean with an Nginx
+                    Ubuntu server and Laravel Forge as the deployment Manager, ensuring
+                    seamless and efficient continuous deployment of the
                     application.
                 </p>
                 <h3 className="text-orange-700 bold text-4xl"></h3>
